@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\MVC_project2\\Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project2\\project\\project\\models\\bookstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\bookstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project2\\project\\project\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project2\\project\\project\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project2\\project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project2\\project\\project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\Comment.cs",
+              "ToolTip": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\Comment.cs",
+              "RelativeToolTip": "Project\\Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:38:06.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_project2\\Project\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "D:\\ITI\\MVC_project2\\Project\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:34:45.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\Order.cs",
+              "ToolTip": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\Order.cs",
+              "RelativeToolTip": "Project\\Models\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:32:43.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDetails.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\OrderDetails.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\OrderDetails.cs",
+              "ToolTip": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\OrderDetails.cs",
+              "RelativeToolTip": "Project\\Models\\OrderDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:32:39.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookStoreContext.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\BookStoreContext.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\BookStoreContext.cs",
+              "ToolTip": "D:\\ITI\\MVC_project2\\Project\\Project\\Models\\BookStoreContext.cs",
+              "RelativeToolTip": "Project\\Models\\BookStoreContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:26:30.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
