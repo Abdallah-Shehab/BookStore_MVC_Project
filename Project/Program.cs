@@ -14,7 +14,7 @@ namespace Project
 
             builder.Services.AddDbContext<BookStoreContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("BookDB"));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("BookStore"));
             });
             var app = builder.Build();
 

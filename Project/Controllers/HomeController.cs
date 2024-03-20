@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Project.Models;
+using Project.Repositories;
 using System.Diagnostics;
 
 namespace Project.Controllers
@@ -7,10 +8,11 @@ namespace Project.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        BookRepository bookRepository;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            bookRepository = new BookRepository();
         }
 
         public IActionResult Index()
@@ -37,9 +39,9 @@ namespace Project.Controllers
         {
             return View();
         }
-        public IActionResult ProductDetails()
+        public IActionResult BookDetails(int id)
         {
-            return View();
+            return View(bookRepository.GetBookDetails(id));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
