@@ -16,11 +16,13 @@ namespace Project.ViewModels
         public string? Image { get; set; }
         public int Quantity { get; set; }
         public Author Author { get; set; }
-        public List<Book> authorBooks {  get; set; }  //books from the same author
+        public List<BookDetailsVM> authorBooks {  get; set; }  //books from the same author
         public Category Category { get; set; }
-        public List<Book> categoryBooks { get; set; }  //books from the same category
+        public int categoryID {  get; set; }
+        public List<BookDetailsVM> categoryBooks { get; set; }  //books from the same category
         public Discount Discount { get; set; }
-        public List<CommentVM> Comments { set; get; }     
+        public List<CommentVM> Comments { set; get; }  
+        public int commentsNum {  get; set; }
 
     }
 }

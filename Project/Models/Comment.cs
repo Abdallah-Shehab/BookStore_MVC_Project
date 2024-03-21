@@ -8,6 +8,7 @@ namespace Project.Models
 
 
         public string comment { get; set; }
+        public decimal? rate { get; set; }
 
         public DateTime Date { get; set; }
 
