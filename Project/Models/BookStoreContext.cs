@@ -17,14 +17,15 @@ namespace Project.Models
 
         }
 
-        DbSet<Book> Books { get; set; }
-        DbSet<Author> Authors { get; set; }
-        DbSet<Category> Categories { get; set; }
-        DbSet<Comment> Comments { get; set; }
-        DbSet<Order> Orders { get; set; }
-        DbSet<OrderDetails> OrdersDetails { get; set; }
-        DbSet<Discount> Discounts { get; set; }
-        DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetails> OrdersDetails { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
