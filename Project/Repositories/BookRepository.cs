@@ -21,6 +21,24 @@ namespace Project.Repositories
         public BookDetailsVM GetBookDetails(int id)
         {
             Book book = db.Books.FirstOrDefault(x => x.ID == id);
+            List<Comment> comments = db.Comments.Where(x => x.book_id == book.ID).ToList();
+
+            List<CommentVM> comments_vm = new List<CommentVM>();
+
+            CommentVM cmVM;
+            foreach (var comment in comments)
+            {
+                cmVM = new CommentVM()
+                {
+                    Comment = comment.comment,
+                    Date = comment.Date,
+                    //userFName = comment.user.FirstName,
+                    //userLName = comment.user.LastName
+                };
+                comments_vm.Add(cmVM);
+            }
+
+
             BookDetailsVM bookvm = new BookDetailsVM()
             {
                 ID = book.ID,
@@ -35,7 +53,7 @@ namespace Project.Repositories
                 Discount = db.Discounts.FirstOrDefault(x => x.ID == book.Discount_id),
                 authorBooks = db.Books.Where(x => x.Author_id == book.Author_id).ToList(),
                 categoryBooks = db.Books.Where(x => x.Category_id == book.Category_id).ToList(),
-                Comments = db.Comments.Where(x => x.book_id == book.ID).ToList()
+                Comments = comments_vm
             };
             return bookvm;
         }

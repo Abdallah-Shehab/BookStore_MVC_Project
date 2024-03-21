@@ -20,7 +20,7 @@ namespace Project.ViewModels
         public Category Category { get; set; }
         public List<Book> categoryBooks { get; set; }  //books from the same category
         public Discount Discount { get; set; }
-        public List<Comment> Comments { set; get; }      //create commentVM !!!!!!!!!!!!!
+        public List<CommentVM> Comments { set; get; }     
 
     }
 }
