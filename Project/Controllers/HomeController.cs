@@ -12,7 +12,7 @@ namespace Project.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            bookRepository = new BookRepository();
+
         }
 
 

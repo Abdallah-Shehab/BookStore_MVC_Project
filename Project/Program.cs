@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Project.Models;
+using Project.Repositories;
 
 namespace Project
 {
@@ -16,6 +17,9 @@ namespace Project
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("BookStore"));
             });
+
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

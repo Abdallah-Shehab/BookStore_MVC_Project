@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\ITI\\MVC_Project\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\views\\test\\bookdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\views\\test\\bookdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\models\\bookstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\bookstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|D:\\ITI\\MVC_Project\\Project\\project\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,15 +38,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Book.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "Project\\Models\\Book.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\Book.cs",
-              "RelativeToolTip": "Project\\Models\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Project\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T12:08:57.415Z"
+              "WhenOpened": "2024-03-21T13:40:28.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookDetail.cshtml",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Test\\BookDetail.cshtml",
+              "RelativeDocumentMoniker": "Project\\Views\\Test\\BookDetail.cshtml",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Test\\BookDetail.cshtml",
+              "RelativeToolTip": "Project\\Views\\Test\\BookDetail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-21T13:38:10.427Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,14 +70,14 @@
               "RelativeDocumentMoniker": "Project\\Controllers\\TestController.cs",
               "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\TestController.cs",
               "RelativeToolTip": "Project\\Controllers\\TestController.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAwBUAAAAfAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAQwB8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T12:02:56.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Project\\Models\\ApplicationUser.cs",
@@ -91,20 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Project\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Project\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T22:36:08.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Comment.cs",
               "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "Project\\Models\\Comment.cs",
@@ -113,54 +98,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T21:38:06.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Program.cs",
-              "RelativeDocumentMoniker": "Project\\Program.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Program.cs",
-              "RelativeToolTip": "Project\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:34:45.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Project\\Models\\Order.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\Order.cs",
-              "RelativeToolTip": "Project\\Models\\Order.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:32:43.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderDetails.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\OrderDetails.cs",
-              "RelativeDocumentMoniker": "Project\\Models\\OrderDetails.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\OrderDetails.cs",
-              "RelativeToolTip": "Project\\Models\\OrderDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:32:39.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookStoreContext.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\BookStoreContext.cs",
-              "RelativeDocumentMoniker": "Project\\Models\\BookStoreContext.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\BookStoreContext.cs",
-              "RelativeToolTip": "Project\\Models\\BookStoreContext.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAmwBsAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:26:30.777Z"
             }
           ]
         }
