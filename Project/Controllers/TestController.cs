@@ -1,15 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project.Models;
+using Project.Repositories;
+using Project.ViewModels;
 
 namespace Project.Controllers
 {
     public class TestController : Controller
     {
         BookStoreContext db;
-        public TestController(BookStoreContext db)
+
+        IBookRepository bookRepository;
+        public TestController(BookStoreContext db, IBookRepository bookRepository)
         {
             this.db = db;
+            this.bookRepository = bookRepository;
         }
         public IActionResult Index()
         {
@@ -20,6 +25,12 @@ namespace Project.Controllers
                 name += comment;
             }
             return Content(name);
+        }
+
+        public IActionResult BookDetail()
+        {
+            BookDetailsVM bookDetail = bookRepository.GetBookDetails(6);
+            return View("BookDetail", bookDetail);
         }
     }
 }

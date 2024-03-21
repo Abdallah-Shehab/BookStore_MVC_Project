@@ -897,6 +897,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\blog\\single\\fullwidth\\3.jpg"
     },
     {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\images\\books\\tim-alex-xG5VJW-7Bio-unsplash.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\tim-alex-xG5VJW-7Bio-unsplash.jpg"
+    },
+    {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\images\\brands\\1.png",
       "PackagePath": "staticwebassets\\assets\\images\\brands\\1.png"
     },
