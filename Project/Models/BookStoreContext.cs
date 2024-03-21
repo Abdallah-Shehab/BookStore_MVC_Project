@@ -24,12 +24,15 @@ namespace Project.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetails> OrdersDetails { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+ 
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+ 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.
+                UseSqlServer("Data Source=.;Initial Catalog=BookStore;Integrated Security=True;Encrypt=False");
             base.OnConfiguring(optionsBuilder);
         }
 
