@@ -15,9 +15,11 @@ namespace Project.Controllers
             bookRepository = new BookRepository();
         }
 
+
         public IActionResult Index()
         {
-            return View();
+
+            return View("index");
         }
 
         public IActionResult Privacy()
@@ -31,7 +33,8 @@ namespace Project.Controllers
         public IActionResult AllCategories()
         {
             return View();
-        }public IActionResult AboutUs()
+        }
+        public IActionResult AboutUs()
         {
             return View();
         }

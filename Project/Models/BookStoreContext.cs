@@ -24,7 +24,10 @@ namespace Project.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetails> OrdersDetails { get; set; }
         public DbSet<Discount> Discounts { get; set; }
-        public DbSet<ApplicationUser> Users { get; set; }
+ 
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+ 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
