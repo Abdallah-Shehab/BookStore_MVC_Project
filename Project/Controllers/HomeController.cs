@@ -8,11 +8,11 @@ namespace Project.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        BookRepository bookRepository;
-        public HomeController(ILogger<HomeController> logger)
+        IBookRepository bookRepository;
+        public HomeController(ILogger<HomeController> logger, IBookRepository bookRepository)
         {
             _logger = logger;
-            bookRepository = new BookRepository();
+            this.bookRepository = bookRepository;
         }
 
 

@@ -19,6 +19,12 @@ namespace Project
             });
 
             builder.Services.AddScoped<IBookRepository, BookRepository>();
+            builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+            builder.Services.AddScoped<ICategoryRepository,CategoryRepository >();
+            builder.Services.AddScoped<ICommentRepository,CommentRepository>();
+            builder.Services.AddScoped<IOrderRepository,OrderRepository>();
+            builder.Services.AddScoped<IOrderDetailsRepository,OrderDetailsRepository>();
+            builder.Services.AddScoped<IDiscountRepository,DiscountRepository>();
 
             var app = builder.Build();
 
