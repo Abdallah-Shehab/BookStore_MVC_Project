@@ -8,11 +8,11 @@ namespace Project.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        BookRepository bookRepository;
-        public HomeController(ILogger<HomeController> logger)
+        IBookRepository IbookRepository;
+        public HomeController(ILogger<HomeController> logger, IBookRepository IbookRepo)
         {
             _logger = logger;
-            bookRepository = new BookRepository();
+            IbookRepository = IbookRepo; 
         }
 
 
@@ -44,7 +44,7 @@ namespace Project.Controllers
         }
         public IActionResult BookDetails(int id)
         {
-            return View(bookRepository.GetBookDetails(id));
+            return View(IbookRepository.GetBookDetails(id));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
