@@ -1,54 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ITI\\MVC_Project\\Project\\",
+  "WorkspaceRootPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\orderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\orderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\iorderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\iorderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\repositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\repositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,168 +14,20 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IAuthorRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\IAuthorRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\IAuthorRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\IAuthorRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\IAuthorRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T20:23:00.995Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IOrderDetailsRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\IOrderDetailsRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\IOrderDetailsRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\IOrderDetailsRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\IOrderDetailsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:51:30.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderDetailsRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\OrderDetailsRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\OrderDetailsRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\OrderDetailsRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\OrderDetailsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:50:53.369Z",
+              "WhenOpened": "2024-03-23T15:10:18.089Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\OrderRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\OrderRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\OrderRepository.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:49:34.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthorRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\AuthorRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\AuthorRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\AuthorRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\AuthorRepository.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:49:13.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ICommentRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\ICommentRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\ICommentRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\ICommentRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\ICommentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:48:56.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CommentRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\CommentRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\CommentRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\CommentRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\CommentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:44:52.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BookRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\BookRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\BookRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\BookRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\BookRepository.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAIwCEAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:43:37.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderDetails.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\OrderDetails.cs",
-              "RelativeDocumentMoniker": "Project\\Models\\OrderDetails.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Models\\OrderDetails.cs",
-              "RelativeToolTip": "Project\\Models\\OrderDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:33:03.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\ICategoryRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\ICategoryRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\ICategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:26:37.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\CategoryRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\CategoryRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAowB0AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T21:26:01.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Repositories\\IOrderRepository.cs",
-              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Repositories\\IOrderRepository.cs",
-              "RelativeToolTip": "Project\\Repositories\\IOrderRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T20:51:45.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             }
           ]
         }
