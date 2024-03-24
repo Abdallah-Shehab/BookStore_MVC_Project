@@ -5,7 +5,7 @@ namespace Project.Repositories
 {
     public interface IBookRepository
     {
-        public BookDetailsVM GetBookDetails(int id);
+        //public BookDetailsVM GetBookDetails(int id);
 
         public List<Book> GetAll();
 

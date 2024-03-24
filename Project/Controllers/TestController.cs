@@ -29,8 +29,8 @@ namespace Project.Controllers
 
         public IActionResult BookDetail()
         {
-            BookDetailsVM bookDetail = bookRepository.GetBookDetails(6);
-            return View("BookDetail", bookDetail);
+            //BookDetailsVM bookDetail = bookRepository.GetBookDetails(6);
+            return View("BookDetail");
         }
     }
 }

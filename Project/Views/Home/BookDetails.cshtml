@@ -31,7 +31,7 @@
                         <div class="product-gallery product-gallery-vertical">
                             <div class="row">
                                 <figure class="product-main-image">
-                                    <img id="product-zoom" src="~/assets/images/books/@Model.Image" style="object-fit: cover;max-height: 400px;min-height: 400px;" data-zoom-image="~/assets/images/books/@Model.Image" alt="product image">
+                                    <img id="product-zoom" src="~/assets/images/books/@Model.Image" style="object-fit: cover;max-height: 400px;min-height: 400px;" data-zoom-image="~/assets/images/books/@Model.Image" alt="product image"> 
 
                                     <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                         <i class="icon-arrows"></i>
@@ -97,7 +97,7 @@
                             </div><!-- End .details-filter-row -->
 
                             <div class="product-details-action">
-                                <a href="#" onclick="addToCart(@Model.ID)" class="btn-product btn-cart"><span>add to cart</span></a>
+                                <a href="javascript:" onclick="addToCart(@Model.ID)" class="btn-product btn-cart"><span>add to cart</span></a>
 
                                 <div class="details-action-wrapper">
                                     <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a>
@@ -256,7 +256,7 @@
                                 </div><!-- End .product-action-vertical -->
 
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a href="javascript:" onclick="addToCart(@item.ID , 'whithout quantity')" class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div><!-- End .product-action -->
                             </figure><!-- End .product-media -->
 
@@ -392,7 +392,7 @@
                                 </div><!-- End .product-action-vertical -->
 
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a href="javascript:" onclick="addToCart(@item.ID , 'whithout quantity')" class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div><!-- End .product-action -->
                             </figure><!-- End .product-media -->
 
@@ -425,37 +425,3 @@
         </div><!-- End .container -->
     </div><!-- End .page-content -->
 </main><!-- End .main -->
-
-
-
-<script>
-    function addToCart(id){
-        const quantity = document.getElementById("qty").value;
-
-        let arritems = JSON.parse(localStorage.getItem("cart"));
-
-        if(arritems == null) {
-            setItem("cart", [{ "bookID": id, "quantity": quantity }]);
-        }
-        if(arritems != null){
-
-            alert("hh");
-            let newitems = [];
-            arritems.forEach(obj => {
-                if (obj.bookID == id) {
-                    obj.quantity = quantity;
-                }
-                newitems.push(obj);
-            });
-            setItem("cart", newitems);
-        }
-        
-
-    }
-
-
-    function setItem(key,valueObj){
-        
-        sessionStorage.setItem(key, JSON.stringify(valueObj));
-    }
-</script>

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Project.bundle.scp.css"
     },
     {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
+      "PackagePath": "staticwebassets\\assets\\css\\NewStyle.css"
+    },
+    {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
     },
@@ -195,6 +199,10 @@
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\toastr.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\toastr.min.css"
     },
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\fonts\\flaming\\flaming-webfont.woff",
@@ -5797,6 +5805,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\superfish.min.js"
     },
     {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\toastr.min.js"
+    },
+    {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\js\\wNumb.js",
       "PackagePath": "staticwebassets\\assets\\js\\wNumb.js"
     },
@@ -5839,6 +5851,10 @@
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Cart.js",
+      "PackagePath": "staticwebassets\\js\\Cart.js"
     },
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",

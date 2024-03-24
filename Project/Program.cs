@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project.Models;
 using Project.Repositories;
@@ -20,11 +21,11 @@ namespace Project
 
             builder.Services.AddScoped<IBookRepository, BookRepository>();
             builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
-            builder.Services.AddScoped<ICategoryRepository,CategoryRepository >();
-            builder.Services.AddScoped<ICommentRepository,CommentRepository>();
-            builder.Services.AddScoped<IOrderRepository,OrderRepository>();
-            builder.Services.AddScoped<IOrderDetailsRepository,OrderDetailsRepository>();
-            builder.Services.AddScoped<IDiscountRepository,DiscountRepository>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
+            builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 
             var app = builder.Build();
 
@@ -44,7 +45,25 @@ namespace Project
             app.UseAuthorization();
 
             app.MapControllerRoute(
+              "Home",
+              "Home",
+              new { Controller = "Home", Action = "Index" }
+              );
+            app.MapControllerRoute(
+              "Home",
+              "Cart",
+              new { Controller = "Home", Action = "Cart" }
+              );
+            app.MapControllerRoute(
+                "ContactUs",
+                "Contact",
+                new { Controller = "Contact", Action = "Index" }
+                );
+
+
+            app.MapControllerRoute(
                 name: "default",
+
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();

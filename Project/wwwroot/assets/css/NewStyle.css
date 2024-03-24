@@ -1,0 +1,12 @@
+﻿
+.sticky-header {
+    background-color: #212529;
+}
+
+    .sticky-header.fixed {
+        background-color: #212529;
+    }
+
+.menu > li > a {
+    color: #eee;
+}
