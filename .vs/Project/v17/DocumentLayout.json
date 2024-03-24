@@ -1,10 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\",
+  "WorkspaceRootPath": "D:\\ITI\\MVC_Project\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\views\\contact\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\views\\contact\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\viewmodels\\contactvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\viewmodels\\contactvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\iti\\mvc_project\\project\\project\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +42,115 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Program.cs",
-              "RelativeDocumentMoniker": "Project\\Program.cs",
-              "ToolTip": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Program.cs",
-              "RelativeToolTip": "Project\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABRAAAA",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Project\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Project\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAAAEsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T20:25:12.141Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\appsettings.json",
+              "RelativeDocumentMoniker": "Project\\appsettings.json",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\appsettings.json",
+              "RelativeToolTip": "Project\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-24T22:17:53.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContactVM.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\ViewModels\\ContactVM.cs",
+              "RelativeDocumentMoniker": "Project\\ViewModels\\ContactVM.cs",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\ViewModels\\ContactVM.cs",
+              "RelativeToolTip": "Project\\ViewModels\\ContactVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T15:10:18.089Z",
+              "WhenOpened": "2024-03-24T21:33:26.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Project\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T21:13:28.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Home\\Cart.cshtml",
+              "RelativeDocumentMoniker": "Project\\Views\\Home\\Cart.cshtml",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Home\\Cart.cshtml",
+              "RelativeToolTip": "Project\\Views\\Home\\Cart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T20:45:44.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Project\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Project\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T20:24:42.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContactUs.cshtml",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Contact\\ContactUs.cshtml",
+              "RelativeDocumentMoniker": "Project\\Views\\Contact\\ContactUs.cshtml",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Views\\Contact\\ContactUs.cshtml",
+              "RelativeToolTip": "Project\\Views\\Contact\\ContactUs.cshtml",
+              "ViewState": "AQIAALAAAAAAAAAAAAAIwJcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T20:23:49.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\ContactController.cs",
+              "ToolTip": "D:\\ITI\\MVC_Project\\Project\\Project\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "Project\\Controllers\\ContactController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T20:20:11.348Z",
               "EditorCaption": ""
             }
           ]

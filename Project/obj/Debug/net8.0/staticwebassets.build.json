@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EG68e6796PKsS8Jq8qxF7bVE7t5E+PVTmP4iqp2LSq4=",
+  "Hash": "r0toY7IiGZFMzVpN9egHU/qKZ5vMg0cstRPiu6/9ThE=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -530,6 +530,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\main.min.css"
     },
     {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "assets/css/NewStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\NewStyle.css"
+    },
+    {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\plugins\\jquery.countdown.css",
       "SourceId": "Project",
       "SourceType": "Discovered",
@@ -965,6 +984,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\toastr.min.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "assets/css/toastr.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\toastr.min.css"
     },
     {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\fonts\\flaming\\flaming-webfont.woff",
@@ -27567,6 +27605,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\superfish.min.js"
     },
     {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\js\\toastr.min.js",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "assets/js/toastr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\toastr.min.js"
+    },
+    {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\js\\wNumb.js",
       "SourceId": "Project",
       "SourceType": "Discovered",
@@ -27774,6 +27831,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Cart.js",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "js/Cart.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Cart.js"
     },
     {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",
