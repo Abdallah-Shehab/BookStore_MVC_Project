@@ -26,7 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Technical Materials\ASP.Net Core(MVC)\Project\BookStore_MVC_Project\Project
 build_property._RazorSourceGeneratorDebug = 
 
-<<<<<<< HEAD
+[D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/AboutUS/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVU1xBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,13 +39,6 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Contact/ContactUs.cshtml]
-=======
-[D:/ITI/MVC_Project/Project/Project/Views/AboutUS/AboutUs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVU1xBYm91dFVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ITI/MVC_Project/Project/Project/Views/Contact/ContactUs.cshtml]
->>>>>>> 16312507ac76871fbcd2789f97585540948690a3
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 

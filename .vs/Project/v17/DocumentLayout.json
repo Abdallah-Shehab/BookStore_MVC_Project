@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|solutionrelative:project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D8D878F-3B0D-40AA-B456-DC334FC5E95B}|Project\\Project.csproj|d:\\technical materials\\asp.net core(mvc)\\project\\bookstore_mvc_project\\project\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,8 +38,12 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -76,18 +80,17 @@
               "RelativeToolTip": "Project\\ViewModels\\UserLoginViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T01:58:57.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T01:58:57.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Project\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T00:24:52.004Z",
               "EditorCaption": ""
@@ -102,8 +105,7 @@
               "RelativeToolTip": "Project\\Views\\Account\\Register.cshtml",
               "ViewState": "AQIAABoAAAAAAAAAAAAAAD0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-25T22:49:15.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T22:49:15.121Z"
             },
             {
               "$type": "Document",
@@ -115,12 +117,11 @@
               "RelativeToolTip": "Project\\ViewModels\\UserRegisterViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T10:50:52.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T10:50:52.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\AccountController.cs",
@@ -128,8 +129,7 @@
               "RelativeToolTip": "Project\\Controllers\\AccountController.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAAAEsAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T10:46:40.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T10:46:40.013Z"
             }
           ]
         }

@@ -5,15 +5,15 @@
       "PackagePath": "staticwebassets\\Project.bundle.scp.css"
     },
     {
-<<<<<<< HEAD
-      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
-=======
-      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\AboutUS\\Abdallah.jpg",
-      "PackagePath": "staticwebassets\\Images\\AboutUS\\Abdallah.jpg"
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\Images\\AboutUS\\Abdallah2.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutUS\\Abdallah2.jpg"
     },
     {
-      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
->>>>>>> 16312507ac76871fbcd2789f97585540948690a3
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\Images\\AboutUS\\profile-logo.png",
+      "PackagePath": "staticwebassets\\Images\\AboutUS\\profile-logo.png"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\NewStyle.css"
     },
     {
@@ -5589,6 +5589,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\stores\\img-2.jpg"
     },
     {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\team\\Abdallah2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\Abdallah2.jpg"
+    },
+    {
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\team\\about-2\\member-1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\team\\about-2\\member-1.jpg"
     },
@@ -5853,15 +5857,11 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\line-awesome\\line-awesome\\line-awesome\\fonts\\line-awesomeeb4f.woff2"
     },
     {
-<<<<<<< HEAD
-      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
-=======
-      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\AboutUsCards.css",
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\AboutUsCards.css",
       "PackagePath": "staticwebassets\\css\\AboutUsCards.css"
     },
     {
-      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\site.css",
->>>>>>> 16312507ac76871fbcd2789f97585540948690a3
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
@@ -5873,15 +5873,11 @@
       "PackagePath": "staticwebassets\\js\\Cart.js"
     },
     {
-<<<<<<< HEAD
-      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\js\\site.js",
-=======
-      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Nav_Links.js",
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\js\\Nav_Links.js",
       "PackagePath": "staticwebassets\\js\\Nav_Links.js"
     },
     {
-      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",
->>>>>>> 16312507ac76871fbcd2789f97585540948690a3
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
@@ -6067,6 +6063,38 @@
     {
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.min.js"
+    },
+    {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.min.js"
     },
     {
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\lib\\isotope\\jquery.isotope.min.js",

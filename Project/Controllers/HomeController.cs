@@ -7,7 +7,6 @@ using System.Diagnostics;
 
 namespace Project.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -22,6 +21,7 @@ namespace Project.Controllers
         }
 
 
+        [Authorize]
         public IActionResult Index()
         {
             var books = bookRepository.GetAll();
