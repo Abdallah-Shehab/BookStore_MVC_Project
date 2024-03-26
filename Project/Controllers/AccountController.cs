@@ -1,16 +1,18 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Project.Filters;
 using Project.Models;
 using Project.ViewModels;
 
 namespace Project.Controllers
 {
+
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager,SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -28,6 +30,8 @@ namespace Project.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RedirectAuthenticatedUsersAttribute]
+
         public async Task<IActionResult> Register(UserRegisterViewModel userRegisterVM)
         {
             if (ModelState.IsValid)
@@ -50,7 +54,7 @@ namespace Project.Controllers
                 {
                     //make cookie foe the user
                     await signInManager.SignInAsync(user, false);
-                    return RedirectToAction("index","Home");
+                    return RedirectToAction("index", "Home");
                 }
 
                 //add errors to the modelState
@@ -64,11 +68,13 @@ namespace Project.Controllers
         [HttpGet]
         public IActionResult LogIn()
         {
-            return View("LogIn");
+            return View("Login");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RedirectAuthenticatedUsersAttribute]
+
         public async Task<IActionResult> Login(UserLoginViewModel userLoginVM)
         {
             if (ModelState.IsValid)

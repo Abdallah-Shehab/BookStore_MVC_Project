@@ -25,7 +25,7 @@ namespace Project
             {
                 options.User.AllowedUserNameCharacters = null;
                 options.User.RequireUniqueEmail = true;
-                
+
             }).AddEntityFrameworkStores<BookStoreContext>();
 
             builder.Services.AddScoped<IBookRepository, BookRepository>();
@@ -52,7 +52,17 @@ namespace Project
             app.UseRouting();
 
             app.UseAuthorization();
+            app.MapControllerRoute(
+                "Login", "Login", new { Controller = "Account", Action = "Login" }
+               );
+            app.MapControllerRoute(
+              "Register", "Register", new
+              {
+                  Controller = "Account",
+                  Action = "Register"
+              }
 
+             );
             app.MapControllerRoute(
               "Home",
               "Home",

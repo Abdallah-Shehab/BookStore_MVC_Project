@@ -21,7 +21,7 @@ namespace Project.Controllers
         }
 
 
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
         {
             var books = bookRepository.GetAll();
