@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {}
+    "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {
+    "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
+        "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\Doctor_PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\obj\\",
+        "projectPath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\--\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Doctor_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\--\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
