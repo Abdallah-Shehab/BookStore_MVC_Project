@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj": {}
+    "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj": {
+    "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\SHaFiQ\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\MVC_Project\\Project\\Project\\obj\\",
+        "projectPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\Doctor_PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SHaFiQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Doctor_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,6 +58,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
