@@ -22,8 +22,9 @@ namespace Project.Controllers
 
         public IActionResult Index()
         {
-
+            var books = bookRepository.GetAll();
             return View("index");
+            //return Json(books);
         }
 
         public IActionResult Privacy()

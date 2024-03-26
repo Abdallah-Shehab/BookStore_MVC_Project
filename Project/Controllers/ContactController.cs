@@ -40,7 +40,7 @@ namespace Project.Controllers
                     message.To.Add("abdallah.shafiq49@gmail.com"); // the reciver 
                     message.Subject = Cont_vm.Subject;
                     message.IsBodyHtml = true;
-                    message.Body = @$"Name : {Cont_vm.Name} \n Email : {Cont_vm.Email} \n Phone : {Cont_vm.Phone} \n Message : {Cont_vm.Message}";
+                    message.Body = @$"Name : {Cont_vm.Name} \\n Email : {Cont_vm.Email} \\n Phone : {Cont_vm.Phone} \\n Message : {Cont_vm.Message}";
 
 
                     smtpClient.Port = 587;
@@ -49,11 +49,13 @@ namespace Project.Controllers
                     smtpClient.UseDefaultCredentials = false;
                     smtpClient.Credentials = new NetworkCredential("c3e22046e96d1e", "bf4e2a33f13a4e");
                     smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
                     smtpClient.Send(message);
-
-
+                    ViewBag.isSent = true;
                     Cont_vm.IsSent = true;
-                    //return RedirectToRoute("Home");
+
+
+                    return RedirectToRoute("ContactUs");
                 }
 
 
@@ -61,7 +63,9 @@ namespace Project.Controllers
             catch (Exception)
             {
                 ViewBag.Error = "Some Error";
+                ViewBag.isSent = false;
                 Cont_vm.IsSent = false;
+
 
             }
             return View("ContactUs", Cont_vm);

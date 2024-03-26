@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Project.bundle.scp.css"
     },
     {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\AboutUS\\Abdallah.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutUS\\Abdallah.jpg"
+    },
+    {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\NewStyle.css"
     },
@@ -5845,6 +5849,10 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\line-awesome\\line-awesome\\line-awesome\\fonts\\line-awesomeeb4f.woff2"
     },
     {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\AboutUsCards.css",
+      "PackagePath": "staticwebassets\\css\\AboutUsCards.css"
+    },
+    {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -5855,6 +5863,10 @@
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Cart.js",
       "PackagePath": "staticwebassets\\js\\Cart.js"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Nav_Links.js",
+      "PackagePath": "staticwebassets\\js\\Nav_Links.js"
     },
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",

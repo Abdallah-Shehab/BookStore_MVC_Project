@@ -1,4 +1,5 @@
 ﻿@model ContactVM
+@* <partial name="_ValidationScriptsPartial" /> *@
 
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
@@ -66,9 +67,9 @@
                     <h2 class="title mb-1">Got Any Questions?</h2><!-- End .title mb-2 -->
                     <p class="mb-2">Use the form below to get in touch with the sales team</p>
 
-                    <form asp-action="SendMessage" method="post">
+                    <form id="myForm" asp-action="SendMessage" method="post">
 
-                        <div asp-validation-summary="All" class="text-danger"></div>
+                        @* <div asp-validation-summary="All" class="text-danger"></div> *@
                         <!--MOdelSate All Error (Model Property or else) li-->
                         <div>
                             <label asp-for="Name"></label>
@@ -95,59 +96,63 @@
 
                             <input  class="form form-control" asp-for="Message" cols="30" rows="4" />
                             <span asp-validation-for="Message" class="text-danger"></span>
-                        </div> 
-
-                        <button type="submit"  class="btn btn-secondary">
-                            <span>SUBMIT</span>
-                            <i class="icon-long-arrow-right"></i></button>
-
-                        @if (Model != null && Model.IsSent == true )
-                        {
-                            <label>Email Sent</label>
-                        }
-
-                        @if(Model != null && Model.IsSent == false )
-                        {
-                            <label>Email not Sent</label>
-                        }
-                      
-
-                    
-                    </form>
-                 
-                    @* <form action="#" class="contact-form mb-3">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="cname" class="sr-only">Name</label>
-                                <input type="text" class="form-control" id="cname" placeholder="Name *" required>
-                            </div><!-- End .col-sm-6 -->
-
-                            <div class="col-sm-6">
-                                <label for="cemail" class="sr-only">Email</label>
-                                <input type="email" class="form-control" id="cemail" placeholder="Email *" required>
-                            </div><!-- End .col-sm-6 -->
-                        </div><!-- End .row -->
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="cphone" class="sr-only">Phone</label>
-                                <input type="tel" class="form-control" id="cphone" placeholder="Phone">
-                            </div><!-- End .col-sm-6 -->
-
-                            <div class="col-sm-6">
-                                <label for="csubject" class="sr-only">Subject</label>
-                                <input type="text" class="form-control" id="csubject" placeholder="Subject">
-                            </div><!-- End .col-sm-6 -->
-                        </div><!-- End .row -->
-
-                        <label for="cmessage" class="sr-only">Message</label>
-                        <textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Message *"></textarea>
-
-                        <button type="submit" class="btn btn-outline-primary-2 btn-minwidth-sm">
+                        </div>
+                       
+                        <button type="submit"  class="btn btn-secondary" id="Submit">
                             <span>SUBMIT</span>
                             <i class="icon-long-arrow-right"></i>
                         </button>
-                    </form><!-- End .contact-form --> *@
+
+                      
+
+
+                        @* <button type="submit"  class="btn btn-secondary" onclick="Click(@Model.IsSent)">
+                            <span>SUBMIT</span>
+                            <i class="icon-long-arrow-right"></i></button> *@
+
+                        @* @if (@ViewBag.isSent==true)
+                        {
+                            <script>
+
+                                Swal.fire({
+                                    position: "center",
+                                    icon: "success",
+                                    title: "Your Email has been Sent",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                            </script>
+                        }
+
+                        @if (@ViewBag.isSent==false)
+                        {
+                            <script>
+
+                                Swal.fire({
+                                    position: "center",
+                                    icon: "error",
+                                    title: "Failed to Send Email",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                            </script>
+                        } *@
+                      
+
+                     
+                    </form>
+                   @*  @if (Model != null && Model.IsSent==true)
+                    {
+                        <script>
+
+                            Swal.fire({
+                                title: "Good job!",
+                                text: "You clicked the button!",
+                                icon: "success"
+                            });
+                        </script>
+                    } *@
+                  
                 </div><!-- End .col-lg-6 -->
             </div><!-- End .row -->
 
@@ -211,6 +216,29 @@
                 </div><!-- End .row -->
             </div><!-- End .stores -->
         </div><!-- End .container -->
-        <div id="map"></div><!-- End #map -->
+       
     </div><!-- End .page-content -->
 </main><!-- End .main -->
+<script>
+   
+ 
+    var but = document.getElementById("Submit");
+    but.onclick = function (e) {
+       
+            
+          
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            popup: 'swal2-show',
+            backdrop: 'swal2-backdrop-show',
+            title:"Email Sent Successfully",
+            showConfirmButton: false,
+            timer: 1500
+        });
+       
+    };
+   
+ 
+</script>
+
