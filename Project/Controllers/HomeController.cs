@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Project.Models;
 using Project.Repositories;
@@ -20,6 +21,7 @@ namespace Project.Controllers
         }
 
 
+        [Authorize]
         public IActionResult Index()
         {
             var books = bookRepository.GetAll();

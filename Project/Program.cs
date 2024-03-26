@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project.Models;
@@ -18,6 +19,14 @@ namespace Project
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("BookStore"));
             });
+
+            //Register Identity Service (userManager -roleMnager- SigninManager)
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(options =>
+            {
+                options.User.AllowedUserNameCharacters = null;
+                options.User.RequireUniqueEmail = true;
+                
+            }).AddEntityFrameworkStores<BookStoreContext>();
 
             builder.Services.AddScoped<IBookRepository, BookRepository>();
             builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
