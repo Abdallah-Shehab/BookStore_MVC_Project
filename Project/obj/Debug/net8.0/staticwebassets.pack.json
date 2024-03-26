@@ -5,7 +5,15 @@
       "PackagePath": "staticwebassets\\Project.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
+=======
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\AboutUS\\Abdallah.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutUS\\Abdallah.jpg"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\assets\\css\\NewStyle.css",
+>>>>>>> 16312507ac76871fbcd2789f97585540948690a3
       "PackagePath": "staticwebassets\\assets\\css\\NewStyle.css"
     },
     {
@@ -5845,7 +5853,15 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\line-awesome\\line-awesome\\line-awesome\\fonts\\line-awesomeeb4f.woff2"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
+=======
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\AboutUsCards.css",
+      "PackagePath": "staticwebassets\\css\\AboutUsCards.css"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\site.css",
+>>>>>>> 16312507ac76871fbcd2789f97585540948690a3
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
@@ -5857,7 +5873,15 @@
       "PackagePath": "staticwebassets\\js\\Cart.js"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\js\\site.js",
+=======
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Nav_Links.js",
+      "PackagePath": "staticwebassets\\js\\Nav_Links.js"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",
+>>>>>>> 16312507ac76871fbcd2789f97585540948690a3
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
