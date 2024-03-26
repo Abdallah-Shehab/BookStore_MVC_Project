@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r0toY7IiGZFMzVpN9egHU/qKZ5vMg0cstRPiu6/9ThE=",
+  "Hash": "zo83xOztXy+wSoHB2HodcObwGJWdNaX3cE8rnn7WFnk=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -27795,6 +27795,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\vendor\\line-awesome\\line-awesome\\line-awesome\\fonts\\line-awesomeeb4f.woff2"
     },
     {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\AboutUsCards.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "css/AboutUsCards.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AboutUsCards.css"
+    },
+    {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\site.css",
       "SourceId": "Project",
       "SourceType": "Discovered",
@@ -27833,6 +27852,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\AboutUS\\Abdallah.jpg",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "Images/AboutUS/Abdallah.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\AboutUS\\Abdallah.jpg"
+    },
+    {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Cart.js",
       "SourceId": "Project",
       "SourceType": "Discovered",
@@ -27850,6 +27888,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Cart.js"
+    },
+    {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\Nav_Links.js",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "js/Nav_Links.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Nav_Links.js"
     },
     {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",
