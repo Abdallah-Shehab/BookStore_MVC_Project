@@ -12,6 +12,7 @@ namespace Project.Controllers
 
     public class AccountController : Controller
     {
+        #region Inject Services
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly ISenderEmail emailSender;
@@ -22,11 +23,9 @@ namespace Project.Controllers
             this.signInManager = signInManager;
             this.emailSender = emailSender;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        #endregion
 
+        #region Rgisteration
         [HttpGet]
         public IActionResult Register()
         {
@@ -72,21 +71,9 @@ namespace Project.Controllers
 
             return View("Register", userRegisterVM);
         }
+        #endregion
 
-        //Private Method Which will send confirmation email to user
-        private async Task SendConfirmationEmail(string? email, ApplicationUser user)
-        {
-            //Generate token 
-            var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-
-            //Build the Email Confirmation Link
-            var ConfirmationLink = Url.Action("ConfirmEmail", "Account",
-                new { Email = user.Email, Token = token }, protocol: HttpContext.Request.Scheme);
-
-            //Send the Confirmation Email to the User Email
-            await emailSender.SendEmailAsync(email, "Confirm Your Email", $"Please Confirm Your Account by <a href='{HtmlEncoder.Default.Encode(ConfirmationLink)}'>Clicking here</a>.", true);
-        }
-
+        #region Confirmation Email
         //Action of Confirmation result
         [HttpGet]
         [AllowAnonymous]
@@ -118,7 +105,9 @@ namespace Project.Controllers
             ViewBag.Message = "Email cannot be confirmed";
             return View();
         }
+        #endregion
 
+        #region Resend Confirmation Email
         //action opens the view(form) of resending confiramtion Email
         [HttpGet]
         [AllowAnonymous]
@@ -150,7 +139,9 @@ namespace Project.Controllers
             await SendConfirmationEmail(Email, user);
             return View("ConfirmationEmailSent");
         }
+        #endregion
 
+        #region Log in
         [HttpGet]
         public IActionResult LogIn()
         {
@@ -191,7 +182,9 @@ namespace Project.Controllers
             }
             return View("Login", userLoginVM);
         }
+        #endregion
 
+        #region Log Out
         [HttpGet]
         public async Task<IActionResult> LogOut()
         {
@@ -199,7 +192,9 @@ namespace Project.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("Login");
         }
-      
+        #endregion
+
+        #region Forgot Password Confirmation
         [HttpGet]
         public IActionResult ForgotPassword()
         {
@@ -216,10 +211,10 @@ namespace Project.Controllers
                 if (user != null && user.EmailConfirmed == true)
                 {
                     await SendForgotPasswordEmail(user.Email, user);
-                    return RedirectToAction("PasswordResetConfirmation", "Account");
+                    return RedirectToAction("ForgotPasswordConfirmation", "Account");
                 }
 
-                return RedirectToAction("PasswordResetConfirmation", "Account");
+                return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             return View(model);
@@ -227,11 +222,13 @@ namespace Project.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult PasswordResetConfirmation()
+        public IActionResult ForgotPasswordConfirmation()
         {
             return View();
         }
+        #endregion
 
+        #region Reset Password Confirmation
         // This action method will be invoked when the user clicks on the Password Reset Link in his/her email. and takes email and token from the link
         [HttpGet]
         public IActionResult ResetPassword(string? Email,string? Token)
@@ -287,6 +284,24 @@ namespace Project.Controllers
         {
             return View();
         }
+        #endregion
+
+        #region Two Private Method two send EmailConfirmation And ResetPasswordConfirmation
+       
+        //Private Method Which will send confirmation email to user
+        private async Task SendConfirmationEmail(string? email, ApplicationUser user)
+        {
+            //Generate token 
+            var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            //Build the Email Confirmation Link
+            var ConfirmationLink = Url.Action("ConfirmEmail", "Account",
+                new { Email = user.Email, Token = token }, protocol: HttpContext.Request.Scheme);
+
+            //Send the Confirmation Email to the User Email
+            await emailSender.SendEmailAsync(email, "Confirm Your Email", $"Please Confirm Your Account by <a href='{HtmlEncoder.Default.Encode(ConfirmationLink)}'>Clicking here</a>.", true);
+        }
+
         //private method which will send reset password email
         private async Task SendForgotPasswordEmail(string? email,ApplicationUser? user)
         {
@@ -301,5 +316,6 @@ namespace Project.Controllers
             await emailSender.SendEmailAsync(email, "Reset Your Password"
                 , $"Please Reset Your Passowrd by <a href='{HtmlEncoder.Default.Encode(ResetPasswordLink)}'>Clicking here</a>", true);
         }
+        #endregion
     }
 }
