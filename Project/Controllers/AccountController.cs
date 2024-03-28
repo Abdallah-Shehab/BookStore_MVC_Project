@@ -53,6 +53,7 @@ namespace Project.Controllers
                     Email = userRegisterVM.Email,
                     PasswordHash = userRegisterVM.Password,
                     Address = userRegisterVM.Address,
+                    image = "Defualt.png"
                 };
 
                 //create user in DB using userManger(service controls the operations on user)
