@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Project.Models;
 using Project.Repositories;
 using Project.ViewModels;
@@ -37,16 +38,10 @@ namespace Project.Controllers
 
         public async Task<IActionResult> Test(string email)
         {
-
-            ApplicationUser user = await userManager.FindByEmailAsync("abdallah.shafiq49@gmail.com");
+            ApplicationUser user = await userManager.FindByEmailAsync(email);
             return Json(user);
         }
 
-        public async Task<IActionResult> Test2(string email)
-        {
 
-            ApplicationUser user = await userManager.FindByNameAsync(email);
-            return Json(user);
-        }
     }
 }
