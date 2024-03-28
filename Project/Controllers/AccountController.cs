@@ -81,7 +81,7 @@ namespace Project.Controllers
 
             //Build the Email Confirmation Link
             var ConfirmationLink = Url.Action("ConfirmEmail", "Account",
-                new { UserId = user.Id, Token = token }, protocol: HttpContext.Request.Scheme);
+                new { Email = user.Email, Token = token }, protocol: HttpContext.Request.Scheme);
 
             //Send the Confirmation Email to the User Email
             await emailSender.SendEmailAsync(email, "Confirm Your Email", $"Please Confirm Your Account by <a href='{HtmlEncoder.Default.Encode(ConfirmationLink)}'>Clicking here</a>.", true);
@@ -90,9 +90,9 @@ namespace Project.Controllers
         //Action of Confirmation result
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> ConfirmEmail(int? UserId, string Token)
+        public async Task<IActionResult> ConfirmEmail(string? Email, string Token)
         {
-            if (UserId == null || Token == null)
+            if (Email == null || Token == null)
             {
                 ViewBag.Message = "The link is Invalid or Expired";
                 return View();
@@ -100,10 +100,10 @@ namespace Project.Controllers
 
 
             //Find user by id
-            ApplicationUser user = await userManager.FindByIdAsync(UserId.ToString());
+            ApplicationUser user = await userManager.FindByEmailAsync(Email);
             if (user == null)
             {
-                ViewBag.ErrorMessage = $"The User Id {UserId} is Invalid";
+                ViewBag.ErrorMessage = $"The User Email {Email} is Invalid";
                 return NotFound();
             }
 
@@ -199,13 +199,94 @@ namespace Project.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("Login");
         }
-
+      
         [HttpGet]
         public IActionResult ForgotPassword()
         {
             return View("ForgotPassword");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = await userManager.FindByEmailAsync(model.Email);
+                if (user != null && user.EmailConfirmed == true)
+                {
+                    await SendForgotPasswordEmail(user.Email, user);
+                    return RedirectToAction("PasswordResetConfirmation", "Account");
+                }
+
+                return RedirectToAction("PasswordResetConfirmation", "Account");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult PasswordResetConfirmation()
+        {
+            return View();
+        }
+
+        // This action method will be invoked when the user clicks on the Password Reset Link in his/her email. and takes email and token from the link
+        [HttpGet]
+        public IActionResult ResetPassword(string? Email,string? Token)
+        {
+            if (Email == null && Token == null)
+            {
+                ViewBag.ErrorTitle = "Invalid Password Reset Token";
+                ViewBag.ErrorMessage = "The Link is Expired or Invalid";
+                return View("Error");
+            }
+            else
+            {
+                ResetPasswordViewModel viewModel = new ResetPasswordViewModel();
+                viewModel.Email = Email;
+                viewModel.Token = Token;
+                return View(viewModel);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = await userManager.FindByEmailAsync(model.Email);
+
+                if(user != null)
+                {
+                    var result = await userManager.ResetPasswordAsync(user,model.Token,model.NewPassword);
+
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("ResetPasswordConfirmation", "Account");
+                    }
+
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+
+                    return View(model);
+                }
+
+                return RedirectToAction("ResetPasswordConfirmation","Account");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
         //private method which will send reset password email
         private async Task SendForgotPasswordEmail(string? email,ApplicationUser? user)
         {
