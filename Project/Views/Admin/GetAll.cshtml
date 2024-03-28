@@ -16,8 +16,6 @@
                         <th scope="col">First Name</th>
                         <th scope="col">Last Name</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Update</th>
-                        <th scope="col">Delete</th>
                         <!-- Add more columns as needed -->
                     </tr>
                 </thead>
@@ -29,18 +27,12 @@
                             <td>@admin.FirstName</td>
                             <td>@admin.LastName</td>
                             <td>@admin.Email</td>
-                            <td><a href="@Url.Action("EditAdmin", "Admin", new { id = admin.Id })" class="btn btn-primary">Update</a></td>
-                            <td><a href="@Url.Action("DeleteAdmin", "Admin", new { id = admin.Id })" class="btn btn-danger">Delete</a></td>
-
-
+                            <td>@admin.</td>
                             <!-- Add more columns as needed -->
                         </tr>
                     }
                 </tbody>
-                <td><a href="@Url.Action("AddAdmin", "Admin")" class="btn btn-danger">Add New Admin</a></td>
-
             </table>
-
         </div>
     </div>
 </div>

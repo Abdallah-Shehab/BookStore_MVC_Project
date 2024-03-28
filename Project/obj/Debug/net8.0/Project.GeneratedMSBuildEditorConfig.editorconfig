@@ -38,18 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Admin/AddAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQWRtaW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Admin/DeleteAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQWRtaW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Admin/EditAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFkbWluLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Admin/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,10 +48,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Dashboard/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Dashboard/GetAll.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdldEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Home/AboutUs.cshtml]
@@ -78,10 +62,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCb29rRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Home/Cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Home/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Order/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/ITI 9M  44/23-MVC/BookStore_MVC_Project/Project/Views/Shared/.cshtml]

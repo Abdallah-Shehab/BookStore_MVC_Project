@@ -1,9 +1,4 @@
-﻿
-@{
-    string controllerName = ViewContext.RouteData.Values["controller"].ToString();
-    string actionName = ViewContext.RouteData.Values["action"].ToString();
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 
@@ -35,7 +30,6 @@
     <link rel="stylesheet" href="~/assets/css/style.css">
     <link rel="stylesheet" href="~/assets/css/NewStyle.css">
     <link rel="stylesheet" href="~/css/AboutUsCards.css">
-    <link rel="stylesheet" href="~/css/Account/Login.css">
      
     
     <link rel="stylesheet" href="~/assets/css/plugins/magnific-popup/magnific-popup.css">
@@ -47,179 +41,165 @@
 </head>
 <body>
     <div class="page-wrapper">
-        
-  
-
-            <header class="header">
-                @* <div class="header-top">
-            <div class="container">
-            <div class="header-right">
-            <ul class="top-menu">
-            <li>
-            <a href="#">Links</a>
-            <ul>
-            <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
-            <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
-            </ul>
-            </li>
-            </ul><!-- End .top-menu -->
-            </div><!-- End .header-right -->
-            </div><!-- End .container -->
+        <header class="header">
+            @* <div class="header-top">
+                <div class="container">
+                    <div class="header-right">
+                        <ul class="top-menu">
+                            <li>
+                                <a href="#">Links</a>
+                                <ul>
+                                    <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
+                                    <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
+                                </ul>
+                            </li>
+                        </ul><!-- End .top-menu -->
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
             </div><!-- End .header-top -->
-            *@
-                <div class="header-middle sticky-header">
-                    <div class="container">
-                        <div class="header-left">
-                            <button class="mobile-menu-toggler">
-                                <span class="sr-only">Toggle mobile menu</span>
-                                <i class="icon-bars"></i>
-                            </button>
-                            <a href="~/Home/index" class="logo">
-                                <img src="~/assets/images/logo.png" alt="Molla Logo" width="105" height="25">
-                                <span style="font-family: Abril Fatface, serif;
+ *@
+            <div class="header-middle sticky-header">
+                <div class="container">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggler">
+                            <span class="sr-only">Toggle mobile menu</span>
+                            <i class="icon-bars"></i>
+                        </button>
+                        <a href="~/Home/index" class="logo">
+                            <img src="~/assets/images/logo.png" alt="Molla Logo" width="105" height="25">
+                            <span style="font-family: Abril Fatface, serif;
                         font-weight: 400;
                         font-style: normal;">BookPulse</span>
+                        </a>
+
+                        <nav class="main-nav">
+                            <ul class="menu sf-arrows">
+                                <li class="Link">
+                                    <a   href="~/Home">Home</a>
+                                </li>
+                                <li class="Link">
+                                    <a href="#" class="sf-with-ul">Categories</a>
+                                    <div class="megamenu megamenu-sm">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-6">
+                                                <div class="menu-col">
+                                                    <div class="menu-title">Product Details</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="~/Home/category">All</a></li>
+                                                        <li><a href="product-centered.html">Centered</a></li>
+                                                        <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
+                                                        <li><a href="product-gallery.html">Gallery</a></li>
+                                                        <li><a href="product-sticky.html">Sticky Info</a></li>
+                                                        <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
+                                                        <li><a href="product-fullwidth.html">Full Width</a></li>
+                                                        <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
+                                                    </ul>
+                                                </div><!-- End .menu-col -->
+                                            </div><!-- End .col-md-6 -->
+
+                                            <div class="col-md-6">
+                                                <div class="banner banner-overlay">
+                                                    <a href="~/Home/category">
+                                                        <img src="~/assets/images/menu/banner-2.jpg" alt="Banner">
+
+                                                        <div class="banner-content banner-content-bottom">
+                                                            <div class="banner-title text-white">New Trends<br><span><strong>spring 2019</strong></span></div><!-- End .banner-title -->
+                                                        </div><!-- End .banner-content -->
+                                                    </a>
+                                                </div><!-- End .banner -->
+                                            </div><!-- End .col-md-6 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .megamenu megamenu-md -->
+                                </li>
+                                <li class="Link"><a href="~/Home/AboutUs">About Us</a></li>
+                                <li class ="Link"><a href="~/Contact/index">Contact Us</a></li>
+                            </ul>
+                        </nav><!-- End .main-nav -->
+                    </div><!-- End .header-left -->
+
+                    <div class="header-right">
+                        <div class="header-search">
+                            <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
+                            <form action="#" method="get">
+                                <div class="header-search-wrapper">
+                                    <label for="q" class="sr-only">Search</label>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search in..." required>
+                                </div><!-- End .header-search-wrapper -->
+                            </form>
+                        </div><!-- End .header-search -->
+                        <div class="dropdown cart-dropdown">
+                          @*   <a href="Asp" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                                <i class="icon-shopping-cart"></i>
+                                <span class="cart-count">2</span>
+                            </a> *@
+                            <a href="@Url.Action("Order", "cart")" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                                <i class="icon-shopping-cart"></i>
+                                <span class="cart-count">0</span>
                             </a>
 
-                            <nav class="main-nav">
-                                <ul class="menu sf-arrows">
-                                    <li class="Link">
-                                        <a href="~/Home">Home</a>
-                                    </li>
-                                    <li class="Link">
-                                        <a href="#" class="sf-with-ul">Categories</a>
-                                        <div class="megamenu megamenu-sm">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-6">
-                                                    <div class="menu-col">
-                                                        <div class="menu-title">Product Details</div><!-- End .menu-title -->
-                                                        <ul>
-                                                            <li><a href="~/Home/category">All</a></li>
-                                                            <li><a href="product-centered.html">Centered</a></li>
-                                                            <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                                                            <li><a href="product-gallery.html">Gallery</a></li>
-                                                            <li><a href="product-sticky.html">Sticky Info</a></li>
-                                                            <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
-                                                            <li><a href="product-fullwidth.html">Full Width</a></li>
-                                                            <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
-                                                        </ul>
-                                                    </div><!-- End .menu-col -->
-                                                </div><!-- End .col-md-6 -->
 
-                                                <div class="col-md-6">
-                                                    <div class="banner banner-overlay">
-                                                        <a href="~/Home/category">
-                                                            <img src="~/assets/images/menu/banner-2.jpg" alt="Banner">
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-cart-products">
+                                    <div class="product">
+                                        <div class="product-cart-details">
+                                            <h4 class="product-title">
+                                                <a href="product.html">Beige knitted elastic runner shoes</a>
+                                            </h4>
 
-                                                            <div class="banner-content banner-content-bottom">
-                                                                <div class="banner-title text-white">New Trends<br><span><strong>spring 2019</strong></span></div><!-- End .banner-title -->
-                                                            </div><!-- End .banner-content -->
-                                                        </a>
-                                                    </div><!-- End .banner -->
-                                                </div><!-- End .col-md-6 -->
-                                            </div><!-- End .row -->
-                                        </div><!-- End .megamenu megamenu-md -->
-                                    </li>
-                                    <li class="Link"><a href="~/Home/AboutUs">About Us</a></li>
-                                    <li class="Link"><a href="~/Contact/index">Contact Us</a></li>
-                                </ul>
-                            </nav><!-- End .main-nav -->
-                        </div><!-- End .header-left -->
-                    @if (controllerName != "Account" && actionName != "LogIn")
-                    {
-                        <div class="header-right">
-                            <div class="header-search">
-                                <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
-                                <form action="#" method="get">
-                                    <div class="header-search-wrapper">
-                                        <label for="q" class="sr-only">Search</label>
-                                        <input type="search" class="form-control" name="q" id="q" placeholder="Search in..." required>
-                                    </div><!-- End .header-search-wrapper -->
-                                </form>
-                            </div><!-- End .header-search -->
-                            <div class="dropdown cart-dropdown">
-                                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                                    <i class="icon-shopping-cart"></i>
-                                    <span class="cart-count">2</span>
-                                </a>
+                                            <span class="cart-product-info">
+                                                <span class="cart-product-qty">1</span>
+                                                x $84.00
+                                            </span>
+                                        </div><!-- End .product-cart-details -->
 
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <div class="dropdown-cart-products">
-                                        <div class="product">
-                                            <div class="product-cart-details">
-                                                <h4 class="product-title">
-                                                    <a href="product.html">Beige knitted elastic runner shoes</a>
-                                                </h4>
+                                        <figure class="product-image-container">
+                                            <a href="product.html" class="product-image">
+                                                <img src="~/assets/images/products/cart/product-1.jpg" alt="product">
+                                            </a>
+                                        </figure>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                    </div><!-- End .product -->
 
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    x $84.00
-                                                </span>
-                                            </div><!-- End .product-cart-details -->
+                                    <div class="product">
+                                        <div class="product-cart-details">
+                                            <h4 class="product-title">
+                                                <a href="product.html">Blue utility pinafore denim dress</a>
+                                            </h4>
 
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="~/assets/images/products/cart/product-1.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                                        </div><!-- End .product -->
+                                            <span class="cart-product-info">
+                                                <span class="cart-product-qty">1</span>
+                                                x $76.00
+                                            </span>
+                                        </div><!-- End .product-cart-details -->
 
-                                        <div class="product">
-                                            <div class="product-cart-details">
-                                                <h4 class="product-title">
-                                                    <a href="product.html">Blue utility pinafore denim dress</a>
-                                                </h4>
+                                        <figure class="product-image-container">
+                                            <a href="product.html" class="product-image">
+                                                <img src="~/assets/images/products/cart/product-2.jpg" alt="product">
+                                            </a>
+                                        </figure>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                    </div><!-- End .product -->
+                                </div><!-- End .cart-product -->
 
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    x $76.00
-                                                </span>
-                                            </div><!-- End .product-cart-details -->
+                                <div class="dropdown-cart-total">
+                                    <span>Total</span>
 
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="~/assets/images/products/cart/product-2.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                                        </div><!-- End .product -->
-                                    </div><!-- End .cart-product -->
+                                    <span class="cart-total-price">$160.00</span>
+                                </div><!-- End .dropdown-cart-total -->
 
-                                    <div class="dropdown-cart-total">
-                                        <span>Total</span>
+                                <div class="dropdown-cart-action">
+                                    <a href="/cart" class="btn btn-primary">View Cart</a>
+                                    <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+                                </div><!-- End .dropdown-cart-total -->
+                            </div><!-- End .dropdown-menu -->
+                            <a style="margin-left:20px;" href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a>
 
-                                        <span class="cart-total-price">$160.00</span>
-                                    </div><!-- End .dropdown-cart-total -->
-
-                                    <div class="dropdown-cart-action">
-                                        <a href="/cart" class="btn btn-primary">View Cart</a>
-                                        <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
-                                    </div><!-- End .dropdown-cart-total -->
-                                </div><!-- End .dropdown-menu -->
-
-
-                            </div><!-- End .cart-dropdown -->
-                            @if (User.Identity.IsAuthenticated == true)
-                            {
-
-                                <a style="margin-left:50px;" href="~/Account/Logout"><i class="icon-user"></i>Log out</a>
-                                @* <a style="margin-left:20px;" href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a> *@
-                            }
-                            else
-                            {
-                                <a style="margin-left:50px;" href="~/Account/Login"><i class="icon-user"></i>Login</a>
-
-
-                            }
-                        </div><!-- End .header-right -->
-                    }
+                        </div><!-- End .cart-dropdown -->
+                    </div><!-- End .header-right -->
                 </div><!-- End .container -->
-                </div><!-- End .header-middle -->
-            </header>
+            </div><!-- End .header-middle -->
+        </header><!-- End .header -->
 
-            <!-- End .header -->
-         
         
         
         
@@ -229,7 +209,7 @@
 
 
 
-        @if (controllerName != "Account" && actionName != "LogIn"){
+
         <footer class="footer footer-2">
             <div class="footer-middle">
                 <div class="container">
@@ -330,9 +310,9 @@
                 </div><!-- End .container -->
             </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
-    }
     </div><!-- End .page-wrapper -->
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
 
     @* <partial name="_NavPartialBookDetails" /> *@
 

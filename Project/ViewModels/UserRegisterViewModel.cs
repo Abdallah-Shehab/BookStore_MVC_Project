@@ -5,9 +5,9 @@ namespace Project.ViewModels
     public class UserRegisterViewModel
     {
         [Required]
-        [MaxLength(50, ErrorMessage = "First name Should be less than 50 characters")]
-        [MinLength(3, ErrorMessage = "First name Should be more than 3 characters")]
-        [Display(Name = "First Name")]
+        [MaxLength(50,ErrorMessage ="First name Should be less than 50 characters")]
+        [MinLength(3,ErrorMessage = "First name Should be more than 3 characters")]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
         [Required]
@@ -17,24 +17,21 @@ namespace Project.ViewModels
         public string LastName { get; set; }
 
         [Required]
-        [RegularExpression("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", ErrorMessage = "Please enter a valid email address")]
+        [RegularExpression("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",ErrorMessage = "Please enter a valid email address")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*\\W)[A-Za-z\\d\\W]{8,}$", ErrorMessage = "Password must be at least 8 characters, at least one uppercase letter, one lowercase letter, one digit, and one non-letter/non-digit character.\r\n")]
+        [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*\\W)[A-Za-z\\d\\W]{8,}$",ErrorMessage = "Password must be at least 8 characters, at least one uppercase letter, one lowercase letter, one digit, and one non-letter/non-digit character.\r\n")]
         public string Password { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Not Matched Password.")]
-        [Display(Name = "Confirm Passowrd")]
+        [Compare("Password",ErrorMessage = "Not Matched Password.")]
+        [Display(Name ="Confirm Passowrd")]
         public string ConfirmPassord { get; set; }
 
         [Required]
         public string Address { get; set; }
-
-        [Required]
-        public string Phone { get; set; }
     }
 }

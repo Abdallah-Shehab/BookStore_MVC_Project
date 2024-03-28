@@ -5861,10 +5861,6 @@
       "PackagePath": "staticwebassets\\css\\AboutUsCards.css"
     },
     {
-      "Id": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\wwwroot\\css\\Account\\Login.css",
-      "PackagePath": "staticwebassets\\css\\Account\\Login.css"
-    },
-    {
       "Id": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

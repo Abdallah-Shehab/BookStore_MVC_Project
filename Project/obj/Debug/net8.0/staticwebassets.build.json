@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5Cx6Z0M/Nlg37vUH5rhKD9WAiQe3z6dSZSjCsjnpICc=",
+  "Hash": "aWg8x2CviCizIHQK4lDgXpWRd6zlYcnU9V417bMDupo=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -27831,25 +27831,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AboutUsCards.css"
-    },
-    {
-      "Identity": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\wwwroot\\css\\Account\\Login.css",
-      "SourceId": "Project",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\wwwroot\\",
-      "BasePath": "_content/Project",
-      "RelativePath": "css/Account/Login.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Account\\Login.css"
     },
     {
       "Identity": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
