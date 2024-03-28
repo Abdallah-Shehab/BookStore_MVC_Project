@@ -30,12 +30,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVU1xBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/ConfirmationEmailSent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtYXRpb25FbWFpbFNlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/RegistrationSuccessful.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb25TdWNjZXNzZnVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Account/ResendConfirmationEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNlbmRDb25maXJtYXRpb25FbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Technical Materials/ASP.Net Core(MVC)/Project/BookStore_MVC_Project/Project/Views/Contact/ContactUs.cshtml]

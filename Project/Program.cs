@@ -29,7 +29,11 @@ namespace Project
                 options.User.AllowedUserNameCharacters = null;
                 options.User.RequireUniqueEmail = true;
 
-            }).AddEntityFrameworkStores<BookStoreContext>();
+                //force user to confirm his Email
+                options.SignIn.RequireConfirmedEmail = true;
+
+            }).AddEntityFrameworkStores<BookStoreContext>()
+            .AddDefaultTokenProviders(); //default token providers that generate tokens for email confirmation, password reset
 
             builder.Services.AddScoped<IBookRepository, BookRepository>();
             builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
@@ -38,10 +42,14 @@ namespace Project
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
             builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+
             builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 
             builder.Services.AddAutoMapper(typeof(MapperProfile));
 
+ 
+            builder.Services.AddScoped<ISenderEmail, EmailSender>();
+ 
 
             var app = builder.Build();
 

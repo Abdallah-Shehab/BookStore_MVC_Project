@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project.Models;
 using Project.Repositories;
@@ -9,12 +10,13 @@ namespace Project.Controllers
     public class TestController : Controller
     {
         BookStoreContext db;
-
+        UserManager<ApplicationUser> userManager;
         IBookRepository bookRepository;
-        public TestController(BookStoreContext db, IBookRepository bookRepository)
+        public TestController(BookStoreContext db, IBookRepository bookRepository, UserManager<ApplicationUser> userManager)
         {
             this.db = db;
             this.bookRepository = bookRepository;
+            this.userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -31,6 +33,12 @@ namespace Project.Controllers
         {
             //BookDetailsVM bookDetail = bookRepository.GetBookDetails(6);
             return View("BookDetail");
+        }
+
+        public async Task<IActionResult> Test()
+        {
+            ApplicationUser user = await userManager.FindByIdAsync("5");
+            return Json(user);
         }
     }
 }

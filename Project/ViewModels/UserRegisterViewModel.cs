@@ -35,6 +35,7 @@ namespace Project.ViewModels
         public string Address { get; set; }
 
         [Required]
+        [RegularExpression("^(010|011|015)\\d{8}$",ErrorMessage = "Please enter a valid Egyptian phone number starting with 010, 011, or 015 followed by 8 digits.")]
         public string Phone { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "85+4XcplpMxl5Zd5ACmOZ6me1LwHQ0c7Ag9XmiEroyU=",
+  "Hash": "bMq4fzCW9H/LZigly0hDf6XrJKlC5O57ll3HexZz1oY=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -27831,6 +27831,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AboutUsCards.css"
+    },
+    {
+      "Identity": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\Account\\Login.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "css/Account/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Account\\Login.css"
     },
     {
       "Identity": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
