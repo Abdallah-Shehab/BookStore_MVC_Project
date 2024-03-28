@@ -8017,11 +8017,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
       "projectName": "Project",
       "projectPath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\--\\.nuget\\packages\\",
       "outputPath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\obj\\",
+=======
+      "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
+      "projectName": "Project",
+      "projectPath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\--\\.nuget\\packages\\",
+      "outputPath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\obj\\",
+>>>>>>> 6bb4befe12d2b4eda9538c18ac0ab14e1d424e02
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\--\\AppData\\Roaming\\NuGet\\NuGet.Config",
