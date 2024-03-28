@@ -76,7 +76,7 @@ namespace Project.Controllers
             return View("Register", userRegisterVM);
         }
 
-        //Method Which will send confirmation email to user
+        //Private Method Which will send confirmation email to user
         private async Task SendConfirmationEmail(string? email, ApplicationUser user)
         {
             //Generate token 
@@ -157,6 +157,7 @@ namespace Project.Controllers
         [HttpGet]
         public IActionResult LogIn()
         {
+            ViewBag.Confirm = true;
             return View("Login");
         }
 
@@ -166,6 +167,7 @@ namespace Project.Controllers
 
         public async Task<IActionResult> Login(UserLoginViewModel userLoginVM)
         {
+            ViewBag.Confirm = true;
             if (ModelState.IsValid)
             {
                 ApplicationUser userFromDb = await userManager.FindByEmailAsync(userLoginVM.Email);
@@ -174,7 +176,8 @@ namespace Project.Controllers
                 {
                     if(userFromDb.EmailConfirmed == false)
                     {
-                        ModelState.AddModelError("Email", "Email not confirmed yet.");
+                        ModelState.AddModelError("Email", "Email not confirmed yet, Press Confirm Email.");
+                        ViewBag.Confirm = false;
                         return View("Login", userLoginVM);
                     }
                     bool founded = await userManager.CheckPasswordAsync(userFromDb, userLoginVM.Password);
@@ -204,6 +207,27 @@ namespace Project.Controllers
             //Destroy cookie
             await signInManager.SignOutAsync();
             return RedirectToAction("Login");
+        }
+
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View("ForgotPassword");
+        }
+
+        //private method which will send reset password email
+        private async Task SendForgotPasswordEmail(string? email,ApplicationUser? user)
+        {
+            //Generate Reset Password Token
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+            //Generate Reset Password Link
+            var ResetPasswordLink = Url.Action("ResetPassword", "Account"
+                , new { Email = email, Token = token },protocol: HttpContext.Request.Scheme);
+
+            //send reset password Email to user
+            await emailSender.SendEmailAsync(email, "Reset Your Password"
+                , $"Please Reset Your Passowrd by <a href='{HtmlEncoder.Default.Encode(ResetPasswordLink)}'>Clicking here</a>", true);
         }
     }
 }
