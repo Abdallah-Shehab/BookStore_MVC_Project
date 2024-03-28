@@ -19,7 +19,7 @@ namespace Project.Controllers
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly ISenderEmail emailSender;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,ISenderEmail emailSender)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ISenderEmail emailSender)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -61,7 +61,7 @@ namespace Project.Controllers
                 if (result.Succeeded)
                 {
                     //send confirmation email
-                    await SendConfirmationEmail(userRegisterVM.Email,user);
+                    await SendConfirmationEmail(userRegisterVM.Email, user);
 
                     /*//make cookie foe the user
                     await signInManager.SignInAsync(user, false);*/
@@ -76,7 +76,7 @@ namespace Project.Controllers
             return View("Register", userRegisterVM);
         }
 
-        //Method Which will send confirmation email to user
+        //Private Method Which will send confirmation email to user
         private async Task SendConfirmationEmail(string? email, ApplicationUser user)
         {
             //Generate token 
@@ -84,18 +84,18 @@ namespace Project.Controllers
 
             //Build the Email Confirmation Link
             var ConfirmationLink = Url.Action("ConfirmEmail", "Account",
-                new { UserId = user.Id, Token = token }, protocol: HttpContext.Request.Scheme);
+                new { Email = user.Email, Token = token }, protocol: HttpContext.Request.Scheme);
 
             //Send the Confirmation Email to the User Email
-            await emailSender.SendEmailAsync(email, "Confirm Your Email", $"Please Confirm Your Account by <a href='{HtmlEncoder.Default.Encode(ConfirmationLink)}'>Clicking here</a>.", true);
+            await emailSender.SendEmailAsync(email, "Confirm Your Email", $"Please Confirm Your Account by {email} <a href='{HtmlEncoder.Default.Encode(ConfirmationLink)}'>Clicking here</a>.", true);
         }
 
         //Action of Confirmation result
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> ConfirmEmail(int? UserId, string Token)
+        public async Task<IActionResult> ConfirmEmail(string? Email, string Token)
         {
-            if (UserId == null || Token == null)
+            if (Email == null || Token == null)
             {
                 ViewBag.Message = "The link is Invalid or Expired";
                 return View();
@@ -103,10 +103,10 @@ namespace Project.Controllers
 
 
             //Find user by id
-            ApplicationUser user = await userManager.FindByIdAsync(UserId.ToString());
+            ApplicationUser user = await userManager.FindByEmailAsync(Email);
             if (user == null)
             {
-                ViewBag.ErrorMessage = $"The User Id {UserId} is Invalid";
+                ViewBag.ErrorMessage = $"The User Email : {Email} is Invalid";
                 return NotFound();
             }
 
@@ -120,6 +120,7 @@ namespace Project.Controllers
 
             ViewBag.Message = "Email cannot be confirmed";
             return View();
+
         }
 
         //action opens the view(form) of resending confiramtion Email
@@ -145,7 +146,7 @@ namespace Project.Controllers
         {
             ApplicationUser user = await userManager.FindByEmailAsync(Email);
 
-            if(user == null || await userManager.IsEmailConfirmedAsync(user))
+            if (user == null || await userManager.IsEmailConfirmedAsync(user))
             {
                 return View("ConfirmationEmailSent");
             }
@@ -157,6 +158,7 @@ namespace Project.Controllers
         [HttpGet]
         public IActionResult LogIn()
         {
+            ViewBag.Confirm = true;
             return View("Login");
         }
 
@@ -166,15 +168,17 @@ namespace Project.Controllers
 
         public async Task<IActionResult> Login(UserLoginViewModel userLoginVM)
         {
+            ViewBag.Confirm = true;
             if (ModelState.IsValid)
             {
                 ApplicationUser userFromDb = await userManager.FindByEmailAsync(userLoginVM.Email);
 
                 if (userFromDb != null)
                 {
-                    if(userFromDb.EmailConfirmed == false)
+                    if (userFromDb.EmailConfirmed == false)
                     {
-                        ModelState.AddModelError("Email", "Email not confirmed yet.");
+                        ModelState.AddModelError("Email", "Email not confirmed yet, Press Confirm Email.");
+                        ViewBag.Confirm = false;
                         return View("Login", userLoginVM);
                     }
                     bool founded = await userManager.CheckPasswordAsync(userFromDb, userLoginVM.Password);
@@ -204,6 +208,27 @@ namespace Project.Controllers
             //Destroy cookie
             await signInManager.SignOutAsync();
             return RedirectToAction("Login");
+        }
+
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View("ForgotPassword");
+        }
+
+        //private method which will send reset password email
+        private async Task SendForgotPasswordEmail(string? email, ApplicationUser? user)
+        {
+            //Generate Reset Password Token
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+            //Generate Reset Password Link
+            var ResetPasswordLink = Url.Action("ResetPassword", "Account"
+                , new { Email = email, Token = token }, protocol: HttpContext.Request.Scheme);
+
+            //send reset password Email to user
+            await emailSender.SendEmailAsync(email, "Reset Your Password"
+                , $"Please Reset Your Passowrd by <a href='{HtmlEncoder.Default.Encode(ResetPasswordLink)}'>Clicking here</a>", true);
         }
     }
 }

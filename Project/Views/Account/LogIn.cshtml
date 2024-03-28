@@ -28,18 +28,28 @@
                         <label class="custom-control-label" for="signin-remember">Remember Me</label>
                     </div><!-- End .custom-checkbox -->
 
-                    <a href="#" class="forgot-link">Forgot Your Password?</a>
+                    <a asp-controller="Account" asp-action="ForgotPassword" class="forgot-link">Forgot Your Password?</a>
                 </div><!-- End .form-footer -->
 
 
 
-                <button type="submit"  class="btn btn-outline-primary-2">Log in</button>
+                <button type="submit"  class="btn btn-outline-primary-2">Log in</button>    
+
  
                 <br />
                 <div class="form-group">
+ 
+
+                
+                @if (!ViewBag.Confirm)
+                {
                     <a class="btn btn-outline-primary-2" asp-controller="Account"
                        asp-action="ResendConfirmationEmail">Confirm Email</a>
+
+                }
+
                 </div>
+
 
             </form>
             <p class="sign-up-label">

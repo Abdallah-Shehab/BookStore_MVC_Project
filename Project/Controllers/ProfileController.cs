@@ -28,6 +28,7 @@ namespace Project.Controllers
             UserDetails userInfo = userProfileRepository.UserDetails(getUserID());
             //return Json(result);
             return View("Profile", userInfo);
+            //return Json(userInfo);
         }
 
         [HttpGet]

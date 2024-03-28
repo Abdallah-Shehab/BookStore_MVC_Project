@@ -35,9 +35,17 @@ namespace Project.Controllers
             return View("BookDetail");
         }
 
-        public async Task<IActionResult> Test()
+        public async Task<IActionResult> Test(string email)
         {
-            ApplicationUser user = await userManager.FindByIdAsync("5");
+
+            ApplicationUser user = await userManager.FindByEmailAsync("abdallah.shafiq49@gmail.com");
+            return Json(user);
+        }
+
+        public async Task<IActionResult> Test2(string email)
+        {
+
+            ApplicationUser user = await userManager.FindByNameAsync(email);
             return Json(user);
         }
     }
