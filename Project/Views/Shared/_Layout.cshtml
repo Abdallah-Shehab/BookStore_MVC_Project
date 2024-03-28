@@ -2,7 +2,10 @@
 @{
     string controllerName = ViewContext.RouteData.Values["controller"].ToString();
     string actionName = ViewContext.RouteData.Values["action"].ToString();
+   
 }
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,10 +37,8 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="~/assets/css/style.css">
     <link rel="stylesheet" href="~/assets/css/NewStyle.css">
-    <link rel="stylesheet" href="~/css/AboutUsCards.css">
-    <link rel="stylesheet" href="~/css/Account/Login.css">
-     
-    
+    @* <link rel="stylesheet" href="~/css/AboutUsCards.css"> *@
+
     <link rel="stylesheet" href="~/assets/css/plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="~/assets/css/plugins/nouislider/nouislider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,6 +123,9 @@
                                     </li>
                                     <li class="Link"><a href="~/Home/AboutUs">About Us</a></li>
                                     <li class="Link"><a href="~/Contact/index">Contact Us</a></li>
+
+                              
+                                 
                                 </ul>
                             </nav><!-- End .main-nav -->
                         </div><!-- End .header-left -->
@@ -202,8 +206,9 @@
                             </div><!-- End .cart-dropdown -->
                             @if (User.Identity.IsAuthenticated == true)
                             {
-
-                                <a style="margin-left:50px;" href="~/Account/Logout"><i class="icon-user"></i>Log out</a>
+                              
+                                <partial name="Popup"/>
+                                @* <a style="margin-left:50px;" href="~/Account/Logout"><i class="icon-user"></i>Log out</a> *@
                                 @* <a style="margin-left:20px;" href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a> *@
                             }
                             else
