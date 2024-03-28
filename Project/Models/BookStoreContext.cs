@@ -27,12 +27,16 @@ namespace Project.Models
  
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
- 
 
+
+        // Add DbSet properties for Identity tables
+        public DbSet<ApplicationUser> AspNetUsers { get; set; }
+        public DbSet<IdentityRole<int>> AspNetRoles { get; set; }
+        public DbSet<IdentityUserRole<int>> AspNetUserRoles { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.
-                UseSqlServer("Data Source=.;Initial Catalog=BookStore;Integrated Security=True;Encrypt=False");
+                UseSqlServer("Data Source=HALA_MANSOUR\\SQLEXPRESS;Initial Catalog=BookStore;Integrated Security=True;Encrypt=False");
             base.OnConfiguring(optionsBuilder);
         }
 

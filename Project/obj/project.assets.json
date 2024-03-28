@@ -8012,19 +8012,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SHaFiQ\\.nuget\\packages\\": {}
+    "C:\\Users\\--\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+      "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
-      "packagesPath": "C:\\Users\\SHaFiQ\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI\\MVC_Project\\Project\\Project\\obj\\",
+      "projectPath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\--\\.nuget\\packages\\",
+      "outputPath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SHaFiQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\--\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8093,7 +8093,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
