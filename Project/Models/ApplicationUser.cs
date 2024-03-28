@@ -12,6 +12,7 @@ namespace Project.Models
 
         public String LastName { get; set; }
 
+        public string image { get; set; }
         [MaxLength(100)]
         public string Address { get; set; }
 

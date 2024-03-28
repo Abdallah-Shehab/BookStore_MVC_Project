@@ -3,12 +3,14 @@
 @{
     ViewData["Title"] = "LogIn";
 }
+<link rel="stylesheet" href="~/css/Account/Login.css">
 
 <div class="container-fluid">
 
     <div class="row justify-content-center align-items-center">
 
         <div class="form-container">
+        
             <p class="title">LOGIN</p>
             <form class="form" asp-action="LogIn">
                
@@ -30,7 +32,7 @@
                 </div><!-- End .form-footer -->
 
 
-                <button type="submit "  class="btn btn-outline-primary-2">Log in</button>
+                <button type="submit"  class="btn btn-outline-primary-2">Log in</button>
             </form>
             <p class="sign-up-label">
                 Don't have an account?<span class="sign-up-link"><a href="~/Account/Register">Register !</a></span>

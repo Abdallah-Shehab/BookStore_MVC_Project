@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Project.Filters;
 using Project.Models;
 using Project.ViewModels;
+using System.Security.Claims;
 
 namespace Project.Controllers
 {
@@ -86,7 +87,13 @@ namespace Project.Controllers
                     bool founded = await userManager.CheckPasswordAsync(userFromDb, userLoginVM.Password);
                     if (founded)
                     {
-                        await signInManager.SignInAsync(userFromDb, userLoginVM.RememberMe);
+                        //add cookie extra info
+
+                        List<Claim> claims = [new Claim("image", userFromDb.image)];
+
+
+
+                        await signInManager.SignInWithClaimsAsync(userFromDb, userLoginVM.RememberMe, claims);
                         return RedirectToAction("index", "Home");
                     }
                     else
