@@ -30,11 +30,7 @@
 
                     <a asp-controller="Account" asp-action="ForgotPassword" class="forgot-link">Forgot Your Password?</a>
                 </div><!-- End .form-footer -->
-
-
-
-                <button type="submit"  class="btn btn-outline-primary-2">Log in</button>
-
+\
                 <button type="submit "  class="btn btn-outline-primary-2">Log in</button>
                 @if (!ViewBag.Confirm)
                 {
@@ -42,9 +38,6 @@
                        asp-action="ResendConfirmationEmail">Confirm Email</a>
 
                 }
-
-                </div>
-
 
             </form>
             <p class="sign-up-label">

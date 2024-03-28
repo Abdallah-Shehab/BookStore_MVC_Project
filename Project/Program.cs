@@ -2,7 +2,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Project.Mapper;
+/*using Project.Mapper;*/
 using Project.Models;
 using Project.Repositories;
 using Project.ViewModels;
@@ -43,9 +43,9 @@ namespace Project
             builder.Services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
             builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 
-            builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+            /*builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 
-            builder.Services.AddAutoMapper(typeof(MapperProfile));
+            builder.Services.AddAutoMapper(typeof(MapperProfile));*/
 
  
             builder.Services.AddScoped<ISenderEmail, EmailSender>();
