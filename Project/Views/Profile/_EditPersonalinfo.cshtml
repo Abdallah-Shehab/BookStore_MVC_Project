@@ -11,16 +11,28 @@
         <div class="card mb-4 mb-xl-0 ">
             <div class="card-header">Profile Picture</div>
             <div class="img-card">
-                <div class="card-body text-center">
-                    <!-- Profile picture image-->
-                    <img class="prof-img  mb-2 ml-3" src="~/images/users/@Model.image" alt="">
-                    <span asp-validation-for="image"></span>
+                <form asp-action="EditImage" enctype="multipart/form-data" method="post">
 
-                    <!-- Profile picture help block-->
-                    <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
-                    <!-- Profile picture upload button-->
-                    <button class="btn btn-primary" type="button">Upload new image</button>
-                </div>
+                    <div class="card-body text-center">
+                        <!-- Profile picture image-->
+                       
+
+                       
+                        
+                           <img class="prof-img  mb-2 ml-3" src="~/images/users/@Model.image" alt="">
+                           <input type="hidden" value="@Model.image" name="oldImage"/>
+                            <input class="form-control" type="file" name="Image" id="Image">
+                 
+                       
+                        <span asp-validation-for="image"></span>
+
+                        <!-- Profile picture help block-->
+                        <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                        <!-- Profile picture upload button-->
+                        <button class="btn btn-primary" type="submit">Upload new image</button>
+                    </div>
+                </form>
+               
             </div>
           
         </div>
@@ -50,14 +62,7 @@
                             @* <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna"> *@
                         </div>
                     </div>
-                    <!-- Form Group (email address)-->
-
-                    <div class="mb-3">
-                        <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                        <input class="form-control" asp-for="Email" value="@Model.Email" />
-                        <span asp-validation-for="Email"></span>
-                        @* <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com"> *@
-                    </div>
+                    
                     <!-- Form Row        -->
                     <div class="row gx-3 mb-3">
                        
