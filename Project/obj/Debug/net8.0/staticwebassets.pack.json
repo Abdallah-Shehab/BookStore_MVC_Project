@@ -5861,6 +5861,10 @@
       "PackagePath": "staticwebassets\\css\\AboutUsCards.css"
     },
     {
+      "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\Account\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Account\\Login.css"
+    },
+    {
       "Id": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
