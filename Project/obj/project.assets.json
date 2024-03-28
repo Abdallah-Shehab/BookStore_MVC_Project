@@ -8044,19 +8044,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Doctor_PC\\.nuget\\packages\\": {}
+    "C:\\Users\\SHaFiQ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
+      "projectUniqueName": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
-      "packagesPath": "C:\\Users\\Doctor_PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Technical Materials\\ASP.Net Core(MVC)\\Project\\BookStore_MVC_Project\\Project\\obj\\",
+      "projectPath": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\SHaFiQ\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI\\MVC_Project\\Project\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Doctor_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SHaFiQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8129,8 +8129,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\ITI\\MVC_Project\\Project\\Project\\obj\\project.nuget.cache : After parsing a value an unexpected character was encountered: \". Path 'expectedPackageFiles[164]', line 176, position 4."
+    }
+  ]
 }

@@ -35,9 +35,12 @@
 
                 <button type="submit"  class="btn btn-outline-primary-2">Log in</button>
 
-                <button type="submit "  class="btn btn-outline-primary-2">Log in</button>
+                <br />
+                <div class="form-group">
+
                 @if (!ViewBag.Confirm)
                 {
+
                     <a class="btn btn-outline-primary-2" asp-controller="Account"
                        asp-action="ResendConfirmationEmail">Confirm Email</a>
 
