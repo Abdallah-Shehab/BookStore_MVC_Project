@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "2fyXXJiUYyfLtXRYOpJsKgBbYK9sZMlexvy2YIlgAx3X++S4A24UzpZamI+S5g2rm/qh8C6NfyCFyANN4wvh/Q==",
+  "dgSpecHash": "IZkcD244Ko4FK+t59VUFbAx2COQZszHKDvtn9kpIVrQ06a/ucMUHPYKX5KXWtWcQgWBocNM0BljFVOv6GFYiXw==",
   "success": true,
-  "projectFilePath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
-=======
-  "dgSpecHash": "8KOAo8coBA0fjXrnTSe5rS+fN8CY0QSL1/5/oBa+QOgT8rsxz1KVbUsnhX5Mq/3bJhmTiH0a87wfD8ZW+6XZxg==",
-  "success": true,
-  "projectFilePath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
->>>>>>> 6bb4befe12d2b4eda9538c18ac0ab14e1d424e02
+  "projectFilePath": "E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\--\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -175,5 +169,12 @@
     "C:\\Users\\--\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,0 +1,26 @@
+﻿@model List<Project.ViewModels.OrderDetailsViewModel>
+
+<h1>Order Summary</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Quantity</th>
+            <!-- Add other headers as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BookName</td>
+                <td>@item.Quantity</td>
+                <!-- Add other cells as needed -->
+            </tr>
+        }
+    </tbody>
+</table>
+<p>Total Price: @Model.Sum(item => item.SubTotal)</p>
+<form asp-controller="Order" asp-action="ConfirmOrder" method="post">
+    <button type="submit">Confirm Order</button>
+</form>

@@ -781,3 +781,15 @@ E:\ITI 9M  44\23-MVC\Project\Project\BookStore_MVC_Project\Project\obj\Debug\net
 E:\ITI 9M  44\23-MVC\Project\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.genruntimeconfig.cache
 E:\ITI 9M  44\23-MVC\Project\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\ref\Project.dll
 >>>>>>> 6bb4befe12d2b4eda9538c18ac0ab14e1d424e02
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.AssemblyReference.cache
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.AssemblyInfoInputs.cache
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.AssemblyInfo.cs
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.CoreCompileInputs.cache
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cache
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cache
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cs
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.sourcelink.json
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.dll
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\refint\Project.dll
+E:\ITI 9M  44\23-MVC\Project\New folder\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.pdb

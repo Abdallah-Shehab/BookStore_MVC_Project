@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj": {}
+    "E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj": {
+    "E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
+        "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\Project.csproj",
+        "projectPath": "E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\--\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI 9M  44\\23-MVC\\BookStore_MVC_Project\\Project\\obj\\",
-=======
-    "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {}
-  },
-  "projects": {
-    "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
-        "projectName": "Project",
-        "projectPath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\--\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI 9M  44\\23-MVC\\Project\\Project\\BookStore_MVC_Project\\Project\\obj\\",
->>>>>>> 6bb4befe12d2b4eda9538c18ac0ab14e1d424e02
+        "outputPath": "E:\\ITI 9M  44\\23-MVC\\Project\\New folder\\BookStore_MVC_Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\--\\AppData\\Roaming\\NuGet\\NuGet.Config",
