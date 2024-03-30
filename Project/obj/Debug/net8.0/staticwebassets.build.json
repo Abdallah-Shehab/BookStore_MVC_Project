@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+B8e65mPNxo6xJnjP99Kr9bYGvr5tuXU8HUw6GHxKrM=",
+  "Hash": "r8uv/+9Dcrc2UC0WNAMEpoNJ8ORk0hzmzfa1dbLEx60=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -28137,12 +28137,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\img\\user.jpg"
     },
     {
-      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\Users\\b3fd4835-1c2e-4010-876e-a85b3b22ae2b.jpg",
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\Users\\b90a8198-19c9-41f7-be55-bc18fe3cfd25.jpg",
       "SourceId": "Project",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
       "BasePath": "_content/Project",
-      "RelativePath": "Images/Users/b3fd4835-1c2e-4010-876e-a85b3b22ae2b.jpg",
+      "RelativePath": "Images/Users/b90a8198-19c9-41f7-be55-bc18fe3cfd25.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -28153,7 +28153,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Users\\b3fd4835-1c2e-4010-876e-a85b3b22ae2b.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\Users\\b90a8198-19c9-41f7-be55-bc18fe3cfd25.jpg"
     },
     {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\Images\\Users\\Defualt.png",
