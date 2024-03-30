@@ -74,7 +74,7 @@ namespace Project.Controllers
                 BookDescription = od.book.Description,
             }).ToList();
 
-            return View("OrderConfirmation", orderDetailsViewModel);
+            return View("ConfirmOrder", orderDetailsViewModel);
         }
 
 
