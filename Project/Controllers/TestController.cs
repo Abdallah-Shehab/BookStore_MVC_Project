@@ -42,6 +42,9 @@ namespace Project.Controllers
             return Json(user);
         }
 
-
+        public async Task<IActionResult> test1(int id)
+        {
+            return Json(userManager.FindByIdAsync(id.ToString()));
+        }
     }
 }
