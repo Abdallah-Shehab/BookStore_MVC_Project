@@ -24,7 +24,7 @@ namespace Project.Controllers
         {
             Book book = _bookRepository.GetById(id);
             var comments = _db.Comments.Where(x => x.book_id == book.ID)
-                .Select(b => new CommentVM { Comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).ToList();
+                .Select(b => new CommentVM { comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).ToList();
 
             BookDetailsVM bookvm = new BookDetailsVM()
             {

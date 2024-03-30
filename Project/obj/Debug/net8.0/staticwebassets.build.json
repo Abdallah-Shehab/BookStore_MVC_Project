@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wTY7+Tm3XE+/siVK52dsiZWJL9HyKOji/Yeq5Q47KD8=",
+  "Hash": "+B8e65mPNxo6xJnjP99Kr9bYGvr5tuXU8HUw6GHxKrM=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -27871,6 +27871,25 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\comment.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "css/comment.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\comment.css"
+    },
+    {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\popup.css",
       "SourceId": "Project",
       "SourceType": "Discovered",
@@ -28211,6 +28230,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Nav_Links.js"
+    },
+    {
+      "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\rating.js",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "js/rating.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\rating.js"
     },
     {
       "Identity": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",

@@ -5905,6 +5905,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\comment.css",
+      "PackagePath": "staticwebassets\\css\\comment.css"
+    },
+    {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\css\\popup.css",
       "PackagePath": "staticwebassets\\css\\popup.css"
     },
@@ -5931,6 +5935,10 @@
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\rating.js",
+      "PackagePath": "staticwebassets\\js\\rating.js"
     },
     {
       "Id": "D:\\ITI\\MVC_Project\\Project\\Project\\wwwroot\\js\\site.js",

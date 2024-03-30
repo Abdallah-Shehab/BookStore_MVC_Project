@@ -8,7 +8,7 @@
     <div class="row justify-content-center align-items-center">
 
         <div class="form-container">
-        
+
             <p class="title">LOGIN</p>
         <form class="form" asp-action="LogIn">
 
@@ -41,6 +41,7 @@
 
                 @if (!ViewBag.Confirm)
                 {
+
                     <a class="btn btn-outline-primary-2" asp-controller="Account"
                        asp-action="ResendConfirmationEmail">Confirm Email</a>
 
@@ -82,7 +83,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 
