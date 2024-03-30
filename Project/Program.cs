@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project.Mapper;
-
-/*using Project.Mapper;*/
 using Project.Models;
 using Project.Repositories;
 using Project.ViewModels;
@@ -22,7 +20,7 @@ namespace Project
 
             builder.Services.AddDbContext<BookStoreContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("BookStore"));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("BookDB"));
             });
 
             //Register Identity Service (userManager -roleMnager- SigninManager)
@@ -69,17 +67,7 @@ namespace Project
             app.UseRouting();
 
             app.UseAuthorization();
-            app.MapControllerRoute(
-                "Login", "Login", new { Controller = "Account", Action = "Login" }
-               );
-            app.MapControllerRoute(
-              "Register", "Register", new
-              {
-                  Controller = "Account",
-                  Action = "Register"
-              }
 
-             );
             app.MapControllerRoute(
               "Home",
               "Home",

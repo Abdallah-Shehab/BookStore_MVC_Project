@@ -54,13 +54,16 @@ jQuery(document).ready(function($) {
 	});
 });
 
-jQuery(window).on('load', function() {
-	jQuery('.demos').isotope({
-		filter: '.homepages',
-		initLayout: true,
-		itemSelector: '.iso-item',
-		layoutMode: 'masonry'
-	}).on('layoutComplete', function(e) {
-		jQuery(window).trigger('scroll');
-	});
+jQuery(window).on('load', function () {
+	var $demos = jQuery('.demos');
+	if ($demos.length) {
+		$demos.isotope({
+			filter: '.homepages',
+			initLayout: true,
+			itemSelector: '.iso-item',
+			layoutMode: 'masonry'
+		}).on('layoutComplete', function (e) {
+			jQuery(window).trigger('scroll');
+		});
+	}
 });

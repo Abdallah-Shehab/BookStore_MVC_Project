@@ -4,34 +4,41 @@
     ViewData["Title"] = "LogIn";
 }
 <link rel="stylesheet" href="~/css/Account/Login.css">
-
-<div class="container-fluid">
-
+ 
     <div class="row justify-content-center align-items-center">
 
         <div class="form-container">
 
             <p class="title">LOGIN</p>
-            <form class="form" asp-action="LogIn">
+        <form class="form" asp-action="LogIn">
 
-                <input asp-for="Email" class="input" placeholder="Email">
-                <span asp-validation-for="Email" class="text-danger"></span>
-                <input asp-for="Password" class="input" placeholder="Password">
+            <input asp-for="Email" class="input" placeholder="Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <input asp-for="Password" class="input" placeholder="Password">
 
-                <span asp-validation-for="Password" class="text-danger"></span>
+            <span asp-validation-for="Password" class="text-danger"></span>
 
-                <div class="form-footer" style="display:flex; justify-content:space-between; font-size:14px">
+            <div class="form-footer" style="display:flex; justify-content:space-between; font-size:14px">
 
 
-                    <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="signin-remember" asp-for="RememberMe" />
-                        <label class="custom-control-label" for="signin-remember">Remember Me</label>
-                    </div><!-- End .custom-checkbox -->
+                <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="signin-remember" asp-for="RememberMe" />
+                    <label class="custom-control-label" for="signin-remember">Remember Me</label>
+                </div><!-- End .custom-checkbox -->
 
-                    <a asp-controller="Account" asp-action="ForgotPassword" class="forgot-link">Forgot Your Password?</a>
-                </div><!-- End .form-footer -->
+                <a asp-controller="Account" asp-action="ForgotPassword" class="forgot-link">Forgot Your Password?</a>
+            </div><!-- End .form-footer -->
 
-                <button type="submit " class="btn btn-outline-primary-2">Log in</button>
+
+
+            <button type="submit" class="btn btn-outline-primary-2">Log in</button>
+
+
+        
+            <div class="form-group">
+
+
+
                 @if (!ViewBag.Confirm)
                 {
 
@@ -40,9 +47,15 @@
 
                 }
 
+ 
                 <input type="text" name="bookID" value="@ViewBag.bookID" hidden />
 
-            </form>
+ 
+            </div>
+
+
+        </form>
+ 
             <p class="sign-up-label">
                 Don't have an account?<span class="sign-up-link"><a href="~/Account/Register">Register !</a></span>
             </p>
@@ -78,6 +91,7 @@
 
     </div>
 </div>
+
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

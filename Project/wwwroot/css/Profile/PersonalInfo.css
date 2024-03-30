@@ -3,27 +3,23 @@
     color: #69707a;
 }
 
-.img-account-profile {
-    height: 10rem;
-}
-
-
-
 
 .card {
     box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
 }
 
-    .card .img-card {
+    .card .img-card form .card-body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-        .card .img-card img {
+        .card .img-card form .card-body img {
             border-radius: 15px;
             border: 3px solid #eee;
+            max-width: 250px !important;
+            max-height: 250px !important;
         }
 
     .card .card-header {
