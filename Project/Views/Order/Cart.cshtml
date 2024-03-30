@@ -1,4 +1,82 @@
-﻿<main class="main">
+﻿@* @model List<BookDetailsVM>
+
+<main class="main">
+    <!-- Breadcrumb navigation remains unchanged -->
+
+    <div class="page-content">
+        <div class="container">
+            <div class="cart">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <table class="table table-cart table-mobile">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td class="product-col">
+                                                <div class="product">
+                                                    @if (!string.IsNullOrEmpty(item.Image))
+                                                    {
+                                                        <figure class="product-media">
+                                                            <img src="~/assets/images/books/@item.Image" alt="Product image">
+                                                        </figure>
+                                                    }
+                                                </div>
+                                            </td>
+                                            <td class="price-col">$@(item?.Price ?? 0)</td> <!-- Use null-conditional operator to handle null Price -->
+                                            <td class="quantity-col">
+                                                <div class="cart-product-quantity">
+                                                    <!-- Quantity input -->
+                                                    <!-- You may need to dynamically set the value based on user selection -->
+                                                    <input type="number" class="form-control" value="1" min="1" max="@item.Quantity" step="1" data-decimals="0" required>
+                                                </div>
+                                            </td>
+                                            <td class="total-col">$@(item?.Price * 1 ?? 0)</td> <!-- Total price calculation corrected here -->
+                                            <td class="remove-col">
+                                                <!-- Remove button -->
+                                                <button class="btn-remove"><i class="icon-close"></i></button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="5">Your cart is empty</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Other parts of the cart view remain unchanged -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+ *@
+
+
+
+
+
+
+
+
+
+
+<main class="main">
 	<div class="page-header text-center" style="background-image: url('../assets/images/page-header-bg.jpg')">
 		<div class="container">
 			<h1 class="page-title">Shopping Cart<span>Shop</span></h1>
