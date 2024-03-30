@@ -181,9 +181,15 @@ namespace Project.Controllers
 
                         List<Claim> claims = [new Claim("image", userFromDb.image)];
 
-                        await signInManager.SignInWithClaimsAsync(userFromDb, userLoginVM.RememberMe, claims);
 
-                        return RedirectToAction("index", "Home");
+
+                        await signInManager.SignInWithClaimsAsync(userFromDb, userLoginVM.RememberMe, claims);
+                        if (bookID == null)
+                        {
+                            return RedirectToAction("index", "Home");
+                        }
+                        else
+                            return RedirectToActionPermanent("BookDetails", "Home", new { id = bookID });
                     }
                     else
                         ModelState.AddModelError("Password", "Incorrect Password, Check your Password.");
