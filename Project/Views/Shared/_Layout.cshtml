@@ -1,10 +1,9 @@
-﻿
-@{
+﻿@{
     string controllerName = ViewContext.RouteData.Values["controller"].ToString();
     string actionName = ViewContext.RouteData.Values["action"].ToString();
-   
+
 }
- 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="~/assets/images/logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="~/assets/images/logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="~/assets/images/logo.png">
-   @*  <link rel="manifest" href="~/assets/images/icons/site.html">
+    @*  <link rel="manifest" href="~/assets/images/icons/site.html">
     <link rel="mask-icon" href="~/assets/images/icons/safari-pinned-tab.svg" color="#666666"> *@
     <link rel="shortcut icon" href="~/assets/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Molla">
@@ -44,15 +43,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100..900&display=swap" rel="stylesheet">
-	<link href="~/assets/css/toastr.min.css" rel="stylesheet" />
+    <link href="~/assets/css/toastr.min.css" rel="stylesheet" />
+    <link href="~/css/comment.css" rel="stylesheet" />
 </head>
 <body>
     <div class="page-wrapper">
-        
-  
 
-            <header class="header">
-                @* <div class="header-top">
+
+
+        <header class="header">
+            @* <div class="header-top">
             <div class="container">
             <div class="header-right">
             <ul class="top-menu">
@@ -68,67 +68,67 @@
             </div><!-- End .container -->
             </div><!-- End .header-top -->
             *@
-                <div class="header-middle sticky-header">
-                    <div class="container">
-                        <div class="header-left">
-                            <button class="mobile-menu-toggler">
-                                <span class="sr-only">Toggle mobile menu</span>
-                                <i class="icon-bars"></i>
-                            </button>
-                            <a href="~/Home/index" class="logo">
-                                <img src="~/assets/images/logo.png" alt="Molla Logo" width="105" height="25">
-                                <span style="font-family: Abril Fatface, serif;
+            <div class="header-middle sticky-header">
+                <div class="container">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggler">
+                            <span class="sr-only">Toggle mobile menu</span>
+                            <i class="icon-bars"></i>
+                        </button>
+                        <a href="~/Home/index" class="logo">
+                            <img src="~/assets/images/logo.png" alt="Molla Logo" width="105" height="25">
+                            <span style="font-family: Abril Fatface, serif;
                         font-weight: 400;
                         font-style: normal;">BookPulse</span>
-                            </a>
+                        </a>
 
-                            <nav class="main-nav">
-                                <ul class="menu sf-arrows">
-                                    <li class="Link">
-                                        <a href="~/Home">Home</a>
-                                    </li>
-                                    <li class="Link">
-                                        <a href="#" class="sf-with-ul">Categories</a>
-                                        <div class="megamenu megamenu-sm">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-6">
-                                                    <div class="menu-col">
-                                                        <div class="menu-title">Product Details</div><!-- End .menu-title -->
-                                                        <ul>
-                                                            <li><a href="~/Home/category">All</a></li>
-                                                            <li><a href="product-centered.html">Centered</a></li>
-                                                            <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                                                            <li><a href="product-gallery.html">Gallery</a></li>
-                                                            <li><a href="product-sticky.html">Sticky Info</a></li>
-                                                            <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
-                                                            <li><a href="product-fullwidth.html">Full Width</a></li>
-                                                            <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
-                                                        </ul>
-                                                    </div><!-- End .menu-col -->
-                                                </div><!-- End .col-md-6 -->
+                        <nav class="main-nav">
+                            <ul class="menu sf-arrows">
+                                <li class="Link">
+                                    <a href="~/Home">Home</a>
+                                </li>
+                                <li class="Link">
+                                    <a href="#" class="sf-with-ul">Categories</a>
+                                    <div class="megamenu megamenu-sm">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-6">
+                                                <div class="menu-col">
+                                                    <div class="menu-title">Product Details</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="~/Home/category">All</a></li>
+                                                        <li><a href="product-centered.html">Centered</a></li>
+                                                        <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
+                                                        <li><a href="product-gallery.html">Gallery</a></li>
+                                                        <li><a href="product-sticky.html">Sticky Info</a></li>
+                                                        <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
+                                                        <li><a href="product-fullwidth.html">Full Width</a></li>
+                                                        <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
+                                                    </ul>
+                                                </div><!-- End .menu-col -->
+                                            </div><!-- End .col-md-6 -->
 
-                                                <div class="col-md-6">
-                                                    <div class="banner banner-overlay">
-                                                        <a href="~/Home/category">
-                                                            <img src="~/assets/images/menu/banner-2.jpg" alt="Banner">
+                                            <div class="col-md-6">
+                                                <div class="banner banner-overlay">
+                                                    <a href="~/Home/category">
+                                                        <img src="~/assets/images/menu/banner-2.jpg" alt="Banner">
 
-                                                            <div class="banner-content banner-content-bottom">
-                                                                <div class="banner-title text-white">New Trends<br><span><strong>spring 2019</strong></span></div><!-- End .banner-title -->
-                                                            </div><!-- End .banner-content -->
-                                                        </a>
-                                                    </div><!-- End .banner -->
-                                                </div><!-- End .col-md-6 -->
-                                            </div><!-- End .row -->
-                                        </div><!-- End .megamenu megamenu-md -->
-                                    </li>
-                                    <li class="Link"><a href="~/Home/AboutUs">About Us</a></li>
-                                    <li class="Link"><a href="~/Contact/index">Contact Us</a></li>
+                                                        <div class="banner-content banner-content-bottom">
+                                                            <div class="banner-title text-white">New Trends<br><span><strong>spring 2019</strong></span></div><!-- End .banner-title -->
+                                                        </div><!-- End .banner-content -->
+                                                    </a>
+                                                </div><!-- End .banner -->
+                                            </div><!-- End .col-md-6 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .megamenu megamenu-md -->
+                                </li>
+                                <li class="Link"><a href="~/Home/AboutUs">About Us</a></li>
+                                <li class="Link"><a href="~/Contact/index">Contact Us</a></li>
 
-                              
-                                 
-                                </ul>
-                            </nav><!-- End .main-nav -->
-                        </div><!-- End .header-left -->
+
+
+                            </ul>
+                        </nav><!-- End .main-nav -->
+                    </div><!-- End .header-left -->
                     @if (controllerName != "Account" && actionName != "LogIn")
                     {
                         <div class="header-right">
@@ -206,8 +206,8 @@
                             </div><!-- End .cart-dropdown -->
                             @if (User.Identity.IsAuthenticated == true)
                             {
-                              
-                                <partial name="Popup"/>
+
+                                <partial name="Popup" />
                                 @* <a style="margin-left:50px;" href="~/Account/Logout"><i class="icon-user"></i>Log out</a> *@
                                 @* <a style="margin-left:20px;" href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a> *@
                             }
@@ -217,125 +217,125 @@
 
 
                             }
-                        </div><!-- End .header-right -->
+                        </div>
+
+                        <!-- End .header-right -->
                     }
                 </div><!-- End .container -->
-                </div><!-- End .header-middle -->
-            </header>
+            </div><!-- End .header-middle -->
+        </header>
 
-            <!-- End .header -->
-         
-        
-        
-        
-        
+        <!-- End .header -->
         @RenderBody();
 
 
 
 
-        @if (controllerName != "Account" && actionName != "LogIn"){
-        <footer class="footer footer-2">
-            <div class="footer-middle">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-6 col-xl-5">
-                            <div class="widget widget-about">
-                                <a href="index-20.html" class="logo" style="display: flex;width: fit-content;align-items: center;">
-                                    <img src="~/assets/images/logo.png" alt="Molla Logo" width="105" height="25" style="max-width: 30%;">
-                                    <span style="font-family: Abril Fatface, serif;
+        @if (controllerName != "Account" && actionName != "LogIn")
+        {
+            <footer class="footer footer-2">
+                <div class="footer-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6 col-xl-5">
+                                <div class="widget widget-about">
+                                    <a href="index-20.html" class="logo" style="display: flex;width: fit-content;align-items: center;">
+                                        <img src="~/assets/images/logo.png" alt="Molla Logo" width="105" height="25" style="max-width: 30%;">
+                                        <span style="font-family: Abril Fatface, serif;
                         font-weight: 400;
                         font-style: normal;font-size: xx-large;">BookPulse</span>
-                                </a>
-                                <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. </p>
+                                    </a>
+                                    <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. </p>
 
-                                <div class="widget-about-info">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-md-4">
-                                            <span class="widget-about-title">Got Question? Call us 24/7</span>
-                                            <a href="tel:123456789">+0123 456 789</a>
-                                        </div><!-- End .col-sm-6 -->
-                                        <div class="col-sm-6 col-md-8">
-                                            <span class="widget-about-title">Payment Method</span>
-                                            <figure class="footer-payments">
-                                                <img src="~/assets/images/payments.png" alt="Payment methods" width="272" height="20">
-                                            </figure><!-- End .footer-payments -->
-                                        </div><!-- End .col-sm-6 -->
-                                    </div><!-- End .row -->
-                                </div><!-- End .widget-about-info -->
-                            </div><!-- End .widget about-widget -->
-                        </div><!-- End .col-sm-12 col-lg-3 -->
+                                    <div class="widget-about-info">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-4">
+                                                <span class="widget-about-title">Got Question? Call us 24/7</span>
+                                                <a href="tel:123456789">+0123 456 789</a>
+                                            </div><!-- End .col-sm-6 -->
+                                            <div class="col-sm-6 col-md-8">
+                                                <span class="widget-about-title">Payment Method</span>
+                                                <figure class="footer-payments">
+                                                    <img src="~/assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                                                </figure><!-- End .footer-payments -->
+                                            </div><!-- End .col-sm-6 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .widget-about-info -->
+                                </div><!-- End .widget about-widget -->
+                            </div><!-- End .col-sm-12 col-lg-3 -->
 
-                        <div class="col-lg-6 col-xl-7">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="widget">
-                                        <h4 class="widget-title">Information</h4><!-- End .widget-title -->
+                            <div class="col-lg-6 col-xl-7">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="widget">
+                                            <h4 class="widget-title">Information</h4><!-- End .widget-title -->
 
-                                        <ul class="widget-list">
-                                            <li><a href="~/Home/AboutUs">About Molla</a></li>
-                                            <li><a href="#">How to shop on Molla</a></li>
-                                            <li><a href="~/Home/faq.html">FAQ</a></li>
-                                            <li><a href="~/Home/contact">Contact us</a></li>
-                                            <li><a href="~/Home/login">Log in</a></li>
-                                        </ul><!-- End .widget-list -->
-                                    </div><!-- End .widget -->
-                                </div><!-- End .col-sm-4 col-lg-3 -->
+                                            <ul class="widget-list">
+                                                <li><a href="~/Home/AboutUs">About Molla</a></li>
+                                                <li><a href="#">How to shop on Molla</a></li>
+                                                <li><a href="~/Home/faq.html">FAQ</a></li>
+                                                <li><a href="~/Home/contact">Contact us</a></li>
+                                                <li><a href="~/Home/login">Log in</a></li>
+                                            </ul><!-- End .widget-list -->
+                                        </div><!-- End .widget -->
+                                    </div><!-- End .col-sm-4 col-lg-3 -->
 
-                                <div class="col-sm-4">
-                                    <div class="widget">
-                                        <h4 class="widget-title">Customer Service</h4><!-- End .widget-title -->
+                                    <div class="col-sm-4">
+                                        <div class="widget">
+                                            <h4 class="widget-title">Customer Service</h4><!-- End .widget-title -->
 
-                                        <ul class="widget-list">
-                                            <li><a href="#">Payment Methods</a></li>
-                                            <li><a href="#">Money-back guarantee!</a></li>
-                                            <li><a href="#">Returns</a></li>
-                                            <li><a href="#">Shipping</a></li>
-                                            <li><a href="#">Terms and conditions</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                        </ul><!-- End .widget-list -->
-                                    </div><!-- End .widget -->
-                                </div><!-- End .col-sm-4 col-lg-3 -->
+                                            <ul class="widget-list">
+                                                <li><a href="#">Payment Methods</a></li>
+                                                <li><a href="#">Money-back guarantee!</a></li>
+                                                <li><a href="#">Returns</a></li>
+                                                <li><a href="#">Shipping</a></li>
+                                                <li><a href="#">Terms and conditions</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                            </ul><!-- End .widget-list -->
+                                        </div><!-- End .widget -->
+                                    </div><!-- End .col-sm-4 col-lg-3 -->
 
-                                <div class="col-sm-4">
-                                    <div class="widget">
-                                        <h4 class="widget-title">My Account</h4><!-- End .widget-title -->
+                                    <div class="col-sm-4">
+                                        <div class="widget">
+                                            <h4 class="widget-title">My Account</h4><!-- End .widget-title -->
 
-                                        <ul class="widget-list">
-                                            <li><a href="~/Home/login">Sign In</a></li>
-                                            <li><a href="~/Home/cart">View Cart</a></li>
-                                            <li><a href="~/Home/wishlist">My Wishlist</a></li>
-                                            <li><a href="#">Track My Order</a></li>
-                                            <li><a href="#">Help</a></li>
-                                        </ul><!-- End .widget-list -->
-                                    </div><!-- End .widget -->
-                                </div><!-- End .col-sm-4 col-lg-2 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .col-lg-6 col-xl-7 -->
-                    </div><!-- End .row -->
-                </div><!-- End .container -->
-            </div><!-- End .footer-middle -->
+                                            <ul class="widget-list">
+                                                <li><a href="~/Home/login">Sign In</a></li>
+                                                <li><a href="~/Home/cart">View Cart</a></li>
+                                                <li><a href="~/Home/wishlist">My Wishlist</a></li>
+                                                <li><a href="#">Track My Order</a></li>
+                                                <li><a href="#">Help</a></li>
+                                            </ul><!-- End .widget-list -->
+                                        </div><!-- End .widget -->
+                                    </div><!-- End .col-sm-4 col-lg-2 -->
+                                </div><!-- End .row -->
+                            </div><!-- End .col-lg-6 col-xl-7 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+                </div><!-- End .footer-middle -->
 
-            <div class="footer-bottom">
-                <div class="container">
-                    <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p><!-- End .footer-copyright -->
-                    <ul class="footer-menu">
-                        <li><a href="#">Terms Of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul><!-- End .footer-menu -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p><!-- End .footer-copyright -->
+                        <ul class="footer-menu">
+                            <li><a href="#">Terms Of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul><!-- End .footer-menu -->
 
-                    <div class="social-icons social-icons-color">
-                        <span class="social-label">Social Media</span>
-                        <a href="#" class="social-icon social-facebook" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                        <a href="#" class="social-icon social-twitter" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                        <a href="#" class="social-icon social-instagram" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                        <a href="#" class="social-icon social-youtube" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
-                        <a href="#" class="social-icon social-pinterest" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
-                    </div><!-- End .soial-icons -->
-                </div><!-- End .container -->
-            </div><!-- End .footer-bottom -->
-        </footer><!-- End .footer -->
-    }
+                        <div class="social-icons social-icons-color">
+                            <span class="social-label">Social Media</span>
+                            <a href="#" class="social-icon social-facebook" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                            <a href="#" class="social-icon social-twitter" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                            <a href="#" class="social-icon social-instagram" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                            <a href="#" class="social-icon social-youtube" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
+                            <a href="#" class="social-icon social-pinterest" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
+                        </div><!-- End .soial-icons -->
+                    </div><!-- End .container -->
+                </div><!-- End .footer-bottom -->
+            </footer>
+
+            <!-- End .footer -->
+        }
     </div><!-- End .page-wrapper -->
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
@@ -547,7 +547,7 @@
     <script src="https://kit.fontawesome.com/941f82ab6e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
+    <script src="~/js/rating.js"></script>
 </body>
 
 

@@ -1,5 +1,7 @@
 ﻿@model BookDetailsVM
 
+<input type="text" value="@Model.ID" id="bookId" hidden />
+<div id="authStatus" data-is-authenticated="@User.Identity.IsAuthenticated"></div>
 
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
@@ -10,15 +12,15 @@
             </ol>
 
             @* <nav class="product-pager ml-auto" aria-label="Product">
-                <a class="product-pager-link product-pager-prev" href="#" aria-label="Previous" tabindex="-1">
-                    <i class="icon-angle-left"></i>
-                    <span>Prev</span>
-                </a>
-
-                <a class="product-pager-link product-pager-next" href="#" aria-label="Next" tabindex="-1">
-                    <span>Next</span>
-                    <i class="icon-angle-right"></i>
-                </a>
+            <a class="product-pager-link product-pager-prev" href="#" aria-label="Previous" tabindex="-1">
+            <i class="icon-angle-left"></i>
+            <span>Prev</span>
+            </a>
+            W
+            <a class="product-pager-link product-pager-next" href="#" aria-label="Next" tabindex="-1">
+            <span>Next</span>
+            <i class="icon-angle-right"></i>
+            </a>
             </nav><!-- End .pager-nav --> *@
         </div><!-- End .container -->
     </nav><!-- End .breadcrumb-nav -->
@@ -31,7 +33,7 @@
                         <div class="product-gallery product-gallery-vertical">
                             <div class="row">
                                 <figure class="product-main-image">
-                                    <img id="product-zoom" src="~/assets/images/books/@Model.Image" style="object-fit: cover;max-height: 400px;min-height: 400px;" data-zoom-image="~/assets/images/books/@Model.Image" alt="product image"> 
+                                    <img id="product-zoom" src="~/assets/images/books/@Model.Image" style="object-fit: cover;max-height: 400px;min-height: 400px;" data-zoom-image="~/assets/images/books/@Model.Image" alt="product image">
 
                                     <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                         <i class="icon-arrows"></i>
@@ -60,33 +62,31 @@
                             <div class="product-content">
                                 <p>A Book By @Model.Author.Name </p>
                             </div><!-- End .product-content -->
-
                             @* <div class="details-filter-row details-row-size">
-                                <label>Color:</label>
+                            <label>Color:</label>
 
-                                <div class="product-nav product-nav-thumbs">
-                                    <a href="#" class="active">
-                                        <img src="~/assets/images/products/single/1-thumb.jpg" alt="product desc">
-                                    </a>
-                                    <a href="#">
-                                        <img src="~/assets/images/products/single/2-thumb.jpg" alt="product desc">
-                                    </a>
-                                </div><!-- End .product-nav -->
+                            <div class="product-nav product-nav-thumbs">
+                            <a href="#" class="active">
+                            <img src="~/assets/images/products/single/1-thumb.jpg" alt="product desc">
+                            </a>
+                            <a href="#">
+                            <img src="~/assets/images/products/single/2-thumb.jpg" alt="product desc">
+                            </a>
+                            </div><!-- End .product-nav -->
                             </div> *@<!-- End .details-filter-row -->
-
                             @* <div class="details-filter-row details-row-size">
-                                <label for="size">Size:</label>
-                                <div class="select-custom">
-                                    <select name="size" id="size" class="form-control">
-                                        <option value="#" selected="selected">Select a size</option>
-                                        <option value="s">Small</option>
-                                        <option value="m">Medium</option>
-                                        <option value="l">Large</option>
-                                        <option value="xl">Extra Large</option>
-                                    </select>
-                                </div><!-- End .select-custom -->
+                            <label for="size">Size:</label>
+                            <div class="select-custom">
+                            <select name="size" id="size" class="form-control">
+                            <option value="#" selected="selected">Select a size</option>
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                            <option value="xl">Extra Large</option>
+                            </select>
+                            </div><!-- End .select-custom -->
 
-                                <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
+                            <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
                             </div> *@<!-- End .details-filter-row -->
 
                             <div class="details-filter-row details-row-size">
@@ -159,50 +159,88 @@
                             </p>
                         </div><!-- End .product-desc-content -->
                     </div><!-- .End .tab-pane -->
-                    <div class="tab-pane fade" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">
-                        <div class="reviews">
-                            <h3>Reviews (@Model.Comments.Count)</h3>
-                            @if (@Model.Comments.Count ==0)
-                            {
-                                <div style="text-align:center"> <h3>No Reviews For This Book</h3> </div>
-                            }
-                            else
-                            {
-                                foreach (var comment in Model.Comments)
+                    <div class="tab-pane fade row reviewsCont" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">
+                        <div class="row" style="display:flex">
+                            <div class="reviews col-md-6" style="margin: 27px 0;">
+                                <h3>Reviews (@Model.Comments.Count)</h3>
+                                @if (@Model.Comments.Count == 0)
                                 {
-                                    <div class="review">
-                                        <div class="row no-gutters">
-                                            <div class="col-auto">
-                                                <div class="ratings-container">
-                                                    <div class="ratings">
-                                                        <div class="ratings-val" style="width: @(comment.rate * 10)%;"></div><!-- End .ratings-val -->
-                                                    </div><!-- End .ratings -->
-                                                </div><!-- End .rating-container -->
-                                                <span class="review-date">@comment.Date</span>
-                                            </div><!-- End .col -->
-                                            <div class="col">
-                                                        <h4>@comment.userFName @comment.userLName</h4>
-                                                <div class="review-content">
-                                                    <p>@comment.Comment</p>
-                                                </div><!-- End .review-content -->
-
-                                                <div class="review-action">
-                                                    <a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>
-                                                    <a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>
-                                                </div><!-- End .review-action -->
-                                            </div><!-- End .col-auto -->
-                                        </div><!-- End .row -->
+                                    <div class="containerReviews">
                                     </div>
-
-                                    <!-- End .review -->
+                                    <div id="noReviews" style="text-align:center"> <h3>No Reviews For This Book</h3> </div>
                                 }
-                            }
-                        </div><!-- End .reviews -->
+                                else
+                                { 
+                                    <div class="containerReviews">
+                                        @foreach (var comment in Model.Comments)
+                                        {
+
+                                            <div class="review">
+                                                <div class="row no-gutters">
+                                                    <div class="col-auto">
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: @(comment.rate * 10)%;"></div><!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                        </div><!-- End .rating-container -->
+                                                        <span class="review-date">@comment.Date</span>
+                                                    </div><!-- End .col -->
+                                                    <div class="col">
+                                                        <h4>@comment.userFName @comment.userLName</h4>
+                                                        <div class="review-content">
+                                                            <p>@comment.comment</p>
+                                                        </div><!-- End .review-content -->
+
+                                                        <div class="review-action">
+                                                            <a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>
+                                                            <a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>
+                                                        </div><!-- End .review-action -->
+                                                    </div><!-- End .col-auto -->
+                                                </div><!-- End .row -->
+                                            </div>
+                                            <!-- End .review -->
+                                        }
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-md-6" style="margin: 27px 0;">
+                                <div class="addReviewDiv">
+                                    <h3>Add Review</h3>
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <form class="formComments">
+                                            <textarea name="commentText" id="txtComment" rows="4" cols="50" class="txtComment"></textarea>
+                                            <div class="rateComment">
+                                                <div class="ratings addRating" style="font-size: large;">
+                                                    <div class="ratings-val" style="width: 0%;font-size: large;"></div><!-- End .ratings-val -->
+                                                    <input type="text" id="rateTxt" class="rateTxt" value="0" hidden name="rateTxt" />
+                                                </div>
+                                                <button class="btn btn-primary btnComment"
+                                                        type="submit" id="newsletter-btn">
+                                                    Add Comment
+                                                </button> <!--go to ajax in rating.js file-->
+                                            </div>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <p style="margin-top:45px">Please log in to add your own review.</p>
+                                        <a href="/Account/LogIn?bookID=@Model.ID" class="btn btn-sm btn-minwidth btn-outline-primary-2" style="width: fit-content;margin-top: 15px;">
+                                            <span>Login</span>
+                                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                        </a>
+                                    }
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- End .reviews -->
                     </div><!-- .End .tab-pane -->
                 </div><!-- End .tab-content -->
             </div><!-- End .product-details-tab -->
-
-
             <!--books fro the same category-->
             @if (Model.categoryBooks.Count != 0)
             {
@@ -212,30 +250,30 @@
 
                 <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl"
                      data-owl-options='{
-                                "nav": false,
-                                "dots": true,
-                                "margin": 20,
-                                "loop": false,
-                                "responsive": {
-                                    "0": {
-                                        "items":1
-                                    },
-                                    "480": {
-                                        "items":2
-                                    },
-                                    "768": {
-                                        "items":3
-                                    },
-                                    "992": {
-                                        "items":4
-                                    },
-                                    "1200": {
-                                        "items":4,
-                                        "nav": true,
-                                        "dots": false
-                                    }
-                                }
-                            }'>
+                                        "nav": false,
+                                        "dots": true,
+                                        "margin": 20,
+                                        "loop": false,
+                                        "responsive": {
+                                            "0": {
+                                                "items":1
+                                            },
+                                            "480": {
+                                                "items":2
+                                            },
+                                            "768": {
+                                                "items":3
+                                            },
+                                            "992": {
+                                                "items":4
+                                            },
+                                            "1200": {
+                                                "items":4,
+                                                "nav": true,
+                                                "dots": false
+                                            }
+                                        }
+                                    }'>
                     @foreach (var item in Model.categoryBooks)
                     {
                         <div class="product product-7 text-center">
@@ -281,9 +319,9 @@
                         <!-- End .product -->
                     }
                     @*
-                
 
-               
+
+
                 <div class="product product-7 text-center">
                 <figure class="product-media">
                 <span class="product-label label-top">Top</span>
@@ -332,12 +370,12 @@
                 </div><!-- End .product-body -->
                 </div><!-- End .product --> *@
 
-                <!-- End .product -->
+                    <!-- End .product -->
                 </div>
 
                 <!-- End .owl-carousel -->
             }
-            
+
 
             <!--books from the same author-->
             @if (Model.authorBooks.Count != 0)
@@ -348,30 +386,30 @@
 
                 <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl"
                      data-owl-options='{
-                                "nav": false,
-                                "dots": true,
-                                "margin": 20,
-                                "loop": false,
-                                "responsive": {
-                                    "0": {
-                                        "items":1
-                                    },
-                                    "480": {
-                                        "items":2
-                                    },
-                                    "768": {
-                                        "items":3
-                                    },
-                                    "992": {
-                                        "items":4
-                                    },
-                                    "1200": {
-                                        "items":4,
-                                        "nav": true,
-                                        "dots": false
-                                    }
-                                }
-                            }'>
+                                        "nav": false,
+                                        "dots": true,
+                                        "margin": 20,
+                                        "loop": false,
+                                        "responsive": {
+                                            "0": {
+                                                "items":1
+                                            },
+                                            "480": {
+                                                "items":2
+                                            },
+                                            "768": {
+                                                "items":3
+                                            },
+                                            "992": {
+                                                "items":4
+                                            },
+                                            "1200": {
+                                                "items":4,
+                                                "nav": true,
+                                                "dots": false
+                                            }
+                                        }
+                                    }'>
                     @foreach (var item in Model.authorBooks)
                     {
                         <div class="product product-7 text-center">
@@ -421,7 +459,7 @@
 
                 <!-- End .owl-carousel -->
             }
-            
+
         </div><!-- End .container -->
     </div><!-- End .page-content -->
 </main><!-- End .main -->

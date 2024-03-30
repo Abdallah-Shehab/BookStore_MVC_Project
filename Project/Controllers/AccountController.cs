@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -77,8 +78,39 @@ namespace Project.Controllers
         }
         #endregion
 
+        #region ConfirmationEmail
+        //Action of Confirmation result
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ConfirmEmail(string? Email, string Token)
+        {
+            if (Email == null || Token == null)
+            {
+                ViewBag.Message = "The link is Invalid or Expired";
+                return View();
+            }
 
 
+            //Find user by id
+            ApplicationUser user = await userManager.FindByEmailAsync(Email);
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = $"The User Email {Email} is Invalid";
+                return NotFound();
+            }
+
+            //Call the ConfirmEmailAsync Method which will mark the Email as Confirmed
+            var result = await userManager.ConfirmEmailAsync(user, Token);
+            if (result.Succeeded)
+            {
+                ViewBag.Message = "Thank you for confirming your email";
+                return View();
+            }
+
+            ViewBag.Message = "Email cannot be confirmed";
+            return View();
+        }
+        #endregion
 
         #region Resend Confirmation Email
         //action opens the view(form) of resending confiramtion Email
@@ -116,9 +148,10 @@ namespace Project.Controllers
 
         #region Log in
         [HttpGet]
-        public IActionResult LogIn()
+        public IActionResult LogIn(int? bookID)
         {
             ViewBag.Confirm = true;
+            ViewBag.bookID = bookID;
             return View("Login");
         }
 
@@ -126,7 +159,7 @@ namespace Project.Controllers
         [ValidateAntiForgeryToken]
         [RedirectAuthenticatedUsersAttribute]
 
-        public async Task<IActionResult> Login(UserLoginViewModel userLoginVM)
+        public async Task<IActionResult> Login(UserLoginViewModel userLoginVM, int? bookID)
         {
             ViewBag.Confirm = true;
             if (ModelState.IsValid)
@@ -148,9 +181,8 @@ namespace Project.Controllers
 
                         List<Claim> claims = [new Claim("image", userFromDb.image)];
 
-
-
                         await signInManager.SignInWithClaimsAsync(userFromDb, userLoginVM.RememberMe, claims);
+
                         return RedirectToAction("index", "Home");
                     }
                     else
@@ -265,7 +297,7 @@ namespace Project.Controllers
         }
         #endregion
 
-        #region Two Private Method two send EmailConfirmation And ResetPasswordConfirmation
+        #region Two Private Method to send EmailConfirmation And ResetPasswordConfirmation
 
         //Private Method Which will send confirmation email to user
         private async Task SendConfirmationEmail(string? email, ApplicationUser user)
