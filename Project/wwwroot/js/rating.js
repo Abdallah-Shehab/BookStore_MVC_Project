@@ -51,21 +51,57 @@ if (isAuthenticated) {
             toastr.error("You must select Rate.");
         }
         else {
-            debugger;
             $.ajax({
                 url: '/Home/addReview',
                 type: 'POST',
                 dataType: 'json',
                 data: { bookID: bookid, comment: comment, rate: rate },
                 success: function (response) {
-                    // Handle success
-                    console.log(response);
-                    toastr.success("your Review is Added Successfully.");
 
+                    if (response == "no more than one") {
+                        toastr.error("sorry, you mustn't add more than one review per book..");
+                        clearReview();
+                    }
+                    else if (response == "no user") {
+                        toastr.error("Please Login again...");
+                    }
+                    else {
+                        toastr.success("your Review is Added Successfully.");
+                        var newReview = '<div class="row no-gutters">'
+                                             +'<div class="col-auto">'
+                                                   +'<div class="ratings-container">'
+                                                      +'<div class="ratings">'
+                                                             +'<div class="ratings-val" style="width: '+(response.rate * 10)+'%"></div>'
+                                                      +'</div>'
+                                                   +'</div>'
+                                                   +'<span class="review-date">Just Now</span>'
+                                                 +'</div>'
+                                                 +'<div class="col">'
+                                                     +'<h4>'+response.userFName+' '+response.userLName+' (You)</h4>'
+                                                     +'<div class="review-content">'
+                                                         +'<p>'+response.comment+'</p>'
+                                                     +'</div>'
+                                                     +'<div class="review-action">'
+                                                         +'<a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>'
+                                                         +'<a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>'
+                                                     +'</div>'
+                                                 +'</div>'
+                                             +'</div>';
+
+                        var reviewDiv = document.createElement("div");
+                        reviewDiv.className = "review animateReview";
+                        reviewDiv.innerHTML = newReview;
+
+                        document.getElementsByClassName("containerReviews")[0].prepend(reviewDiv);
+                        clearReview();
+
+                        if (document.getElementById("noReviews") != null) {
+                            document.getElementById("noReviews").remove();
+                        }
+                    }
                 },
                 error: function (xhr, status, error) {
                     // Handle error
-                    console.error("error");
                     toastr.error("Something wrong, Try again!!");
 
                 }
@@ -75,6 +111,10 @@ if (isAuthenticated) {
 
 }
 
+function clearReview() {
+    document.getElementById("txtComment").value = "";
+    ratingsContainer.querySelector(".ratings-val").style.width = "0";
+}
 function getRate(event) {
     var containerRect = ratingsContainer.getBoundingClientRect();
     var mouseX = event.clientX - containerRect.left;

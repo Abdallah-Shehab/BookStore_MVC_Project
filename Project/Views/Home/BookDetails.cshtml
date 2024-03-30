@@ -1,45 +1,5 @@
 ﻿@model BookDetailsVM
 
-<style>
-    .addReviewDiv {
-        display: flex;
-        margin: auto;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .reviewsCont {
-        display: flex;
-    }
-
-    .reviews {
-        border-right: 2px solid #cc9966;
-    }
-
-    .btnComment {
-        width: fit-content;
-    }
-
-    .formComments {
-        flex-direction: column;
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
-
-    .txtComment {
-        display: block;
-        width: 94%;
-    }
-
-    .rateComment {
-        width: 94%;
-        justify-content: space-between;
-        display: flex;
-        margin-top: 16px;
-        align-items: baseline;
-    }
-</style>
 
 <input type="text" value="@Model.ID" id="bookId" hidden />
 <div id="authStatus" data-is-authenticated="@(User.Identity.IsAuthenticated)"></div>
@@ -206,38 +166,42 @@
                                 <h3>Reviews (@Model.Comments.Count)</h3>
                                 @if (@Model.Comments.Count == 0)
                                 {
-                                    <div style="text-align:center"> <h3>No Reviews For This Book</h3> </div>
+                                    <div class="containerReviews">
+                                    </div>
+                                    <div id="noReviews" style="text-align:center"> <h3>No Reviews For This Book</h3> </div>
                                 }
                                 else
-                                {
-                                    foreach (var comment in Model.Comments)
-                                    {
-                                        <div class="review">
-                                            <div class="row no-gutters">
-                                                <div class="col-auto">
-                                                    <div class="ratings-container">
-                                                        <div class="ratings">
-                                                            <div class="ratings-val" style="width: @(comment.rate * 10)%;"></div><!-- End .ratings-val -->
-                                                        </div><!-- End .ratings -->
-                                                    </div><!-- End .rating-container -->
-                                                    <span class="review-date">@comment.Date</span>
-                                                </div><!-- End .col -->
-                                                <div class="col">
-                                                    <h4>@comment.userFName @comment.userLName</h4>
-                                                    <div class="review-content">
-                                                        <p>@comment.comment</p>
-                                                    </div><!-- End .review-content -->
+                                { 
+                                    <div class="containerReviews">
+                                        @foreach (var comment in Model.Comments)
+                                        {
 
-                                                    <div class="review-action">
-                                                        <a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>
-                                                        <a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>
-                                                    </div><!-- End .review-action -->
-                                                </div><!-- End .col-auto -->
-                                            </div><!-- End .row -->
-                                        </div>
+                                            <div class="review">
+                                                <div class="row no-gutters">
+                                                    <div class="col-auto">
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: @(comment.rate * 10)%;"></div><!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                        </div><!-- End .rating-container -->
+                                                        <span class="review-date">@comment.Date</span>
+                                                    </div><!-- End .col -->
+                                                    <div class="col">
+                                                        <h4>@comment.userFName @comment.userLName</h4>
+                                                        <div class="review-content">
+                                                            <p>@comment.comment</p>
+                                                        </div><!-- End .review-content -->
 
-                                        <!-- End .review -->
-                                    }
+                                                        <div class="review-action">
+                                                            <a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>
+                                                            <a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>
+                                                        </div><!-- End .review-action -->
+                                                    </div><!-- End .col-auto -->
+                                                </div><!-- End .row -->
+                                            </div>
+                                            <!-- End .review -->
+                                        }
+                                    </div>
                                 }
                             </div>
                             <div class="col-md-6" style="margin: 27px 0;">

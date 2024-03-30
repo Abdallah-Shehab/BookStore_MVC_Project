@@ -91,28 +91,51 @@ namespace Project.Controllers
 			ApplicationUser user = userManager.FindByNameAsync(userName).Result;
 			if (user != null)
 			{
-				// Get the user's ID
-				int userId = user.Id;
-				var userData = db.Users.FirstOrDefault(x => x.Id == userId);
+                // Get the user's ID
+                int userId = user.Id;
+                var userData = db.Users.FirstOrDefault(x => x.Id == userId);
 
-				CommentVM CommentVM = new CommentVM()
+
+				//check if there is comment before or not
+				var test = db.Comments.FirstOrDefault(x => x.book_id == bookID && x.user_id == userId);
+				
+				
+				if(test == null)
 				{
-					comment = comment,
-					rate = rate / 10M,    // update the final rate of the book after adding each rate
-					user_id = userId,
-					book_id = bookID,
-					Date = DateTime.Now,
-					userFName = userData.FirstName.ToString(),
-					userLName = userData.LastName.ToString()
-				};
 
-				Comment finalComment = new Comment(CommentVM);
+                    CommentVM CommentVM = new CommentVM()
+                    {
+                        comment = comment,
+                        rate = rate / 10M,    // update the final rate of the book after adding each rate
+                        user_id = userId,
+                        book_id = bookID,
+                        Date = DateTime.Now,
+                        userFName = userData.FirstName.ToString(),
+                        userLName = userData.LastName.ToString()
+                    };
 
-				db.Comments.Add(finalComment);
-				db.SaveChanges();
+                    Comment finalComment = new Comment(CommentVM);
 
-				return Json(CommentVM);
-			}
+                    db.Comments.Add(finalComment);
+                    db.SaveChanges();
+
+                    //to update  book's total rate
+                    var book = db.Books.Where(x => x.ID == bookID).FirstOrDefault();
+                    var peopleCount = db.Comments.Where(x => x.book_id == bookID).Count();
+                    var ExactRate = (book.Rate ?? 0.0m + (rate / 10M)) / peopleCount;
+                    book.Rate = ExactRate;
+                    db.Update(book);
+                    db.SaveChanges();
+
+
+                    return Json(CommentVM);
+                }
+				else
+                {
+                    return Json("no more than one");
+                }
+
+            }
 			else
 			{
 				return Json("no user");

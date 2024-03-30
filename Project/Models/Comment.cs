@@ -14,7 +14,7 @@ namespace Project.Models
 		public Comment(CommentVM c)
 		{
 			comment = c.comment;
-			rate = c.rate / 10M;
+			rate = c.rate;
 			user_id = c.user_id;
 			book_id = c.book_id;
 			Date = DateTime.Now;
