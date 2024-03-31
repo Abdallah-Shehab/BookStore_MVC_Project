@@ -8,28 +8,43 @@
     <div class="bg-light text-center rounded p-4">
         <h6 class="mb-4">Add New Admin</h6>
 
-        <form method="post" asp-action="AddAdmin" asp-controller="Admin">
-            <div class="mb-3">
-                <input type="text" class="form-control" id="firstName" asp-for="FirstName" placeholder="First Name" required>
+        <form asp-action="AddAdmin" method="post">
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" id="lastName" asp-for="LastName" placeholder="Last Name" required>
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <input type="number" class="form-control" id="phoneNumber" asp-for="PhoneNumber" placeholder="phone Number" required>
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" id="address" asp-for="Address" placeholder="Address" required>
+            <div class="form-group">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <input type="email" class="form-control" id="email" asp-for="Email" placeholder="Email" required>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <input type="password" class="form-control" id="password" asp-for="Password" placeholder="Password" required>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <a href="@Url.Action("GetAll", "Admin")" class="btn btn-secondary">Cancel</a>
+            <div style="margin-top:30px;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a asp-action="GetAll" class="btn btn-secondary">Cancel</a>
+            </div>
+          
         </form>
+
     </div>
 </div>
