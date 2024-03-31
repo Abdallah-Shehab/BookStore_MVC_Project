@@ -49,7 +49,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="/dashboard/dashboard" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>BookPulse</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100 hoveredBlock">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/dashboard/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -75,7 +75,7 @@
                     <a href="#" class="nav-item nav-link"><i class="fa-solid fa-user"></i>Admins</a>
                     <a href="#" class="nav-item nav-link"><i class="fa-solid fa-person"></i>Users</a>
                     <a href="#" class="nav-item nav-link"><i class="fa-solid fa-cart-arrow-down"></i>Orders</a>
-                    <a href="/Dashboard/Books" class="nav-item nav-link"><i class="fa-solid fa-book"></i>Books</a>
+                    <a href="/dashboard/books" class="nav-item nav-link"><i class="fa-solid fa-book"></i>Books</a>
                     <a href="#" class="nav-item nav-link"><i class="fa-solid fa-layer-group"></i>Categories</a>
 
 
@@ -224,38 +224,9 @@
 	<!-- DataTable -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    
+    <script src="~/js/dashboard/layout.js"></script>
 
-
-
-    <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const myDiv = document.getElementsByClassName("hoveredBlock")[0];
-            const links = myDiv.querySelectorAll("a");
-
-            // Get the current URL path
-            const currentPath = window.location.pathname;
-
-            // Loop through each <a> tag
-            links.forEach(function (link) {
-                // Check if the href attribute matches the current path
-                if (link.getAttribute("href") === currentPath) {
-                    // Add the "active" class to the matching <a> tag
-                    link.classList.add("active");
-                }
-            });
-        });
-
-        //////////////////////////////////////////////////////////////////////////
-
-        //dataTable
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
-    </script>
 
 
 

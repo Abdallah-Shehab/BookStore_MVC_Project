@@ -59,7 +59,7 @@ namespace Project.Controllers
         {
             Book book = bookRepository.GetById(id);
             var comments = db.Comments.Where(x => x.book_id == book.ID)
-                .Select(b => new CommentVM { Comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).ToList();
+                .Select(b => new CommentVM { Comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).OrderByDescending(x=>x.Date).ToList();
 
             BookDetailsVM bookvm = new BookDetailsVM()
             {
