@@ -24,7 +24,8 @@ namespace Project.ViewModels
 		public Discount Discount { get; set; }
 		public List<CommentVM> Comments { set; get; }
 		public int commentsNum { get; set; }
+        public ApplicationUser Admin { get; set; }
 
 
-	}
+    }
 }

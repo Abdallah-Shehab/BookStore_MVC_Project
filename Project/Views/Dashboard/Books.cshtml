@@ -1,0 +1,52 @@
+﻿@model List<BookDetailsVM>
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+<button class="btn btn-primary addBook"> <i class="fa-duotone fa-books-medical"></i> Add New Book</button>
+
+<table id="myTable" class="display">
+    <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Quantity</th>  
+            <th>Author</th>
+            <th>Category</th>
+            <th>Added by</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> <i class="fa-solid fa-info" title="Book Details" style="color:#009CFF"></i> </td>
+                <td>@item.ID</td>
+                <td>@item.Image</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Rate</td>
+                <td>@item.Price</td>
+                <td>@item.Discount.Percantage %</td>
+                <td>@item.Quantity</td>
+                <td>@item.Author.Name</td>
+                <td>@item.Category.Name</td>
+                <td>@item.Admin.FirstName @item.Admin.LastName</td>
+                <td>
+                    <i class="fa-solid fa-pen-to-square" title="Edit" style="color:#009CFF"></i>
+                    <i class="fa-solid fa-trash" title="Delete" style="color:red"></i>
+                    <i class="fa-regular fa-comment-dots" title="Show Comments" style="color:green"></i>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
