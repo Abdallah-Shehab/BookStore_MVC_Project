@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Project.Models;
+using Project.ViewModels;
 
 namespace Project.Controllers
 {
@@ -25,6 +26,22 @@ namespace Project.Controllers
 
 
             return View("GetAll", users);
+        }
+
+        public IActionResult Books()
+        {
+            var books = _context.Books.
+                Select(x=>new BookDetailsVM { ID=x.ID,Name=x.Name,Description=x.Description,
+                    Price=x.Price,Rate=x.Rate,Image=x.Image,Quantity=x.Quantity,
+                    Author=_context.Authors.FirstOrDefault(s=>s.ID==x.Author_id),
+                    Category=_context.Categories.FirstOrDefault(s=>s.ID==x.Category_id),
+                    Discount=_context.Discounts.FirstOrDefault(s=>s.ID==x.Discount_id),
+                    Admin=_context.Users.FirstOrDefault(s=>s.Id==x.Admin_id)
+                }).ToList();
+
+
+
+            return View("Books",books);
         }
     }
 }
