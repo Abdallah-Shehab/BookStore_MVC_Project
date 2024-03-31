@@ -59,7 +59,7 @@ namespace Project.Controllers
         {
             Book book = bookRepository.GetById(id);
             var comments = db.Comments.Where(x => x.book_id == book.ID)
-                .Select(b => new CommentVM { comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).ToList();
+                .Select(b => new CommentVM { Comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).ToList();
 
             BookDetailsVM bookvm = new BookDetailsVM()
             {
@@ -106,7 +106,7 @@ namespace Project.Controllers
 
                     CommentVM CommentVM = new CommentVM()
                     {
-                        comment = comment,
+                        Comment = comment,
                         rate = rate / 10M,    // update the final rate of the book after adding each rate
                         user_id = userId,
                         book_id = bookID,

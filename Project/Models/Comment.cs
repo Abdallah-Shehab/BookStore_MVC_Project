@@ -13,7 +13,7 @@ namespace Project.Models
 		}
 		public Comment(CommentVM c)
 		{
-			comment = c.comment;
+			comment = c.Comment;
 			rate = c.rate;
 			user_id = c.user_id;
 			book_id = c.book_id;
