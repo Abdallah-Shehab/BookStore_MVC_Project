@@ -1,0 +1,50 @@
+﻿@model List<Project.ViewModels.BookDetailsVM>
+
+@if (Model != null && Model.Any())
+{
+    <h1 style="text-align: center;">Order Summary</h1>
+    <div class="table-responsive" style="margin: 0 auto; width: 80%;">
+        <table class="table table-bordered table-striped" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Order ID</th>
+                    <th style="width: 8%;">Image</th>
+                    <th style="width: 30%;">Book Name</th>
+                    <th style="width: 15%;">Book Price</th>
+                    <th style="width: 15%;">Book Quantity</th>
+                    <th style="width: 15%;">Order Price </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    decimal totalPrice = item.Quantity * item.Price;
+
+                    <tr>
+                        <td>@item.ID</td>
+                        <td><img id="product-zoom" src="~/assets/images/books/@item.Image" style="object-fit: cover; max-height: 200px;" data-zoom-image="~/assets/images/books/@item.Image" alt="product image"></td>
+                        <td>@item.Name</td>
+                        <td>$@item.Price</td>
+                        <td>@item.Quantity</td>
+                        <td>@totalPrice</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="text-align: right;"><strong style="font-size: 18px;">Total Price:</strong></td>
+                    <td style="font-size: 18px; font-weight: bold;">$@Model.Sum(item => item.Quantity * item.Price)</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div style="text-align: center;">
+        <form asp-controller="Order" asp-action="ConfirmOrder" method="post">
+            <button type="submit" class="btn btn-primary">Confirm Order</button>
+        </form>
+    </div>
+}
+else
+{
+    <p>No order details available.</p>
+}
