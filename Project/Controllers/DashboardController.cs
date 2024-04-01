@@ -31,12 +31,19 @@ namespace Project.Controllers
         public IActionResult Books()
         {
             var books = _context.Books.
-                Select(x=>new BookDetailsVM { ID=x.ID,Name=x.Name,Description=x.Description,
-                    Price=x.Price,Rate=x.Rate,Image=x.Image,Quantity=x.Quantity,
-                    Author=_context.Authors.FirstOrDefault(s=>s.ID==x.Author_id),
-                    Category=_context.Categories.FirstOrDefault(s=>s.ID==x.Category_id),
-                    Discount=_context.Discounts.FirstOrDefault(s=>s.ID==x.Discount_id),
-                    Admin=_context.Users.FirstOrDefault(s=>s.Id==x.Admin_id)
+                Select(x => new BookDetailsVM
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Price = x.Price,
+                    Rate = x.Rate,
+                    Image = x.Image,
+                    Quantity = x.Quantity,
+                    Author = x.Author,
+                    Category = x.Category,
+                    Discount = x.Discount,
+                    Admin = x.Admin
                 }).ToList();
 
             return View("Books",books);
@@ -54,10 +61,10 @@ namespace Project.Controllers
                     Rate = x.Rate,
                     Image = x.Image,
                     Quantity = x.Quantity,
-                    Author = _context.Authors.FirstOrDefault(s => s.ID == x.Author_id),
-                    Category = _context.Categories.FirstOrDefault(s => s.ID == x.Category_id),
-                    Discount = _context.Discounts.FirstOrDefault(s => s.ID == x.Discount_id),
-                    Admin = _context.Users.FirstOrDefault(s => s.Id == x.Admin_id)
+                    Author = x.Author,
+                    Category = x.Category,
+                    Discount = x.Discount,
+                    Admin = x.Admin
                 }).FirstOrDefault();
 
 
@@ -70,6 +77,22 @@ namespace Project.Controllers
                 admin = book.Admin.FirstName + " " + book.Admin.LastName,
                 discount = book.Discount.Percantage
             });
+        }
+
+        public IActionResult GetBookComments(int id)
+        {
+            var comments = _context.Comments.Where(x => x.book_id == id).
+                Select(x => new CommentVM
+                {
+                    Comment = x.comment,
+                    userFName = x.user.FirstName,
+                    userLName = x.user.LastName,
+                    rate = x.rate,
+                    Date = x.Date,
+                    user_id = x.user_id
+                }).ToList();
+
+            return View("BookComments",comments);
         }
     }
 }

@@ -38,14 +38,21 @@
                     <td>@item.Rate</td>
                     <td>@item.Price</td>
                     <td>@item.Discount.Percantage %</td>
-                    <td>@item.Quantity</td>
+                    @if (item.Quantity == 0)
+                    {
+                        <td>0 (out of stock)</td>
+                    }
+                    else
+                    {
+                        <td>@item.Quantity</td>
+                    }
                     <td>@item.Author.Name</td>
                     <td>@item.Category.Name</td>
                     <td>@item.Admin.FirstName @item.Admin.LastName</td>
                     <td>
                         <i class="fa-solid fa-pen-to-square" title="Edit" style="color:#009CFF"></i>
                         <i class="fa-solid fa-trash" title="Delete" style="color:red"></i>
-                        <i class="fa-regular fa-comment-dots" title="Show Comments" style="color:green"></i>
+                        <i class="fa-regular fa-comment-dots" onclick="redirectToBookComments(@item.ID)" title="Show Comments" style="color:green"></i>
                     </td>
                 </tr>
             }
@@ -56,7 +63,7 @@
 
 
 
-@* info icon *@
+@* Book Details/info icon *@
 <div class="modal fade" id="info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -70,7 +77,7 @@
                     <div class="product__photo">
                         <div class="photo-container">
                             <div class="photo-main">
-                                <img src="~/assets/images/books/morgan-housel-aZ_MmSmAcjg-unsplash.jpg">
+                                @* <img src="~/assets/images/books/tim-alex-xG5VJW-7Bio-unsplash.jpg"> *@
                             </div>
                         </div>
                     </div>
@@ -80,6 +87,10 @@
 							<span>Book ID:</span> <span id="bookId"> </span>
                         </div>
                      
+                        <div class="description">
+                            <h3>Rate</h3>
+                            <span id="bookRate"> </span> /10
+                        </div>
                         <div class="description">
                             <h3>Price</h3>
                             <span id="bookPrice"> </span> $
@@ -125,3 +136,5 @@
         </div>
     </div>
 </div>
+
+

@@ -1,26 +1,29 @@
 ﻿function BookInfo(bookId) {
     $.ajax({
-        url: '/Dashboard/GetBookDeatils/'+bookId,
+        url: '/Dashboard/GetBookDeatils/' + bookId,
         type: 'GET',
         dataType: 'json',
         success: function (obj) {
-                '<div><span>rate:</span> <span>' + obj.bookobj.rate + '</span></div>' 
+            var imagePath = '/assets/images/books/' + obj.bookobj.image;
+            document.getElementsByClassName("photo-main")[0].innerHTML = '<img src="' + imagePath + '">';
 
             document.getElementById("bookId").textContent = obj.bookobj.id;
-            document.getElementById("bookTitle").textContent = obj.bookobj.name; 
-            document.getElementById("bookPrice").textContent = obj.bookobj.price; 
+            document.getElementById("bookRate").textContent = obj.bookobj.rate;
+            document.getElementById("bookTitle").textContent = obj.bookobj.name;
+            document.getElementById("bookPrice").textContent = obj.bookobj.price;
             document.getElementById("bookDesc").textContent = obj.bookobj.description;
             if (obj.bookobj.quantity == 0) {
+                document.getElementById("bookQuant").style.color = "red";
                 document.getElementById("bookQuant").textContent = obj.bookobj.quantity + " (Out Of Stock)";
             }
             else {
                 document.getElementById("bookQuant").textContent = obj.bookobj.quantity;
+                document.getElementById("bookQuant").style.color = "#757575";
             }
-            document.getElementById("bookCategory").textContent = obj.category; 
-            document.getElementById("bookAuthor").textContent = obj.author; 
-            document.getElementById("bookDiscount").textContent = obj.discount; 
-            document.getElementById("bookAdmin").textContent = obj.admin; 
-            //document.getElementsByClassName("photo-main")[0].innerHTML = '<img src="~/assets/images/books/' + obj.bookobj.image + '">';
+            document.getElementById("bookCategory").textContent = obj.category;
+            document.getElementById("bookAuthor").textContent = obj.author;
+            document.getElementById("bookDiscount").textContent = obj.discount;
+            document.getElementById("bookAdmin").textContent = obj.admin;
         },
         error: function (xhr, status, error) {
             // Handle error
@@ -29,4 +32,16 @@
         }
     });
 
+}
+
+
+
+
+
+function redirectToBookComments(id) {
+    // Construct the URL for the action
+    let url = `/Dashboard/GetBookComments/${id}`;
+
+    // Redirect the user to the URL
+    window.location.href = url;
 }
