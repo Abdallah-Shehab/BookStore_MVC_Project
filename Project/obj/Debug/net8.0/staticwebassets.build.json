@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B00aOR/O41Ap0CL7M1h76q6duVegv2u+oo5gdE7x8As=",
+  "Hash": "qeuQ4tgRluJAr0TYRmvz8vbJE0GK6A6Dn2XGKECrpis=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -27888,6 +27888,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\comment.css"
+    },
+    {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\modal.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "css/dashboard/modal.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dashboard\\modal.css"
     },
     {
       "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\style.css",

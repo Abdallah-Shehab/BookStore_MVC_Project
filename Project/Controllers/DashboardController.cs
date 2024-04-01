@@ -62,7 +62,14 @@ namespace Project.Controllers
 
 
 
-            return Json(book);  //return json not list => so the athor name, admin name and any data like that will be undefined in modals.js
+            return Json(new
+            {
+                bookobj = book,
+                author = book.Author.Name,
+                category = book.Category.Name,
+                admin = book.Admin.FirstName + " " + book.Admin.LastName,
+                discount = book.Discount.Percantage
+            });
         }
     }
 }

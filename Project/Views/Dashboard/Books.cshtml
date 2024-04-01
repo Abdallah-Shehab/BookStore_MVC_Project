@@ -65,7 +65,59 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bookInfo">
-                
+
+                <section class="product">
+                    <div class="product__photo">
+                        <div class="photo-container">
+                            <div class="photo-main">
+                                <img src="~/assets/images/books/morgan-housel-aZ_MmSmAcjg-unsplash.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__info">
+                        <div class="title">
+                            <h1 id="bookTitle"> </h1>
+							<span>Book ID:</span> <span id="bookId"> </span>
+                        </div>
+                     
+                        <div class="description">
+                            <h3>Price</h3>
+                            <span id="bookPrice"> </span> $
+                        </div>
+                        <div class="description">
+                            <h3>Discount</h3>
+                            <span id="bookDiscount"> </span> %
+                        </div>
+                        <div class="description">
+                            <h3>Quantity</h3>
+                            <span id="bookQuant"> </span>
+                        </div>
+                        <div class="description">
+                            <h3>Category</h3>
+                            <span id="bookCategory"> </span>
+                        </div>
+                        <div class="description">
+                            <h3>Author</h3>
+                            <span id="bookAuthor"> </span>
+                        </div>
+                        
+                        <div class="description">
+                            <h3>Added By / Admin Name</h3>
+                            <span id="bookAdmin"> </span>
+                        </div>
+                        <div class="description">
+                            <h3>Description</h3>
+                            <span id="bookDesc"> </span>
+                        </div>
+                        
+                        <div id="btns">
+                            <button class="buy--btn" style="background-color:#009CFF"><i class="fa-solid fa-pen-to-square"></i> Update</button>
+                            <button class="buy--btn" style="background-color:green"><i class="fa-regular fa-comment-dots"></i> Show Comments</button>
+                            <button class="buy--btn"><i class="fa-solid fa-trash"></i> Delete</button>
+
+                        </div>
+                    </div>
+                </section>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-default" ta-dismiss="modal">close</button>

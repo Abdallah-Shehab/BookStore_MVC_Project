@@ -3,21 +3,24 @@
         url: '/Dashboard/GetBookDeatils/'+bookId,
         type: 'GET',
         dataType: 'json',
-        success: function (response) {
-            var block = '<div><span>id:</span> <span>' + response.ID + '</span></div>' +
-                '<div><span>image:</span> <span>' + response.Image + '</span></div>' +
-                '<div><span>title:</span> <span>' + response.Name + '</span></div> ' +
-                '<div><span>ddesciption:</span> <span>' + response.Description + '</span></div> ' +
-                '<div><span>rate:</span> <span>' + response.Rate + '</span></div>' +
-                '<div><span>price:</span> <span>' + response.Price + '</span></div> ' +
-                //'<div><span>discount:</span> <span>' + response.Discount.Percantage + '</span></div> ' +
-                '<div><span>quantity:</span> <span>' + response.Quantity + '</span></div> ' +
-                '<div><span>author:</span> <span>' + response.Author.Name + '</span></div> ' +
-                '<div><span>category:</span> <span>' + response.Category.Name + '</span></div> ' +
-                '<div<span>>added by:</span> <span>' + response.Admin.FirstName + '</span> </div>';
+        success: function (obj) {
+                '<div><span>rate:</span> <span>' + obj.bookobj.rate + '</span></div>' 
 
-            var descDiv = document.createElement("div");
-            document.getElementsByClassName("bookInfo")[0].innerHTML = block;
+            document.getElementById("bookId").textContent = obj.bookobj.id;
+            document.getElementById("bookTitle").textContent = obj.bookobj.name; 
+            document.getElementById("bookPrice").textContent = obj.bookobj.price; 
+            document.getElementById("bookDesc").textContent = obj.bookobj.description;
+            if (obj.bookobj.quantity == 0) {
+                document.getElementById("bookQuant").textContent = obj.bookobj.quantity + " (Out Of Stock)";
+            }
+            else {
+                document.getElementById("bookQuant").textContent = obj.bookobj.quantity;
+            }
+            document.getElementById("bookCategory").textContent = obj.category; 
+            document.getElementById("bookAuthor").textContent = obj.author; 
+            document.getElementById("bookDiscount").textContent = obj.discount; 
+            document.getElementById("bookAdmin").textContent = obj.admin; 
+            //document.getElementsByClassName("photo-main")[0].innerHTML = '<img src="~/assets/images/books/' + obj.bookobj.image + '">';
         },
         error: function (xhr, status, error) {
             // Handle error
