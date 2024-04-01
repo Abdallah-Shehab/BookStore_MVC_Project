@@ -39,9 +39,30 @@ namespace Project.Controllers
                     Admin=_context.Users.FirstOrDefault(s=>s.Id==x.Admin_id)
                 }).ToList();
 
-
-
             return View("Books",books);
+        }
+
+        public IActionResult GetBookDeatils(int id)
+        {
+            var book = _context.Books.Where(x => x.ID == id).
+                Select(x => new BookDetailsVM
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Price = x.Price,
+                    Rate = x.Rate,
+                    Image = x.Image,
+                    Quantity = x.Quantity,
+                    Author = _context.Authors.FirstOrDefault(s => s.ID == x.Author_id),
+                    Category = _context.Categories.FirstOrDefault(s => s.ID == x.Category_id),
+                    Discount = _context.Discounts.FirstOrDefault(s => s.ID == x.Discount_id),
+                    Admin = _context.Users.FirstOrDefault(s => s.Id == x.Admin_id)
+                }).FirstOrDefault();
+
+
+
+            return Json(book);  //return json not list => so the athor name, admin name and any data like that will be undefined in modals.js
         }
     }
 }

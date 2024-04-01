@@ -5941,8 +5941,12 @@
       "PackagePath": "staticwebassets\\js\\dashboard\\layout.js"
     },
     {
-      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\main.js",
-      "PackagePath": "staticwebassets\\js\\main.js"
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\main.js",
+      "PackagePath": "staticwebassets\\js\\dashboard\\main.js"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\modals.js",
+      "PackagePath": "staticwebassets\\js\\dashboard\\modals.js"
     },
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\rating.js",

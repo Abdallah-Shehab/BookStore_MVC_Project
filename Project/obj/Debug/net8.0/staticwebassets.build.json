@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iFzKOYRzJZkn0zvfAaqWPQ/asC+wsR6DESEq4oLG57M=",
+  "Hash": "B00aOR/O41Ap0CL7M1h76q6duVegv2u+oo5gdE7x8As=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -28232,12 +28232,12 @@
       "OriginalItemSpec": "wwwroot\\js\\dashboard\\layout.js"
     },
     {
-      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\main.js",
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\main.js",
       "SourceId": "Project",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
       "BasePath": "_content/Project",
-      "RelativePath": "js/main.js",
+      "RelativePath": "js/dashboard/main.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -28248,7 +28248,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\main.js"
+      "OriginalItemSpec": "wwwroot\\js\\dashboard\\main.js"
+    },
+    {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\modals.js",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "js/dashboard/modals.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\dashboard\\modals.js"
     },
     {
       "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\Nav_Links.js",
