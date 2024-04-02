@@ -1,58 +1,41 @@
-﻿@model List<BookDetailsVM>
+﻿@model List<CommentVM>
 @{
     Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
 }
 
 
-<button class="btn btn-primary addBook" href="/Dashboard/AddNewBook"> <i class="fa-duotone fa-books-medical"></i> Add New Book</button>
 
+<a class="btn btn-outline-primary m-2" href="/Dashboard/Books"> <i class="fa-solid fa-backward"></i> Back To All Books</a>
+
+
+<h3>Reviews of (@ViewBag.BookName)</h3>
 
 <div>
-    <table id="myTable" class="display">
+    <table id="myTable" class="display commentsTable">
         <thead>
             <tr>
-                <th></th>
-                <th>ID</th>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Description</th>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Date</th>
                 <th>Rate</th>
-                <th>Price</th>
-                <th>Discount</th>
-                <th>Quantity</th>
-                <th>Author</th>
-                <th>Category</th>
-                <th>Added by</th>
-                <th></th>
+                <th>Comment</th>
+                <th>Status</th>
+                <th>Hide/Show</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td> <i class="fa-solid fa-info" onclick="BookInfo(@item.ID)" title="Book Details" style="color:#009CFF" data-bs-toggle="modal" data-bs-target="#info"></i> </td>
-                    <td>@item.ID</td>
-                    <td>@item.Image</td>
-                    <td>@item.Name</td>
-                    <td>@item.Description</td>
-                    <td>@item.Rate</td>
-                    <td>@item.Price</td>
-                    <td>@item.Discount.Percantage %</td>
-                    @if (item.Quantity == 0)
-                    {
-                        <td>0 (out of stock)</td>
-                    }
-                    else
-                    {
-                        <td>@item.Quantity</td>
-                    }
-                    <td>@item.Author.Name</td>
-                    <td>@item.Category.Name</td>
-                    <td>@item.Admin.FirstName @item.Admin.LastName</td>
+                    <td>@item.user_id</td>
+                    <td>@item.userFName @item.userLName</td>
+                    <td>@item.Date</td>
+                    <td>@item.rate /10</td>
+                    <td>@item.Comment</td>
+                    <td></td>
                     <td>
-                        <i class="fa-solid fa-pen-to-square" title="Edit" style="color:#009CFF"></i>
-                        <i class="fa-solid fa-trash" title="Delete" style="color:red"></i>
-                        <i class="fa-regular fa-comment-dots" onclick="redirectToBookComments(@item.ID)" title="Show Comments" style="color:green"></i>
+                        <i class="fa-solid fa-eye" title="Show" style="color:#009CFF"></i> @* if this icon is visible, so the comment is hidden from the public and want to click on it to show comment to the public*@
+                        <i class="fa-regular fa-eye-slash" title="Hide" style="color:red"></i> @* comment is shown and want to hide it*@
                     </td>
                 </tr>
             }

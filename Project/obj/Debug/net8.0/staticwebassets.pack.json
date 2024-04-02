@@ -5909,16 +5909,20 @@
       "PackagePath": "staticwebassets\\css\\comment.css"
     },
     {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\Comments.css",
+      "PackagePath": "staticwebassets\\css\\dashboard\\Comments.css"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\dataTable.css",
+      "PackagePath": "staticwebassets\\css\\dashboard\\dataTable.css"
+    },
+    {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\modal.css",
       "PackagePath": "staticwebassets\\css\\dashboard\\modal.css"
     },
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\style.css",
       "PackagePath": "staticwebassets\\css\\dashboard\\style.css"
-    },
-    {
-      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\style2.css",
-      "PackagePath": "staticwebassets\\css\\dashboard\\style2.css"
     },
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\popup.css",

@@ -79,9 +79,9 @@ namespace Project.Controllers
             });
         }
 
-        public IActionResult GetBookComments(int id)
+        public IActionResult BookComments(int id)
         {
-            var comments = _context.Comments.Where(x => x.book_id == id).
+            List<CommentVM> comments = _context.Comments.Where(x => x.book_id == id).
                 Select(x => new CommentVM
                 {
                     Comment = x.comment,
@@ -92,7 +92,30 @@ namespace Project.Controllers
                     user_id = x.user_id
                 }).ToList();
 
-            return View("BookComments",comments);
+            ViewBag.BookName = _context.Books.Where(x => x.ID == id).Select(x => x.Name).FirstOrDefault();
+
+
+            return View("BookComments", comments);
+        }
+        
+        
+        public IActionResult redirectToDeleteBook(int id)
+        {
+            List<CommentVM> comments = _context.Comments.Where(x => x.book_id == id).
+                Select(x => new CommentVM
+                {
+                    Comment = x.comment,
+                    userFName = x.user.FirstName,
+                    userLName = x.user.LastName,
+                    rate = x.rate,
+                    Date = x.Date,
+                    user_id = x.user_id
+                }).ToList();
+
+            ViewBag.BookName = _context.Books.Where(x => x.ID == id).Select(x => x.Name).FirstOrDefault();
+
+
+            return View("BookComments", comments);
         }
     }
 }

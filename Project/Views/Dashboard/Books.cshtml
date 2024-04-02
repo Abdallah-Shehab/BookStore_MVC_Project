@@ -8,7 +8,7 @@
 
 
 <div>
-    <table id="myTable" class="display">
+    <table id="myTable" class="display allBooks">
         <thead>
             <tr>
                 <th></th>
@@ -30,7 +30,11 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td> <i class="fa-solid fa-info" onclick="BookInfo(@item.ID)" title="Book Details" style="color:#009CFF" data-bs-toggle="modal" data-bs-target="#info"></i> </td>
+                    <td>
+                        <button type="button" onclick="BookInfo(@item.ID)" data-bs-toggle="modal" data-bs-target="#info" class="btn btn-square btn-outline-primary m-2"><i class="fa-solid fa-info" title="Book Details"></i></button>
+                        
+                        @* <i class="fa-solid fa-info" onclick="BookInfo(@item.ID)" title="Book Details" style="color:#009CFF" data-bs-toggle="modal" data-bs-target="#info"></i> *@
+                    </td>
                     <td>@item.ID</td>
                     <td>@item.Image</td>
                     <td>@item.Name</td>
@@ -51,8 +55,8 @@
                     <td>@item.Admin.FirstName @item.Admin.LastName</td>
                     <td>
                         <i class="fa-solid fa-pen-to-square" title="Edit" style="color:#009CFF"></i>
-                        <i class="fa-solid fa-trash" title="Delete" style="color:red"></i>
-                        <i class="fa-regular fa-comment-dots" onclick="redirectToBookComments(@item.ID)" title="Show Comments" style="color:green"></i>
+                        <i class="fa-solid fa-trash" title="Delete" onclick="redirectToDeleteBook(@item.ID)" style="color:red"></i>
+                        <i class="fa-regular fa-comment-dots" onclick="redirectToBookComments(@item.ID)" title="Show Comments" style="color:green"></i>   @*handle in modals.js*@
                     </td>
                 </tr>
             }
@@ -77,7 +81,7 @@
                     <div class="product__photo">
                         <div class="photo-container">
                             <div class="photo-main">
-                                @* <img src="~/assets/images/books/tim-alex-xG5VJW-7Bio-unsplash.jpg"> *@
+
                             </div>
                         </div>
                     </div>
@@ -123,8 +127,8 @@
                         
                         <div id="btns">
                             <button class="buy--btn" style="background-color:#009CFF"><i class="fa-solid fa-pen-to-square"></i> Update</button>
-                            <button class="buy--btn" style="background-color:green"><i class="fa-regular fa-comment-dots"></i> Show Comments</button>
-                            <button class="buy--btn"><i class="fa-solid fa-trash"></i> Delete</button>
+                            <button class="buy--btn btnShowComments" style="background-color:green"><i class="fa-regular fa-comment-dots"></i> Show Comments</button>  @*handle in modals.js*@
+                            <button class="buy--btn btnDeleteBook"><i class="fa-solid fa-trash"></i> Delete</button>
 
                         </div>
                     </div>
