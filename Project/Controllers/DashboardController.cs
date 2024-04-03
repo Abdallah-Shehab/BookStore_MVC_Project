@@ -6,11 +6,12 @@ namespace Project.Controllers
 {
     public class DashboardController : Controller
     {
-
+        private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly BookStoreContext _context;
-        public DashboardController(BookStoreContext context)
+        public DashboardController(BookStoreContext context, IWebHostEnvironment hostingEnvironment)
         {
             _context = context;
+            _hostingEnvironment = hostingEnvironment;
         }
         public IActionResult Dashboard()
         {
@@ -77,7 +78,7 @@ namespace Project.Controllers
                 author = book.Author.Name,
                 category = book.Category.Name,
                 admin = book.Admin.FirstName + " " + book.Admin.LastName,
-                discount = book.Discount.Percantage
+                discount = book.Discount?.Percantage ?? null   //book.Discount?.Percentage checks if book.Discount is not null. If it's not null, it accesses the Percentage property.
             });
         }
 
@@ -122,16 +123,74 @@ namespace Project.Controllers
         
         public IActionResult EditBook(int id)
         {
+            var adminRoleId = _context.AspNetRoles
+                                      .Where(r => r.Name == "ADMIN")
+                                      .Select(r => r.Id)
+                                      .FirstOrDefault();
+            var adminsIds = _context.AspNetUserRoles
+                                            .Where(ur => ur.RoleId == adminRoleId)
+                                            .Select(ur => ur.UserId)
+                                            .ToList();
             BookVM bookVM = new BookVM()
             {
                 book = _context.Books.FirstOrDefault(x => x.ID == id),
                 authors = _context.Authors.ToList(),
-                //admins=_context.ApplicationUsers.Where(x=>x.).ToList(),
+                admins = _context.AspNetUsers.Where(u => adminsIds.Contains(u.Id)).ToList(),
                 categories = _context.Categories.ToList(),
                 discounts = _context.Discounts.ToList(),
             };
             
             return View("EditBook",bookVM);
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> EditBook(BookVM _book, IFormFile imageFile)
+        {
+            Book book = _context.Books.FirstOrDefault(x => x.ID == _book.book.ID);
+            if (book != null)
+            {
+                book.Name = _book.book.Name;
+                book.Description = _book.book.Description;
+                book.Price = _book.book.Price;
+                book.Quantity = _book.book.Quantity;
+                book.IsAvailable = _book.book.IsAvailable;
+                book.Discount_id = _book.book.Discount_id;
+                book.Admin_id = _book.book.Admin_id;
+                book.Author_id = _book.book.Author_id;
+                book.Category_id = _book.book.Category_id;
+
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    // Save the uploaded image to the wwwroot folder
+                    var uploadsDirectory = Path.Combine(_hostingEnvironment.WebRootPath, "assets", "Images", "books");
+                    if (!Directory.Exists(uploadsDirectory))
+                    {
+                        Directory.CreateDirectory(uploadsDirectory);
+                    }
+
+                    // Generate a unique file name to avoid overwriting existing files
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+                    var filePath = Path.Combine(uploadsDirectory, fileName);
+
+                    // Save the file to the server
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await imageFile.CopyToAsync(stream);
+                    }
+
+                    // Update the book's image file name in the database
+                    book.Image = fileName; // Store only the file name in the database
+                }
+
+                _context.Update(book);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Books");
+            }
+
+            return NotFound();
+        }
+
     }
 }

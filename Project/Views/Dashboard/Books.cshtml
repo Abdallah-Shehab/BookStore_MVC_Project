@@ -42,7 +42,14 @@
                     <td>@item.Description</td>
                     <td>@item.Rate</td>
                     <td>@item.Price</td>
-                    <td>@item.Discount.Percantage %</td>
+                    @if(item.Discount == null)
+                    {
+                        <td>--</td>
+                    }
+                    else
+                    {
+                        <td>@item.Discount.Percantage %</td>
+                    }
                     @if (item.Quantity == 0)
                     {
                         <td>0 (out of stock)</td>

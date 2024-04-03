@@ -933,6 +933,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\blog\\single\\fullwidth\\3.jpg"
     },
     {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\da1a93cc-c3ff-4d5e-bf6f-4d40a089f725.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\da1a93cc-c3ff-4d5e-bf6f-4d40a089f725.jpg"
+    },
+    {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg"
     },
@@ -5917,6 +5921,10 @@
       "PackagePath": "staticwebassets\\css\\dashboard\\dataTable.css"
     },
     {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\form.css",
+      "PackagePath": "staticwebassets\\css\\dashboard\\form.css"
+    },
+    {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\modal.css",
       "PackagePath": "staticwebassets\\css\\dashboard\\modal.css"
     },
@@ -5943,6 +5951,10 @@
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\Nav_Links.js",
       "PackagePath": "staticwebassets\\js\\Nav_Links.js"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\formImage.js",
+      "PackagePath": "staticwebassets\\js\\dashboard\\formImage.js"
     },
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\layout.js",
@@ -6659,6 +6671,10 @@
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\uploads\\ff7f2ef4-3e3d-4eae-ad53-8af8df16095d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ff7f2ef4-3e3d-4eae-ad53-8af8df16095d.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Project.Microsoft.AspNetCore.StaticWebAssets.props",

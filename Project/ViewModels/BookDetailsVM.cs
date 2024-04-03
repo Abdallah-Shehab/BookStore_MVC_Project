@@ -22,7 +22,7 @@ namespace Project.ViewModels
 		public Category Category { get; set; }
 		public int categoryID { get; set; }
 		public List<BookDetailsVM> categoryBooks { get; set; }  //books from the same category
-		public Discount Discount { get; set; }
+		public Discount? Discount { get; set; }
 		public List<CommentVM> Comments { set; get; }
 		public int commentsNum { get; set; }
         public ApplicationUser Admin { get; set; }

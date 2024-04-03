@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NV9W8oVS1BAWPludeuyFEKF5OX6XVJ7TMJgr+FouZvw=",
+  "Hash": "0KZTNd3LyzH2YvbnsS7RkLd4GdtrNQMEQBarqvGje4k=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -4366,6 +4366,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\blog\\single\\fullwidth-sidebar\\5.jpg"
+    },
+    {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\da1a93cc-c3ff-4d5e-bf6f-4d40a089f725.jpg",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "assets/images/books/da1a93cc-c3ff-4d5e-bf6f-4d40a089f725.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\books\\da1a93cc-c3ff-4d5e-bf6f-4d40a089f725.jpg"
     },
     {
       "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg",
@@ -27966,6 +27985,25 @@
       "OriginalItemSpec": "wwwroot\\css\\dashboard\\dataTable.css"
     },
     {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\form.css",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "css/dashboard/form.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dashboard\\form.css"
+    },
+    {
       "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\css\\dashboard\\modal.css",
       "SourceId": "Project",
       "SourceType": "Discovered",
@@ -28287,6 +28325,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Cart.js"
+    },
+    {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\formImage.js",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "js/dashboard/formImage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\dashboard\\formImage.js"
     },
     {
       "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\js\\dashboard\\layout.js",
@@ -31707,6 +31764,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\uploads\\ff7f2ef4-3e3d-4eae-ad53-8af8df16095d.jpg",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "uploads/ff7f2ef4-3e3d-4eae-ad53-8af8df16095d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ff7f2ef4-3e3d-4eae-ad53-8af8df16095d.jpg"
     }
   ]
 }
