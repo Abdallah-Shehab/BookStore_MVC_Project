@@ -19,6 +19,7 @@ namespace Project.Models
 
         public string? Image { get; set; }
         public int Quantity { get; set; }
+        public bool IsAvailable { get; set; }
 
         [ForeignKey("Admin")]
         public int Admin_id { get; set; }

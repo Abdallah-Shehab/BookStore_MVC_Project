@@ -21,9 +21,18 @@
     text-overflow: ellipsis;
     white-space: nowrap; /* Prevent text wrapping within cells */
     overflow: hidden; /* Hide overflowing content */
+    max-width: 0; /* Ensure ellipsis works */
+    overflow: hidden; /* Hide overflow text */
 }
+
+
+.allBooks td:last-child {
+    text-overflow: clip;
+}
+
 td {
     text-align: center;
+
 }
 tr:first-child { /* Target the first row (header) */
     table-layout: auto;
@@ -42,4 +51,6 @@ th:hover {
 i{
     cursor:pointer;
 }
+
+
 

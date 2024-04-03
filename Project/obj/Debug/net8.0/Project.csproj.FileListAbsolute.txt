@@ -780,3 +780,13 @@ F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_P
 F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.pdb
 F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.genruntimeconfig.cache
 F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\obj\Debug\net8.0\ref\Project.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+F:\ITI (9 M)\Menofia\32. Asp.Net(MVC)\Final Project (Book Store)\BookStore_MVC_Project\Project\bin\Debug\net8.0\Microsoft.JSInterop.dll

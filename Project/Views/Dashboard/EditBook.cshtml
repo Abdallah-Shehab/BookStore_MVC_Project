@@ -1,0 +1,98 @@
+﻿@model BookVM
+
+@{
+    ViewData["Title"] = "EditBook";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<h1>EditBook</h1>
+
+<h4>Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditBook">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="book.ID" class="control-label"></label>
+                <input asp-for="book.ID" disabled class="form-control" />
+                <span asp-validation-for="book.ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Name" class="control-label"></label>
+                <input asp-for="book.Name" class="form-control" />
+                <span asp-validation-for="book.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Description" class="control-label"></label>
+                <input asp-for="book.Description" class="form-control" />
+                <span asp-validation-for="book.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Price" class="control-label"></label>
+                <input asp-for="book.Price" class="form-control" />
+                <span asp-validation-for="book.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Rate" class="control-label"></label>
+                <input asp-for="book.Rate" disabled class="form-control" />
+                <span asp-validation-for="book.Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Image" class="control-label"></label>
+                <input asp-for="book.Image" class="form-control" />
+                <span asp-validation-for="book.Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Quantity" class="control-label"></label>
+                <input asp-for="book.Quantity" class="form-control" />
+                <span asp-validation-for="book.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="book.IsAvailable" /> @Html.DisplayNameFor(model => model.book.IsAvailable)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Admin_id" class="control-label"></label>
+                <input asp-for="book.Admin_id" class="form-control" />
+                <span asp-validation-for="book.Admin_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Author_id" class="control-label"></label>
+                <input asp-for="book.Author_id" class="form-control" />
+                <span asp-validation-for="book.Author_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Category_id" class="control-label"></label>
+                <input asp-for="book.Category_id" class="form-control" />
+                <span asp-validation-for="book.Category_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book.Discount_id" class="control-label"></label>
+                <select class="control-label" asp-for="book.Discount_id">
+                    @foreach (var discount in Model.discounts)
+                    {
+                        if (Model.book.ID == discount.ID)
+                        {
+                            <option value="@discount.ID" selected>@discount.Percantage</option>
+                        }
+                        else
+                        {
+                            <option value="discount.ID">@discount.Percantage</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="book.Discount_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Books">Back to List</a>
+</div>
+

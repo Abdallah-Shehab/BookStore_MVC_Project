@@ -43,7 +43,8 @@ namespace Project.Controllers
                     Author = x.Author,
                     Category = x.Category,
                     Discount = x.Discount,
-                    Admin = x.Admin
+                    Admin = x.Admin,
+                    IsAvailable=x.IsAvailable
                 }).ToList();
 
             return View("Books",books);
@@ -64,7 +65,8 @@ namespace Project.Controllers
                     Author = x.Author,
                     Category = x.Category,
                     Discount = x.Discount,
-                    Admin = x.Admin
+                    Admin = x.Admin,
+                    IsAvailable=x.IsAvailable
                 }).FirstOrDefault();
 
 
@@ -99,23 +101,37 @@ namespace Project.Controllers
         }
         
         
-        public IActionResult redirectToDeleteBook(int id)
+        public IActionResult DeleteBook(int id)
         {
-            List<CommentVM> comments = _context.Comments.Where(x => x.book_id == id).
-                Select(x => new CommentVM
-                {
-                    Comment = x.comment,
-                    userFName = x.user.FirstName,
-                    userLName = x.user.LastName,
-                    rate = x.rate,
-                    Date = x.Date,
-                    user_id = x.user_id
-                }).ToList();
-
-            ViewBag.BookName = _context.Books.Where(x => x.ID == id).Select(x => x.Name).FirstOrDefault();
-
-
-            return View("BookComments", comments);
+            var book = _context.Books.FirstOrDefault(x => x.ID == id);
+            book.IsAvailable=false;
+            _context.Update(book);
+            _context.SaveChanges();
+            
+            return Json("Done");
+        }
+        public IActionResult AddBook(int id)
+        {
+            var book = _context.Books.FirstOrDefault(x => x.ID == id);
+            book.IsAvailable=true;
+            _context.Update(book);
+            _context.SaveChanges();
+            
+            return Json("Done");
+        }
+        
+        public IActionResult EditBook(int id)
+        {
+            BookVM bookVM = new BookVM()
+            {
+                book = _context.Books.FirstOrDefault(x => x.ID == id),
+                authors = _context.Authors.ToList(),
+                //admins=_context.ApplicationUsers.Where(x=>x.).ToList(),
+                categories = _context.Categories.ToList(),
+                discounts = _context.Discounts.ToList(),
+            };
+            
+            return View("EditBook",bookVM);
         }
     }
 }
