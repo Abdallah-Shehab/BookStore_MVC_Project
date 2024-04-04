@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Project.Models;
 using Project.ViewModels;
 
@@ -45,10 +46,10 @@ namespace Project.Controllers
                     Category = x.Category,
                     Discount = x.Discount,
                     Admin = x.Admin,
-                    IsAvailable=x.IsAvailable
+                    IsAvailable = x.IsAvailable
                 }).ToList();
 
-            return View("Books",books);
+            return View("Books", books);
         }
 
         public IActionResult GetBookDeatils(int id)
@@ -67,7 +68,7 @@ namespace Project.Controllers
                     Category = x.Category,
                     Discount = x.Discount,
                     Admin = x.Admin,
-                    IsAvailable=x.IsAvailable
+                    IsAvailable = x.IsAvailable
                 }).FirstOrDefault();
 
 
@@ -100,37 +101,30 @@ namespace Project.Controllers
 
             return View("BookComments", comments);
         }
-        
-        
+
+
         public IActionResult DeleteBook(int id)
         {
             var book = _context.Books.FirstOrDefault(x => x.ID == id);
-            book.IsAvailable=false;
+            book.IsAvailable = false;
             _context.Update(book);
             _context.SaveChanges();
-            
+
             return Json("Done");
         }
         public IActionResult AddBook(int id)
         {
             var book = _context.Books.FirstOrDefault(x => x.ID == id);
-            book.IsAvailable=true;
+            book.IsAvailable = true;
             _context.Update(book);
             _context.SaveChanges();
-            
+
             return Json("Done");
         }
-        
+
         public IActionResult EditBook(int id)
         {
-            var adminRoleId = _context.AspNetRoles
-                                      .Where(r => r.Name == "ADMIN")
-                                      .Select(r => r.Id)
-                                      .FirstOrDefault();
-            var adminsIds = _context.AspNetUserRoles
-                                            .Where(ur => ur.RoleId == adminRoleId)
-                                            .Select(ur => ur.UserId)
-                                            .ToList();
+            var adminsIds = GetAdminsIDs();
             BookVM bookVM = new BookVM()
             {
                 book = _context.Books.FirstOrDefault(x => x.ID == id),
@@ -139,8 +133,19 @@ namespace Project.Controllers
                 categories = _context.Categories.ToList(),
                 discounts = _context.Discounts.ToList(),
             };
-            
-            return View("EditBook",bookVM);
+
+            return View("EditBook", bookVM);
+        }
+
+        public List<int> GetAdminsIDs()
+        {
+            var adminRoleId = _context.AspNetRoles
+                                      .Where(r => r.Name == "ADMIN")
+                                      .Select(r => r.Id)
+                                      .FirstOrDefault();
+            return _context.AspNetUserRoles.Where(ur => ur.RoleId == adminRoleId)
+                                            .Select(ur => ur.UserId)
+                                            .ToList();
         }
 
 
@@ -192,5 +197,71 @@ namespace Project.Controllers
             return NotFound();
         }
 
+
+        public IActionResult AddNewBook()
+        {
+            var adminsIds = GetAdminsIDs();
+
+            ViewBag.Authors = _context.Authors.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Discounts = _context.Discounts.ToList();
+            ViewBag.Admins = _context.AspNetUsers.Where(u => adminsIds.Contains(u.Id)).ToList();
+
+            return View("AddNewBook");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SaveNewBook(Book book, IFormFile imageFile)
+        {
+            //if (ModelState.IsValid == true)//C#
+            if (book.Admin_id != null || book.Author_id != null || book.Category_id != null || book.Description != null || book.Name != null || book.Price != null)//C#
+            {
+                try
+                {
+                    var fileName = "";
+                    if (imageFile != null && imageFile.Length > 0)
+                    {
+                        // Save the uploaded image to the wwwroot folder
+                        var uploadsDirectory = Path.Combine(_hostingEnvironment.WebRootPath, "assets", "Images", "books");
+                        if (!Directory.Exists(uploadsDirectory))
+                        {
+                            Directory.CreateDirectory(uploadsDirectory);
+                        }
+
+                        // Generate a unique file name to avoid overwriting existing files
+                        fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+                        var filePath = Path.Combine(uploadsDirectory, fileName);
+
+                        // Save the file to the server
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await imageFile.CopyToAsync(stream);
+                        }
+
+                    }
+                    book.Image = fileName;
+
+                    _context.Books.Add(book);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Books");
+                }
+                catch (Exception ex)
+                {
+                    //send ex message to view as error inside modelstate
+                    //ModelState.AddModelError("DepartmentId", "Please Select Department");
+                    //ModelState.AddModelError("", ex.Message);
+                    // ModelState.AddModelError("", ex.InnerException.Message);
+                }
+            }
+
+            var adminsIds = GetAdminsIDs();
+
+            ViewBag.Authors = _context.Authors.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Discounts = _context.Discounts.ToList();
+            ViewBag.Admins = _context.AspNetUsers.Where(u => adminsIds.Contains(u.Id)).ToList();
+            
+            return View("AddNewBook", book);
+        }
     }
 }
