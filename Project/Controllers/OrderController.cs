@@ -9,6 +9,10 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using System.Net.Mail;
 using System.Net;
+using Microsoft.AspNetCore.Identity.UI.Services;
+
+
+
 
 namespace Project.Controllers
 {
@@ -18,13 +22,15 @@ namespace Project.Controllers
         private readonly IBookRepository bookRepository;
         private readonly BookStoreContext db;
         private readonly UserManager<ApplicationUser> userManager;
-
-        public OrderController(ILogger<OrderController> logger, IBookRepository bookRepository, BookStoreContext db, UserManager<ApplicationUser> userManager)
+        private readonly ISenderEmail emailSender;
+        public OrderController(ILogger<OrderController> logger, IBookRepository bookRepository, BookStoreContext db, UserManager<ApplicationUser> userManager, ISenderEmail emailSender)
         {
             _logger = logger;
             this.bookRepository = bookRepository;
             this.db = db;
             this.userManager = userManager;
+            this.emailSender = emailSender;
+            this.emailSender = emailSender;
         }
 
 
@@ -68,7 +74,6 @@ namespace Project.Controllers
 
 
 
-
         [HttpPost]
         public IActionResult AddToCart(BookDetailsVM order, int quantity, decimal price)
         {
@@ -84,7 +89,7 @@ namespace Project.Controllers
                 return RedirectToAction("Error");
             }
 
-            // Check if the book already exists in the user's cart
+        
             var existingOrder = db.Orders.Include(o => o.OrderDetails)
                                         .FirstOrDefault(o => o.user_id == userIdInt && o.OrderDetails.Any(od => od.Book_id == order.ID));
 
@@ -92,9 +97,8 @@ namespace Project.Controllers
             {
                 // Update the quantity of the existing order detail
                 var existingOrderDetail = existingOrder.OrderDetails.FirstOrDefault(od => od.Book_id == order.ID);
-                existingOrderDetail.Sub_total = (order.Price * quantity);
                 existingOrderDetail.Quantity = quantity;
-                
+                existingOrderDetail.Sub_total = (order.Price * quantity);
                 existingOrder.Total_Price = (order.Price * quantity);
             }
             else
@@ -104,14 +108,15 @@ namespace Project.Controllers
                 {
                     Date = DateTime.Now,
                     Time = DateTime.Now.TimeOfDay,
+
                     Total_Price = order.Price * quantity,
                     user_id = userIdInt
                 };
 
-                // Create a new order detail
+            
                 var orderDetails = new OrderDetails
                 {
-                    order = newOrder, 
+                    order = newOrder,
                     Book_id = order.ID,
                     Quantity = quantity,
                     Sub_total = order.Price * quantity
@@ -120,11 +125,11 @@ namespace Project.Controllers
                 db.OrdersDetails.Add(orderDetails);
             }
 
-            db.SaveChanges();
-           // ViewBag.CustomMessage = "The Book is added to the Cart Successfully.";
+            db.SaveChanges(); 
 
             return RedirectToAction("BookDetails", new { id = order.ID });
         }
+
 
 
         [HttpGet]
@@ -143,8 +148,8 @@ namespace Project.Controllers
                         ID = od.Order_id,
                         Name = od.book != null ? od.book.Name : "N/A",
                         // Fetch price from the Book entity
-                        Price = od.book != null ? od.book.Price : 0.0m,
-                        Quantity = od.Quantity != null ? od.Quantity : 0,
+                        Price = od.book.Price,
+                        Quantity = od.Quantity ,
                         Image = od.book != null ? od.book.Image : null
                     };
 
@@ -159,10 +164,30 @@ namespace Project.Controllers
             return View(bookDetailsVMs);
         }
 
+
+
+
+
+
+        [HttpPost]
+        public IActionResult DeleteOrder(int book_id)
+        {
+            var orderDetailToDelete = db.OrdersDetails.FirstOrDefault(od => od.Order_id == book_id);
+            if (orderDetailToDelete != null)
+            {
+                db.OrdersDetails.Remove(orderDetailToDelete);
+                db.SaveChanges();
+            }
+            return RedirectToAction("OrderSummary");
+        }
+
+
+
+
+
         [HttpPost]
         public IActionResult ConfirmOrder()
         {
-            // Check if the user is authenticated
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login", "Account", new { returnUrl = Url.Action("ConfirmOrder", "Order") });
@@ -175,7 +200,6 @@ namespace Project.Controllers
                 return RedirectToAction("Error");
             }
 
-            // Retrieve the cart items for the user
             var orderDetails = db.OrdersDetails
                                 .Include(od => od.book)
                                 .Where(od => od.order.user_id == userIdInt)
@@ -183,49 +207,59 @@ namespace Project.Controllers
 
             if (orderDetails.Any())
             {
-                // Calculate the total price
                 decimal totalPrice = orderDetails.Sum(od => od.Sub_total);
 
-                // Create a new order
                 var newOrder = new Order
                 {
                     Date = DateTime.Now,
                     Time = DateTime.Now.TimeOfDay,
-                    Total_Price = totalPrice, // Set the total price
+                    Total_Price = totalPrice,
                     user_id = userIdInt
                 };
 
-                // Add the order to the database
                 db.Orders.Add(newOrder);
-                db.SaveChanges(); // Save changes to get the new order ID
+                db.SaveChanges();
 
-                // Add order details to the new order
                 foreach (var od in orderDetails)
                 {
-                    // Create a new OrderDetails object and associate it with the new order
                     var orderDetailsForNewOrder = new OrderDetails
                     {
-                        Order_id = newOrder.ID, // Associate with the new order
+                        Order_id = newOrder.ID,
                         Book_id = od.Book_id,
                         Sub_total = od.Sub_total,
                         Quantity = od.Quantity
                     };
 
-                    // Add the order details to the database
                     db.OrdersDetails.Add(orderDetailsForNewOrder);
                 }
 
-                // Save changes to add order details
                 db.SaveChanges();
 
-                // Clear the cart after confirming the order
                 db.OrdersDetails.RemoveRange(orderDetails);
                 db.SaveChanges();
+
+                var userEmail = db.Users.FirstOrDefault(u => u.Id.ToString() == userId)?.Email;
+
+                if (!string.IsNullOrEmpty(userEmail))
+                {
+                    SendOrderConfirmationEmail(userEmail, newOrder);
+                }
             }
 
             return RedirectToAction("Thanks");
         }
 
+        private void SendOrderConfirmationEmail(string userEmail, Order order)
+        {
+            string subject = "Order Confirmation";
+            string body = "<h1>Your Order Details</h1>" +
+                          "<p>Order ID: " + order.ID + "</p>" +
+                          "<p>Total Price: $" + order.Total_Price + "</p>" +
+                          "<p>Delivery Date: " + order.Date.AddDays(3).ToString("dddd, MMMM dd, yyyy") + "</p>" +
+                          "<p>Thank you for your order!</p>";
+
+            emailSender.SendEmailAsync(userEmail, subject, body, true);
+        }
 
         public IActionResult Thanks()
         {

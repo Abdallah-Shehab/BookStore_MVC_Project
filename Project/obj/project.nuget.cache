@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "G7lKo4pnKxlbnRDUhIucoJ7+m+2SBntIDm4zwX2Hlu12SiP7K9UyP/xXdwMnu2f54L1inyDG/JMOZr5+w3vIVw==",
+  "dgSpecHash": "wSqq4r+MEDxZEbbov7WaYcojiTFln1sZbEe/rx4PPZZadwzJ0Hkuy1/raCrjCRGwxNUZj6o9O2N0y6rXZb22yQ==",
   "success": true,
   "projectFilePath": "E:\\ITI 9M  44\\23-MVC\\Project\\BookStore_MVC_Project\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\--\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\--\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\--\\.nuget\\packages\\fluentemail.smtp\\3.0.2\\fluentemail.smtp.3.0.2.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\--\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

@@ -258,18 +258,6 @@ D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\refint\Project.dll
 D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\Project.pdb
 D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\Project.genruntimeconfig.cache
 D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\ref\Project.dll
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.AssemblyReference.cache
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.GeneratedMSBuildEditorConfig.editorconfig
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.AssemblyInfoInputs.cache
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.AssemblyInfo.cs
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.CoreCompileInputs.cache
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cache
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cache
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cs
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.sourcelink.json
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.dll
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\refint\Project.dll
-E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.pdb
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\appsettings.Development.json
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\appsettings.json
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\libman.json
@@ -506,6 +494,15 @@ E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\runt
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.AssemblyReference.cache
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.AssemblyInfoInputs.cache
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.AssemblyInfo.cs
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.CoreCompileInputs.cache
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cache
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cache
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cs
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.sourcelink.json
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\staticwebassets.build.json
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\staticwebassets.development.json
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\staticwebassets\msbuild.Project.Microsoft.AspNetCore.StaticWebAssets.props
@@ -517,5 +514,10 @@ E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\scop
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\scopedcss\bundle\Project.styles.css
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\scopedcss\projectbundle\Project.bundle.scp.css
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.csproj.Up2Date
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.dll
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\refint\Project.dll
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.pdb
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\Project.genruntimeconfig.cache
 E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\obj\Debug\net8.0\ref\Project.dll
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\FluentEmail.Core.dll
+E:\ITI 9M  44\23-MVC\Project\BookStore_MVC_Project\Project\bin\Debug\net8.0\FluentEmail.Smtp.dll
