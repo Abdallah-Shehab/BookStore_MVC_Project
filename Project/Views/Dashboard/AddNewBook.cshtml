@@ -17,7 +17,7 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     <div class="row">
-        <div class="form-group">
+        <div class="form-group" style="text-align: center;">
             <div class="input-group">
                 <!-- Hidden file input -->
                 <input type="file" id="imageInput" name="imageFile" accept="image/*" class="form-control d-none" onchange="previewImage(event)">
@@ -76,7 +76,7 @@
             <div class="form-group">
                 <label asp-for="Discount_id" class="control-label"></label>
                 <select class="myform-control" asp-for="Discount_id" asp-items="DiscountsList">
-                    <option>-- no discount --</option>
+                    <option value="">-- no discount --</option>
                 </select>
                 <span asp-validation-for="Discount_id" class="text-danger"></span>
             </div>

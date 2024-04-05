@@ -12,7 +12,7 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     
     <div class="row">
-        <div class="form-group">
+        <div class="form-group" style="text-align: center;">
             <div class="input-group">
                 <!-- Hidden file input -->
                 <input type="file" id="imageInput" name="imageFile" accept="image/*" class="form-control d-none" onchange="previewImage(event)">
@@ -23,6 +23,7 @@
                         <span class="text">Change Image</span>
                     </div>
                 </div>
+                <input type="text" asp-for="book.Image" hidden/>
             </div>
             <span asp-validation-for="book.Image" class="text-danger"></span>
         </div>
@@ -101,7 +102,7 @@
             <div class="form-group">
                 <label asp-for="book.Discount_id" class="control-label"></label>
                 <select class="myform-control" asp-for="book.Discount_id">
-                    <option value="book.Discount_id">-- no discount --</option>
+                    <option value="">-- no discount --</option>
                     @foreach (var discount in Model.discounts)
                     {
                         if (Model.book.Discount_id == discount.ID)

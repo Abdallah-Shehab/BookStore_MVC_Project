@@ -148,50 +148,62 @@ namespace Project.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> EditBook(BookVM _book, IFormFile imageFile)
+        public async Task<IActionResult> EditBook(BookVM _book, IFormFile? imageFile)
         {
             Book book = _context.Books.FirstOrDefault(x => x.ID == _book.book.ID);
-            if (book != null)
+            if (ModelState.IsValid == true)
             {
-                book.Name = _book.book.Name;
-                book.Description = _book.book.Description;
-                book.Price = _book.book.Price;
-                book.Quantity = _book.book.Quantity;
-                book.IsAvailable = _book.book.IsAvailable;
-                book.Discount_id = _book.book.Discount_id;
-                book.Admin_id = _book.book.Admin_id;
-                book.Author_id = _book.book.Author_id;
-                book.Category_id = _book.book.Category_id;
-
-                if (imageFile != null && imageFile.Length > 0)
+                if (book != null)
                 {
-                    // Save the uploaded image to the wwwroot folder
-                    var uploadsDirectory = Path.Combine(_hostingEnvironment.WebRootPath, "assets", "Images", "books");
-                    if (!Directory.Exists(uploadsDirectory))
+                    book.Name = _book.book.Name;
+                    book.Description = _book.book.Description;
+                    book.Price = _book.book.Price;
+                    book.Quantity = _book.book.Quantity;
+                    book.IsAvailable = _book.book.IsAvailable;
+                    book.Discount_id = _book.book.Discount_id;
+                    book.Admin_id = _book.book.Admin_id;
+                    book.Author_id = _book.book.Author_id;
+                    book.Category_id = _book.book.Category_id;
+
+                    if (imageFile != null && imageFile.Length > 0)
                     {
-                        Directory.CreateDirectory(uploadsDirectory);
+                        // Save the uploaded image to the wwwroot folder
+                        var uploadsDirectory = Path.Combine(_hostingEnvironment.WebRootPath, "assets", "Images", "books");
+                        if (!Directory.Exists(uploadsDirectory))
+                        {
+                            Directory.CreateDirectory(uploadsDirectory);
+                        }
+
+                        // Generate a unique file name to avoid overwriting existing files
+                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+                        var filePath = Path.Combine(uploadsDirectory, fileName);
+
+                        // Save the file to the server
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await imageFile.CopyToAsync(stream);
+                        }
+
+                        // Update the book's image file name in the database
+                        book.Image = fileName; // Store only the file name in the database
                     }
 
-                    // Generate a unique file name to avoid overwriting existing files
-                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-                    var filePath = Path.Combine(uploadsDirectory, fileName);
+                    _context.Update(book);
+                    await _context.SaveChangesAsync();
 
-                    // Save the file to the server
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await imageFile.CopyToAsync(stream);
-                    }
-
-                    // Update the book's image file name in the database
-                    book.Image = fileName; // Store only the file name in the database
+                    return RedirectToAction("Books");
                 }
-
-                _context.Update(book);
-                await _context.SaveChangesAsync();
-
-                return RedirectToAction("Books");
             }
+            else
+            {
+                var adminsIds = GetAdminsIDs();
 
+                _book.authors = _context.Authors.ToList();
+                _book.admins = _context.AspNetUsers.Where(u => adminsIds.Contains(u.Id)).ToList();
+                _book.categories = _context.Categories.ToList();
+                _book.discounts = _context.Discounts.ToList();
+                return View("EditBook", _book);
+            }
             return NotFound();
         }
 
@@ -208,10 +220,13 @@ namespace Project.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveNewBook(Book book, IFormFile imageFile)
+        public async Task<IActionResult> SaveNewBook(Book book, IFormFile? imageFile)
         {
-            //if (ModelState.IsValid == true)//C#
-            if (book.Admin_id != null || book.Author_id != null || book.Category_id != null || book.Description != null || book.Name != null || book.Price != null)//C#
+            if(imageFile == null)
+            {
+                ModelState.AddModelError("Image", "Please select Image");
+            }
+            if (ModelState.IsValid == true)
             {
                 try
                 {
@@ -236,6 +251,7 @@ namespace Project.Controllers
                         }
 
                     }
+                   
                     book.Image = fileName;
 
                     _context.Books.Add(book);
@@ -257,12 +273,10 @@ namespace Project.Controllers
             ViewBag.Categories = _context.Categories.ToList();
             ViewBag.Discounts = _context.Discounts.ToList();
             ViewBag.Admins = _context.AspNetUsers.Where(u => adminsIds.Contains(u.Id)).ToList();
-            
+
             return View("AddNewBook", book);
         }
-
-
-
+        
         //***** Category *****//
 
         public IActionResult Categories()
@@ -303,21 +317,33 @@ namespace Project.Controllers
         public IActionResult EditCategory(Category _category)
         {
             Category category = _context.Categories.FirstOrDefault(x => x.ID == _category.ID);
-            if (category != null)
+
+            if (ModelState.IsValid == true)
             {
-                category.Name = _category.Name;
-                category.Description = _category.Description;
-                category.IsAvailable = _category.IsAvailable;
+                try
+                {
+                    if (category != null)
+                    {
+                        category.Name = _category.Name;
+                        category.Description = _category.Description;
+                        category.IsAvailable = _category.IsAvailable;
 
-                _context.Update(category);
-                _context.SaveChanges();
+                        _context.Update(category);
+                        _context.SaveChanges();
 
-                return RedirectToAction("Categories");
+                        return RedirectToAction("Categories");
+                    }
+                }
+                catch (Exception e)
+                {
+                    NotFound();
+                }
+
             }
+            return View("EditCategory", category);
 
-            return NotFound();
         }
-        
+
         public IActionResult AddNewCategory()
         {
             return View("AddNewCategory");
@@ -325,8 +351,7 @@ namespace Project.Controllers
         [HttpPost]
         public IActionResult SaveNewCategory(Category _category)
         {
-            //if (ModelState.IsValid == true)//C#
-            if (_category.Name != null || _category.Description != null)//C#
+            if (ModelState.IsValid == true)//C#
             {
                 try
                 { 
@@ -338,8 +363,6 @@ namespace Project.Controllers
                 {
                     //send ex message to view as error inside modelstate
                     //ModelState.AddModelError("DepartmentId", "Please Select Department");
-                    //ModelState.AddModelError("", ex.Message);
-                    // ModelState.AddModelError("", ex.InnerException.Message);
                 }
             }
 

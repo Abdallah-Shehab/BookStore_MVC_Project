@@ -933,8 +933,28 @@
       "PackagePath": "staticwebassets\\assets\\images\\blog\\single\\fullwidth\\3.jpg"
     },
     {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\145fdef0-e289-4fab-9a3d-d821a0a92009.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\145fdef0-e289-4fab-9a3d-d821a0a92009.jpg"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\2c816635-f7d5-48f6-ac70-51d80a494f71.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\2c816635-f7d5-48f6-ac70-51d80a494f71.jpg"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\2f007375-e7c3-4afd-9ad8-f8e47e6f0e53.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\2f007375-e7c3-4afd-9ad8-f8e47e6f0e53.jpg"
+    },
+    {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\426dd022-e7ca-4a3b-a45e-0bc80d413e27.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\books\\426dd022-e7ca-4a3b-a45e-0bc80d413e27.jpg"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\4353420a-f73c-4f8a-b371-26436bbcc1e5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\4353420a-f73c-4f8a-b371-26436bbcc1e5.jpg"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\45a46bd4-aebb-40cb-913f-8cfb190b58ac.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\45a46bd4-aebb-40cb-913f-8cfb190b58ac.jpg"
     },
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\85dfbfcc-fccc-4328-a76d-3b197934554b.jpg",
@@ -953,8 +973,16 @@
       "PackagePath": "staticwebassets\\assets\\images\\books\\defaultBook2.png"
     },
     {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\e52a7501-badd-444f-8edd-8460914399b7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\e52a7501-badd-444f-8edd-8460914399b7.jpg"
+    },
+    {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\e968c252-bceb-4d9a-a237-7cf5e086550f.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\books\\e968c252-bceb-4d9a-a237-7cf5e086550f.jpg"
+    },
+    {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\fa57c2de-a0d1-483d-90d8-c79ae2a0f8bf.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\fa57c2de-a0d1-483d-90d8-c79ae2a0f8bf.jpg"
     },
     {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg",

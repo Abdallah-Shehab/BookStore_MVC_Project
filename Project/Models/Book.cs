@@ -7,17 +7,23 @@ namespace Project.Models
     {
         [Key]
         public int ID { get; set; }
+
         [MaxLength(100)]
+        [Required(ErrorMessage = "Name is Required")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "Description is Required")]
         public string Description { get; set; }
 
+        [Required(ErrorMessage = "Price is Required")]
         [Column(TypeName = "money")]
         public decimal Price { get; set; }
 
         public decimal? Rate { get; set; }
 
         public string? Image { get; set; }
+
+        [Required(ErrorMessage = "Quantity is Required")]
         public int Quantity { get; set; }
         public bool IsAvailable { get; set; }
 
@@ -34,14 +40,14 @@ namespace Project.Models
 
         [ForeignKey("Discount")]
         public int? Discount_id { get; set; }
-        public ApplicationUser Admin { get; set; }
+        public ApplicationUser? Admin { get; set; }
 
-        public Author Author { get; set; }
+        public Author? Author { get; set; }
 
-        public Category Category { get; set; }
-        public Discount Discount { get; set; }
-        public virtual List<Comment> Comments { set; get; } = new List<Comment>();
-        public virtual List<OrderDetails> OrderDetails { set; get; } = new List<OrderDetails>();
+        public Category? Category { get; set; }
+        public Discount? Discount { get; set; }
+        public virtual List<Comment>? Comments { set; get; } = new List<Comment>();
+        public virtual List<OrderDetails>? OrderDetails { set; get; } = new List<OrderDetails>();
 
     }
 }

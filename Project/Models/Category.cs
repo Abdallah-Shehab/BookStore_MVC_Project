@@ -7,7 +7,11 @@ namespace Project.Models
         [Key]
         public int ID { get; set; }
 
+        [Unique]
+        [Required(ErrorMessage = "Name is Required")]
         public string Name { get; set; }
+
+        [Required(ErrorMessage = "Description is Required")]
         public string Description { get; set; }
         public bool IsAvailable { get; set; }
 
