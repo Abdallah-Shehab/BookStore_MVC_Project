@@ -18,6 +18,7 @@ namespace Project.Models
 			user_id = c.user_id;
 			book_id = c.book_id;
 			Date = DateTime.Now;
+			IsAvailable = c.IsAvailable;
 		}
 
 		public string comment { get; set; }
@@ -30,6 +31,7 @@ namespace Project.Models
 
 		[ForeignKey("book")]
 		public int book_id { get; set; }
+		public bool IsAvailable { get; set; }
 		public ApplicationUser user { get; set; }
 		public Book book { get; set; }
 

@@ -92,13 +92,31 @@ namespace Project.Controllers
                     userLName = x.user.LastName,
                     rate = x.rate,
                     Date = x.Date,
-                    user_id = x.user_id
+                    IsAvailable=x.IsAvailable,
+                    user_id = x.user_id,
+                    book_id=x.book_id
                 }).ToList();
 
             ViewBag.BookName = _context.Books.Where(x => x.ID == id).Select(x => x.Name).FirstOrDefault();
 
 
             return View("BookComments", comments);
+        }
+
+        public IActionResult HideShowComment(int userId, int bookId,string status)
+        {
+            var comment = _context.Comments.Where(x => x.user_id == userId && x.book_id == bookId).FirstOrDefault();
+            if (status == "show")
+            {
+                comment.IsAvailable = true;
+            }
+            else
+            {
+                comment.IsAvailable = false;
+            }
+            _context.Update(comment);
+            _context.SaveChanges();
+            return Json("Done");
         }
 
         public IActionResult DeleteBook(int id)
@@ -206,7 +224,7 @@ namespace Project.Controllers
             }
             return NotFound();
         }
-
+        
         public IActionResult AddNewBook()
         {
             var adminsIds = GetAdminsIDs();

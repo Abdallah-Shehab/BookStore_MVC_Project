@@ -11,6 +11,7 @@ namespace Project.ViewModels
         public int book_id { get; set; }
         public string userFName { get; set; }
         public string userLName { get; set; }
+        public bool IsAvailable { get; set; }
 
     }
 }

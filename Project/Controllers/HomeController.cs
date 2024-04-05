@@ -58,7 +58,7 @@ namespace Project.Controllers
         public IActionResult BookDetails(int id)
         {
             Book book = bookRepository.GetById(id);
-            var comments = db.Comments.Where(x => x.book_id == book.ID)
+            var comments = db.Comments.Where(x => x.book_id == book.ID && x.IsAvailable==true)
                 .Select(b => new CommentVM { Comment = b.comment, Date = b.Date, rate = b.rate, userFName = b.user.FirstName, userLName = b.user.LastName }).OrderByDescending(x=>x.Date).ToList();
 
             BookDetailsVM bookvm = new BookDetailsVM()
@@ -111,6 +111,7 @@ namespace Project.Controllers
                         user_id = userId,
                         book_id = bookID,
                         Date = DateTime.Now,
+                        IsAvailable=true,
                         userFName = userData.FirstName.ToString(),
                         userLName = userData.LastName.ToString()
                     };
