@@ -19,7 +19,6 @@ namespace Project.Controllers
             return View("Dashboard");
         }
 
-
         public IActionResult GetAll()
         {
             ///Action that display all users in site(Admin & normal user)
@@ -101,7 +100,6 @@ namespace Project.Controllers
 
             return View("BookComments", comments);
         }
-
 
         public IActionResult DeleteBook(int id)
         {
@@ -197,7 +195,6 @@ namespace Project.Controllers
             return NotFound();
         }
 
-
         public IActionResult AddNewBook()
         {
             var adminsIds = GetAdminsIDs();
@@ -263,5 +260,92 @@ namespace Project.Controllers
             
             return View("AddNewBook", book);
         }
+
+
+
+        //***** Category *****//
+
+        public IActionResult Categories()
+        {
+            var categories = _context.Categories.ToList();
+
+            return View("Categories", categories);
+        }
+
+        public IActionResult AddCategory(int id)
+        {
+            var category = _context.Categories.FirstOrDefault(x => x.ID == id);
+            category.IsAvailable = true;
+            _context.Update(category);
+            _context.SaveChanges();
+
+            return Json("Done");
+        }
+
+        public IActionResult DeleteCategory(int id)
+        {
+            var category = _context.Categories.FirstOrDefault(x => x.ID == id);
+            category.IsAvailable = false;
+            _context.Update(category);
+            _context.SaveChanges();
+
+            return Json("Done");
+        }
+
+        public IActionResult EditCategory(int id)
+        {
+            Category category = _context.Categories.FirstOrDefault(x => x.ID == id);
+
+            return View("EditCategory", category);
+        }
+
+        [HttpPost]
+        public IActionResult EditCategory(Category _category)
+        {
+            Category category = _context.Categories.FirstOrDefault(x => x.ID == _category.ID);
+            if (category != null)
+            {
+                category.Name = _category.Name;
+                category.Description = _category.Description;
+                category.IsAvailable = _category.IsAvailable;
+
+                _context.Update(category);
+                _context.SaveChanges();
+
+                return RedirectToAction("Categories");
+            }
+
+            return NotFound();
+        }
+        
+        public IActionResult AddNewCategory()
+        {
+            return View("AddNewCategory");
+        }
+        [HttpPost]
+        public IActionResult SaveNewCategory(Category _category)
+        {
+            //if (ModelState.IsValid == true)//C#
+            if (_category.Name != null || _category.Description != null)//C#
+            {
+                try
+                { 
+                    _context.Categories.Add(_category);
+                    _context.SaveChanges();
+                    return RedirectToAction("Categories");
+                }
+                catch (Exception ex)
+                {
+                    //send ex message to view as error inside modelstate
+                    //ModelState.AddModelError("DepartmentId", "Please Select Department");
+                    //ModelState.AddModelError("", ex.Message);
+                    // ModelState.AddModelError("", ex.InnerException.Message);
+                }
+            }
+
+            return View("AddNewCategory", _category);
+        }
+
+
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eLnmTggoih6BsMn+3pTnK5d3zFFYpuCgOixA3+kd/zY=",
+  "Hash": "UrdqzCeGPfhnRQw/cQHJ9Oe59YAm/xAlbjy3yBmcDcc=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -4461,6 +4461,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\books\\defaultBook2.png"
+    },
+    {
+      "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\e968c252-bceb-4d9a-a237-7cf5e086550f.jpg",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "assets/images/books/e968c252-bceb-4d9a-a237-7cf5e086550f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\books\\e968c252-bceb-4d9a-a237-7cf5e086550f.jpg"
     },
     {
       "Identity": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg",

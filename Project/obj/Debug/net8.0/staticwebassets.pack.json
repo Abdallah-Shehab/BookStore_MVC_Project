@@ -953,6 +953,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\books\\defaultBook2.png"
     },
     {
+      "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\e968c252-bceb-4d9a-a237-7cf5e086550f.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\books\\e968c252-bceb-4d9a-a237-7cf5e086550f.jpg"
+    },
+    {
       "Id": "F:\\ITI (9 M)\\Menofia\\32. Asp.Net(MVC)\\Final Project (Book Store)\\BookStore_MVC_Project\\Project\\wwwroot\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\books\\morgan-housel-aZ_MmSmAcjg-unsplash.jpg"
     },
