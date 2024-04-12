@@ -1,5 +1,6 @@
 ﻿
 using Project.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project.ViewModels
 {
@@ -9,8 +10,9 @@ namespace Project.ViewModels
 		public string Name { get; set; }
 
 		public string Description { get; set; }
+        public int book_id { get; set; }
 
-		public decimal Price { get; set; }
+        public decimal Price { get; set; }
 
 		public decimal? Rate { get; set; }
 

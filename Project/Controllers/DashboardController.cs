@@ -34,6 +34,30 @@ namespace Project.Controllers
             return View("GetAll", users);
         }
 
+        public IActionResult GetAllAdmins()
+        {
+            var adminRoleId = _context.AspNetRoles
+                                      .Where(r => r.Name == "ADMIN")
+                                      .Select(r => r.Id)
+                                      .FirstOrDefault();
+
+            if (adminRoleId != null)
+            {
+                var adminUserIds = _context.AspNetUserRoles
+                                            .Where(ur => ur.RoleId == adminRoleId)
+                                            .Select(ur => ur.UserId)
+                                            .ToList();
+
+                var adminUsers = _context.AspNetUsers
+                                         .Where(u => adminUserIds.Contains(u.Id))
+                                         .ToList();
+
+                return View("GetAll", adminUsers);
+            }
+
+            return View("Error");
+        }
+
         public IActionResult Books()
         {
             var books = _context.Books.
