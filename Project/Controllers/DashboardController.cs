@@ -37,21 +37,28 @@ namespace Project.Controllers
         public IActionResult Books()
         {
             var books = _context.Books.
-                Select(x=>new BookDetailsVM { ID=x.ID,Name=x.Name,Description=x.Description,
-                    Price=x.Price,Rate=x.Rate,Image=x.Image,Quantity=x.Quantity,
-                    Author=_context.Authors.FirstOrDefault(s=>s.ID==x.Author_id),
-                    Category=_context.Categories.FirstOrDefault(s=>s.ID==x.Category_id),
-                    Discount=_context.Discounts.FirstOrDefault(s=>s.ID==x.Discount_id),
-                    Admin=_context.Users.FirstOrDefault(s=>s.Id==x.Admin_id)
+                Select(x => new BookDetailsVM
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Price = x.Price,
+                    Rate = x.Rate,
+                    Image = x.Image,
+                    Quantity = x.Quantity,
+                    Author = _context.Authors.FirstOrDefault(s => s.ID == x.Author_id),
+                    Category = _context.Categories.FirstOrDefault(s => s.ID == x.Category_id),
+                    Discount = _context.Discounts.FirstOrDefault(s => s.ID == x.Discount_id),
+                    Admin = _context.Users.FirstOrDefault(s => s.Id == x.Admin_id)
                 }).ToList();
 
 
 
-            return View("Books",books);
+            return View("Books", books);
         }
         [HttpGet]
         public IActionResult AddAdmin()
-        
+
         {
 
             List<KeyValuePair<int, string>> users_id_name = new List<KeyValuePair<int, string>>();
@@ -59,7 +66,7 @@ namespace Project.Controllers
 
             foreach (var user in users)
             {
-                users_id_name.Add(new KeyValuePair<int, string>(user.Id, user.FirstName+" "+user.LastName));
+                users_id_name.Add(new KeyValuePair<int, string>(user.Id, user.FirstName + " " + user.LastName));
             }
 
             return View("Admin", users_id_name);
@@ -92,8 +99,8 @@ namespace Project.Controllers
         //    return Json(userId_Name);
 
         //}
-        
-        public async Task< IActionResult >CheckAdminRole(int UserID)
+
+        public async Task<IActionResult> CheckAdminRole(int UserID)
         {
             var user = await _context.Users.FindAsync(UserID);
             // Check if the user has the "Admin" role
@@ -103,16 +110,17 @@ namespace Project.Controllers
         [HttpPost]
         public IActionResult AddAdmin(bool isAdmin, int UserID)
         {
-                int roleID = _context.Roles.Where(n => n.Name == "Admin").Select(n=>n.Id).FirstOrDefault();
+            int roleID = _context.Roles.Where(n => n.Name == "Admin").Select(n => n.Id).FirstOrDefault();
 
-                IdentityUserRole<int> obj = new IdentityUserRole<int>();
+            IdentityUserRole<int> obj = new IdentityUserRole<int>();
             obj.UserId = UserID;
             obj.RoleId = roleID;
             if (isAdmin)
             {
                 _context.AspNetUserRoles.Remove(obj);
             }
-            else {
+            else
+            {
                 _context.AspNetUserRoles.Add(obj);
             }
             _context.SaveChanges();
@@ -131,7 +139,8 @@ namespace Project.Controllers
             //}
 
         }
-        public IActionResult GetAllUsers() {
+        public IActionResult GetAllUsers()
+        {
             int? roleID = _context.AspNetRoles.FirstOrDefault(r => r.Name == "user")?.Id;
             if (roleID != null)
             {
@@ -145,16 +154,17 @@ namespace Project.Controllers
                                             .Select(u => u.Id)
                                             .ToList();
                 // Get the users who do not have the specific role
-                List<ApplicationUser> usersWithoutSpecificRole = _context.AspNetUsers.Include(n=>n.Orders)
+                List<ApplicationUser> usersWithoutSpecificRole = _context.AspNetUsers.Include(n => n.Orders)
                                                     .Where(u => usersWithSpecificRoleID.Contains(u.Id))
                                                     .ToList();
-            return View("Users", usersWithoutSpecificRole);
+                return View("Users", usersWithoutSpecificRole);
             }
             return View("Error");
 
         }
 
-        public IActionResult GetOrdersUser(int UserID) {
+        public IActionResult GetOrdersUser(int UserID)
+        {
             List<Order> orders = _context.Orders.Where(o => o.user_id == UserID).ToList();
             return Json(orders);
         }
