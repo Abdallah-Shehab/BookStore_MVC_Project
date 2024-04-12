@@ -26,12 +26,20 @@
 
     <!-- Template Stylesheet -->
     <link href="~/css/dashboard/style.css" rel="stylesheet">
-    <link href="~/css/dashboard/style2.css" rel="stylesheet">
+    <link href="~/css/dashboard/dataTable.css" rel="stylesheet">
+    <link href="~/css/dashboard/modal.css" rel="stylesheet">
+    <link href="~/css/dashboard/Comments.css" rel="stylesheet">
+    <link href="~/css/dashboard/form.css" rel="stylesheet">
+    <link href="~/assets/css/toastr.min.css" rel="stylesheet" />
 
     <!-- DataTable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     
     <link href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css" rel="stylesheet">
+
+	<!-- DataTable -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+    
 
 
     <script src="https://kit.fontawesome.com/b1dab2c302.js" crossorigin="anonymous"></script>
@@ -49,7 +57,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="/dashboard/dashboard" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>BookPulse</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -63,7 +71,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100 hoveredBlock">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/dashboard/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -76,8 +84,8 @@
                     <a asp-action="GetAllAdmins" asp-controller="Dashboard" class="nav-item nav-link"><i class="fa-solid fa-user"></i>Admins</a>
                     <a asp-action="GetAllUsers" asp-controller="Dashboard" class="nav-item nav-link"><i class="fa-solid fa-person"></i>Users</a>
                     <a href="#" class="nav-item nav-link"><i class="fa-solid fa-cart-arrow-down"></i>Orders</a>
-                    <a href="/Dashboard/Books" class="nav-item nav-link"><i class="fa-solid fa-book"></i>Books</a>
-                    <a href="#" class="nav-item nav-link"><i class="fa-solid fa-layer-group"></i>Categories</a>
+                    <a href="/dashboard/books" class="nav-item nav-link"><i class="fa-solid fa-book"></i>Books</a>
+                    <a href="/dashboard/categories" class="nav-item nav-link"><i class="fa-solid fa-layer-group"></i>Categories</a>
 
 
                 </div>
@@ -220,7 +228,7 @@
     <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="~/js/main.js"></script>
+    <script src="~/js/dashboard/main.js"></script>
 
 	<!-- DataTable -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -247,14 +255,14 @@
                 }
             });
         });
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="~/assets/js/toastr.min.js"></script>
 
-        //////////////////////////////////////////////////////////////////////////
+    <script src="~/js/dashboard/layout.js"></script>
+    <script src="~/js/dashboard/modals.js"></script>
+    <script src="~/js/dashboard/formImage.js"></script>
+    <script src="~/js/dashboard/Comments.js"></script>
 
-        //dataTable
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
-    </script>
 
 
 

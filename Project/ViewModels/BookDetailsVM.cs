@@ -15,6 +15,7 @@ namespace Project.ViewModels
         public decimal Price { get; set; }
 
 		public decimal? Rate { get; set; }
+		public bool IsAvailable { get; set; }
 
 		public string? Image { get; set; }
 		public int Quantity { get; set; }
@@ -23,7 +24,7 @@ namespace Project.ViewModels
 		public Category Category { get; set; }
 		public int categoryID { get; set; }
 		public List<BookDetailsVM> categoryBooks { get; set; }  //books from the same category
-		public Discount Discount { get; set; }
+		public Discount? Discount { get; set; }
 		public List<CommentVM> Comments { set; get; }
 		public int commentsNum { get; set; }
         public ApplicationUser Admin { get; set; }

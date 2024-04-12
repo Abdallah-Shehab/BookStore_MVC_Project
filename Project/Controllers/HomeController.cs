@@ -111,6 +111,7 @@ namespace Project.Controllers
                         user_id = userId,
                         book_id = bookID,
                         Date = DateTime.Now,
+                        IsAvailable=true,
                         userFName = userData.FirstName.ToString(),
                         userLName = userData.LastName.ToString()
                     };

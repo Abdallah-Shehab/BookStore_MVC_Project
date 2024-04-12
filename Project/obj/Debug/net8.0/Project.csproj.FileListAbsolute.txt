@@ -7,8 +7,8 @@ D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\Project.MvcApplicationPartsA
 D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cache
 D:\ITI\MVC_Project\Project\Project\obj\Debug\net8.0\Project.RazorAssemblyInfo.cs
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\appsettings.Development.json
-D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\libman.json
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\appsettings.json
+D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\libman.json
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Project.staticwebassets.runtime.json
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Project.exe
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Project.deps.json
