@@ -41,6 +41,20 @@
 
             <hr>
 
+
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    <button>
+                        <a href="~/Dashboard/getall">
+                            <i class="fa-solid fa-gears"></i>
+                           
+                            <span>DashBoard</span>
+                        </a>
+
+                    </button>
+                </li>
+            }
             <li>
                 <button>
                     <a href="~/Profile/edit" >

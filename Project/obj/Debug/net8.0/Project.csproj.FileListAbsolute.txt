@@ -21,6 +21,7 @@ D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Azure.Identity.dll
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\FluentEmail.Core.dll
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\FluentEmail.Smtp.dll
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Humanizer.dll
+D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\ITI\MVC_Project\Project\Project\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
