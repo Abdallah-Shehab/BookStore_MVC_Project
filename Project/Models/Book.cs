@@ -32,7 +32,7 @@ namespace Project.Models
 
 
         [ForeignKey("Discount")]
-        public int Discount_id { get; set; }
+        public int? Discount_id { get; set; }
         public ApplicationUser Admin { get; set; }
 
         public Author Author { get; set; }

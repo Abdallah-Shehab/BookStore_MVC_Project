@@ -280,7 +280,7 @@ namespace Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Discount_id")
+                    b.Property<int?>("Discount_id")
                         .HasColumnType("int");
 
                     b.Property<string>("Image")
@@ -499,9 +499,7 @@ namespace Project.Migrations
 
                     b.HasOne("Project.Models.Discount", "Discount")
                         .WithMany("Books")
-                        .HasForeignKey("Discount_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Discount_id");
 
                     b.Navigation("Admin");
 
