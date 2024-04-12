@@ -16,41 +16,67 @@ namespace Project
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services
+                .AddControllersWithViews();
 
+<<<<<<< Updated upstream
             builder.Services.AddDbContext<BookStoreContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("BookStore"));
             });
+=======
+            builder.Services
+                .AddDbContext<BookStoreContext>(options =>
+                {
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("BookDB"));
+                });
+
+            // configure the authentication services to include Google authentication
+            builder.Services
+                .AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = "1009317318323-l1285obpvm5u00iiii2lsh6b41vnfknp.apps.googleusercontent.com";
+                    options.ClientSecret = "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";
+                });
+>>>>>>> Stashed changes
 
             //Register Identity Service (userManager -roleMnager- SigninManager)
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(options =>
-            {
-                options.User.AllowedUserNameCharacters = null;
-                options.User.RequireUniqueEmail = true;
+            builder.Services
+                .AddIdentity<ApplicationUser, IdentityRole<int>>(options =>
+                {
+                    options.User.AllowedUserNameCharacters = null;
+                    options.User.RequireUniqueEmail = true;
 
-                //force user to confirm his Email
-                options.SignIn.RequireConfirmedEmail = true;
+                    //force user to confirm his Email
+                    options.SignIn.RequireConfirmedEmail = true;
 
-            }).AddEntityFrameworkStores<BookStoreContext>()
-            .AddDefaultTokenProviders(); //default token providers that generate tokens for email confirmation, password reset
+                })
+                .AddEntityFrameworkStores<BookStoreContext>()
+                .AddDefaultTokenProviders(); //default token providers that generate tokens for email confirmation, password reset
 
-            builder.Services.AddScoped<IBookRepository, BookRepository>();
-            builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
-            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            builder.Services.AddScoped<ICommentRepository, CommentRepository>();
-            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-            builder.Services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
-            builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+            builder.Services
+                .AddScoped<IBookRepository, BookRepository>();
+            builder.Services
+                .AddScoped<IAuthorRepository, AuthorRepository>();
+            builder.Services
+                .AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services
+                .AddScoped<ICommentRepository, CommentRepository>();
+            builder.Services
+                .AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services
+                .AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
+            builder.Services
+                .AddScoped<IDiscountRepository, DiscountRepository>();
+            builder.Services
+                .AddScoped<IUserProfileRepository, UserProfileRepository>();
+            builder.Services
+                .AddScoped<ISenderEmail, EmailSender>();
 
-            builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
-
-            builder.Services.AddAutoMapper(typeof(MapperProfile));
-
-
-            builder.Services.AddScoped<ISenderEmail, EmailSender>();
-
-
+            builder.Services
+                .AddAutoMapper(typeof(MapperProfile));
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
