@@ -52,6 +52,7 @@ builder.Services
     .AddScoped<ICommentRepository, CommentRepository>();
 builder.Services
     .AddScoped<IOrderRepository, OrderRepository>();
+
 builder.Services
     .AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
 builder.Services
@@ -97,11 +98,34 @@ app.MapControllerRoute(
     new { Controller = "Contact", Action = "Index" }
 );
 
+app.MapControllerRoute(
+    "index",
+    "Dashboard",
+    new { Controller = "NewDashBoard", Action = "Index" }
+);
+app.MapControllerRoute(
+    "bookDetails",
+    "BookDetails/{id}",
+    new { Controller = "home", Action = "BookDetails" }
+);
+
 
 app.MapControllerRoute(
     name: "ConfirmOrder",
     pattern: "Order/ConfirmOrder",
     defaults: new { controller = "Order", action = "ConfirmOrder" }
+);
+
+app.MapControllerRoute(
+    name: "Shop",
+    pattern: "shop",
+    defaults: new { controller = "Shop", action = "index" }
+);
+
+app.MapControllerRoute(
+    name: "Cart",
+    pattern: "cart",
+    defaults: new { controller = "Home", action = "cart" }
 );
 
 

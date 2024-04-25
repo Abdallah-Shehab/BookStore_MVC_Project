@@ -40,7 +40,8 @@ namespace Project.Controllers
                     message.To.Add("abdallah.shafiq49@gmail.com"); // the reciver 
                     message.Subject = Cont_vm.Subject;
                     message.IsBodyHtml = true;
-                    message.Body = @$"Name : {Cont_vm.Name} \\n Email : {Cont_vm.Email} \\n Phone : {Cont_vm.Phone} \\n Message : {Cont_vm.Message}";
+                    message.Body = $"Name: {Cont_vm.Name}\nEmail: {Cont_vm.Email}\nPhone: {Cont_vm.Phone}\nMessage: {Cont_vm.Message}";
+
 
 
                     smtpClient.Port = 587;

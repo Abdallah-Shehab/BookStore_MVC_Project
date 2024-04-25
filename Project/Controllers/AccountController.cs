@@ -53,6 +53,7 @@ namespace Project.Controllers
                     Email = userRegisterVM.Email,
                     PasswordHash = userRegisterVM.Password,
                     Address = userRegisterVM.Address,
+                    PhoneNumber = userRegisterVM.Phone,
                     image = "Defualt.png"
                 };
 
@@ -170,6 +171,7 @@ namespace Project.Controllers
         public async Task<IActionResult> Login(UserLoginViewModel userLoginVM, int? bookID)
         {
             ViewBag.Confirm = true;
+            userLoginVM.ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
                 ApplicationUser userFromDb = await userManager.FindByEmailAsync(userLoginVM.Email);

@@ -2,11 +2,12 @@
 
 function addToCart(id, text) {
     let quantity;
+    console.log("enterd");
     if (text == 'whithout quantity') { // just click on (Add to cart) button without select any quantity --> from any page except BookDetails
         quantity = 1;
     }
     else { //comes from BookDetails page & take the quantity from the input
-        quantity = document.getElementById("qty").value;
+        quantity = document.getElementById("quantity").value;
     }
     let flag = false; //to know if the book already exist and increse its quantity
 
@@ -24,23 +25,26 @@ function addToCart(id, text) {
                 flag = true;
                 toster();
                 if (text == 'whithout quantity') {   //comes from any page 
-                    toastr.warning("The Book is already exist");  
+                    toastr.warning("The Book is already exist");
                 }
                 else {  //from bookdetails to update the quantity
                     obj.quantity = quantity;
-                    toastr.success("The Book is already exist & update the quantity.");  
+                    toastr.success("The Book is already exist & update the quantity.");
                 }
             }
             newitems.push(obj);
             if (newitems.length == arritems.length && flag == false) {  //the cart has items but this selected book isn't exist -->(add book for the first time)
                 newitems.push({ "bookID": id, "quantity": quantity });
                 toster();
+
                 toastr.success("The Book is added to the Cart Successfully.");
+
             }
-            
+
         });
         setItem("cart", newitems);
     }
+
 }
 function toster() {
     toastr.options = {
@@ -49,7 +53,7 @@ function toster() {
         "progressBar": true,
         "preventDuplicates": false,
         "onclick": null,
-        "timeOut": "5000",
+        "timeOut": "2000",
         "extendedTimeOut": "1000",
         "showEasing": "swing",
         "hideEasing": "linear",
@@ -63,3 +67,4 @@ function setItem(key, valueObj) {
 
     localStorage.setItem(key, JSON.stringify(valueObj));
 }
+

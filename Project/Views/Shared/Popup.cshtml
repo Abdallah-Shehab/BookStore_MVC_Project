@@ -1,5 +1,4 @@
-﻿
-@*
+﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 *@
@@ -9,28 +8,30 @@
 
 <link href="~/css/popup.css" rel="stylesheet" />
 <label class="popup">
-   
+
     <input type="checkbox" name="popup-toggle">
-@*     <div class="burger" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
+    @*     <div class="burger" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
     </div> *@
-    @if(imageClaim != null)
+    @if (imageClaim != null)
     {
-        
-    <img class="burger" src="~/Images/users/@imageClaim.Value" alt="" tabindex="0" />
-    }else{
-        <img class="burger" src="~/Images/users/Defualt.png" alt="" tabindex="0" />
+
+        <img class="burger" src="~/Images/users/@imageClaim.Value" alt="" tabindex="0" />
+    }
+    else
+    {
+        <img class="burger" src="~/Images/users/Defuallt.png" alt="" tabindex="0" />
 
     }
-    
+
     <nav class="popup-window">
         <legend>Actions </legend>
         <ul>
             <li>
                 <button>
-                    <a href="~/Profile" >
+                    <a href="~/Profile">
                         <i class="fa-solid fa-user"></i>
                         <span>Profile</span>
                     </a>
@@ -45,10 +46,10 @@
             @if (User.IsInRole("Admin"))
             {
                 <li>
-                    <button>
-                        <a href="~/Dashboard/getall">
+                    <button onclick="ActiveDash()">
+                        <a href="~/dashboard">
                             <i class="fa-solid fa-gears"></i>
-                           
+
                             <span>DashBoard</span>
                         </a>
 
@@ -57,23 +58,30 @@
             }
             <li>
                 <button>
-                    <a href="~/Profile/edit" >
+                    <a href="~/Profile/edit">
                         <i class="fa-regular fa-pen-to-square"></i>
                         <span>Edit</span>
-                        </a>
-                  
+                    </a>
+
                 </button>
             </li>
             <hr>
             <li>
-                <button >
+                <button>
                     <a href="~/Account/Logout">
                         <i class="fa-solid fa-ban"></i>
                         <span>Log out </span>
                     </a>
-                  
+
                 </button>
             </li>
         </ul>
     </nav>
 </label>
+
+<script>
+    function ActiveDash() {
+
+        localStorage.setItem('activeMenuItem', "Dashboard");
+    }
+</script>

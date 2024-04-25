@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "woPysS1CCMZm6ndI7Z+qlyp9klSiynOnLmNGmhSkdyE/w9PN8u9ZUYp24Jl5Z4FEYMvooWgpaAieQFlePfb+4g==",
+  "dgSpecHash": "ePgSjAItDv9zLVr6yL979ynbGP3dbNn9gTzjC9+0BVPkM3LI71UHPxBF0aFyaoC8pVBPKkm3o69MsJJjIyWZMQ==",
   "success": true,
-  "projectFilePath": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+  "projectFilePath": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SHaFiQ\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\SHaFiQ\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

@@ -17,227 +17,291 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project
 build_property.RootNamespace = Project
-build_property.ProjectDir = D:\ITI\MVC_Project\Project\Project\
+build_property.ProjectDir = D:\ITI\MVC_Project\Project -AbdallahVersion\Project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\ITI\MVC_Project\Project\Project
+build_property.MSBuildProjectDirectory = D:\ITI\MVC_Project\Project -AbdallahVersion\Project
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/AboutUS/AboutUs.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/AboutUS/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVU1xBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ConfirmationEmailSent.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ConfirmationEmailSent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtYXRpb25FbWFpbFNlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ConfirmEmail.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ForgotPassword.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ForgotPasswordConfirmation.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/LogIn.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/Register.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/RegistrationSuccessful.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/RegistrationSuccessful.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb25TdWNjZXNzZnVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ResendConfirmationEmail.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ResendConfirmationEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNlbmRDb25maXJtYXRpb25FbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ResetPassword.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Account/ResetPasswordConfirmation.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Admin/AddAdmin.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Admin/AddAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Admin/DeleteAdmin.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Admin/DeleteAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Admin/EditAdmin.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Admin/EditAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Admin/GetAll.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Admin/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Contact/ContactUs.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Contact/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/AddNewBook.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/AddNewBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEFkZE5ld0Jvb2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/AddNewCategory.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/AddNewCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEFkZE5ld0NhdGVnb3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/Admin.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/BookComments.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/BookComments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEJvb2tDb21tZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/Books.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/Books.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEJvb2tzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/Categories.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/Categories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENhdGVnb3JpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/Dashboard.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/EditBook.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/EditBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/EditCategory.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/EditCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/GetAll.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdldEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Dashboard/Users.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Dashboard/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/AboutUs.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/AllCategories.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/AllCategories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/BookDetails.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/BookDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCb29rRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/Cart.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/ContactUs.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/Index.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Home/Privacy.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Order/BookDetails.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/AddAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEFkZEF1dGhvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/AddNewBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEFkZE5ld0Jvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/AddNewCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEFkZE5ld0NhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/Admins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEFkbWlucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/BookComments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEJvb2tDb21tZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/Books.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEJvb2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXENhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/EditAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEVkaXRBdXRob3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/EditBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEVkaXRCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEVkaXRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/GetAllAuthors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEdldEFsbEF1dGhvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/ModifyAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXE1vZGlmeUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/NewDashBoard/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGFzaEJvYXJkXFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Order/BookDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQm9va0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Order/Cart.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Order/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Order/ConfirmOrder.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Order/ConfirmOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ29uZmlybU9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Order/OrderSummary.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Order/OrderSummary.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJTdW1tYXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Order/Thanks.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Order/Thanks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcVGhhbmtzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Profile/EditTabs.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Profile/EditTabs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0VGFicy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Profile/Profile.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Profile/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Profile/_Billing.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Profile/_Billing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfQmlsbGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Profile/_EditPersonalinfo.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Profile/_EditPersonalinfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfRWRpdFBlcnNvbmFsaW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Profile/_Security.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Profile/_Security.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfU2VjdXJpdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shared/Error.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shared/Popup.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/NavCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5hdkNhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/Popup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBvcHVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shared/_LayoutDashboard.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/_LayoutDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/_NewDashLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OZXdEYXNoTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shop/CardsBooks.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shop/CardsBooks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDYXJkc0Jvb2tzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shop/Shop.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shop/Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxTaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Test/BookDetail.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Test/BookDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxCb29rRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/_ViewImports.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/_ViewStart.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ITI/MVC_Project/Project/Project/Views/Shared/_Layout.cshtml]
+[D:/ITI/MVC_Project/Project -AbdallahVersion/Project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9q8ibpt6yd

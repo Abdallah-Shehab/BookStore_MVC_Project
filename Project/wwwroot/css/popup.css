@@ -118,8 +118,9 @@
     box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
     border: var(--nav-border-width) solid var(--nav-border-color);
     top: calc( var(--burger-diameter) + var(--burger-enable-outline-width) + var(--burger-enable-outline-offset) );
-    left: var(--nav-position-left);
-    right: var(--nav-position-right);
+    /*  left: var(--nav-position-left);
+    right: var(--nav-position-right);*/
+    right: 0;
     transition: var(--burger-transition);
 }
 
