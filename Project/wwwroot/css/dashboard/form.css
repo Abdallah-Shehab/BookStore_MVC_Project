@@ -8,11 +8,13 @@
 .form-control {
     color: #000000;
 }
-.form-control:disabled, .form-control:read-only {
-    color: #757575;
-}
+
+    .form-control:disabled, .form-control:read-only {
+        color: #757575;
+    }
+
 .form-group {
-    margin: 20px 0 ;
+    margin: 20px 0;
 }
 
 /**********************************************************/
@@ -27,12 +29,12 @@
     margin: auto !important;
 }
 
-.image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.2s ease-in-out;
-}
+    .image-container img {
+        display: block;
+        width: 300px;
+        height: auto;
+        transition: transform 0.2s ease-in-out;
+    }
 
 .overlay {
     position: absolute;
@@ -63,5 +65,3 @@
 .d-none {
     display: none !important;
 }
-
-

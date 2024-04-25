@@ -1,13 +1,22 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using Project.Models;
 using Project.Repositories;
 using Project.ViewModels;
 using System.Diagnostics;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Project.Controllers
 {
+    public class CartItem
+    {
+        public int bookID { get; set; }
+        public int quantity { get; set; }
+    }
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -29,8 +38,22 @@ namespace Project.Controllers
         //[Authorize]
         public IActionResult Index()
         {
-            var books = bookRepository.GetAll();
-            return View("index");
+            var books = db.Books.Select(book => new HomeBooksVM
+            {
+                ID = book.ID,
+                Name = book.Name,
+                Description = book.Description,
+                Price = book.Price,
+                Rate = book.Rate,
+                Image = book.Image,
+                Quantity = book.Quantity,
+
+                Author = book.Author.Name,
+                Category = book.Category.Name,
+                Discount = book.Discount.Percantage
+
+            }).ToList();
+            return View("index", books);
             //return Json(books);
         }
 
@@ -47,10 +70,35 @@ namespace Project.Controllers
         {
             return View();
         }
-        //public IActionResult ContactUs()
-        //{
-        //    return View();
-        //}
+        public IActionResult cart()
+        {
+            var orderDetails = db.OrdersDetails
+              .Include(od => od.book)
+              .ToList();
+
+            var bookDetailsVMs = orderDetails.Select((od, index) =>
+            {
+                try
+                {
+                    var bookDetailsVM = new BookDetailsVM
+                    {
+                        ID = od.Order_id,
+                        Name = od.book != null ? od.book.Name : "N/A",
+                        // Fetch price from the Book entity
+                        Price = od.book.Price,
+                        Quantity = od.Quantity,
+                        Image = od.book != null ? od.book.Image : null
+                    };
+
+                    return bookDetailsVM;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Error processing item at index {index}: {ex.Message}", ex);
+                }
+            }).ToList();
+            return View("cart", bookDetailsVMs);
+        }
 
 
 
@@ -111,7 +159,7 @@ namespace Project.Controllers
                         user_id = userId,
                         book_id = bookID,
                         Date = DateTime.Now,
-                        IsAvailable=true,
+                        IsAvailable = true,
                         userFName = userData.FirstName.ToString(),
                         userLName = userData.LastName.ToString()
                     };
@@ -149,6 +197,42 @@ namespace Project.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public IActionResult CartBookDetails()
+        {
+            var orderDetails = db.OrdersDetails
+               .Include(od => od.book)
+               .ToList();
+
+            var bookDetailsVMs = orderDetails.Select((od, index) =>
+            {
+                try
+                {
+                    var bookDetailsVM = new BookDetailsVM
+                    {
+                        ID = od.Order_id,
+                        Name = od.book != null ? od.book.Name : "N/A",
+                        // Fetch price from the Book entity
+                        Price = od.book.Price,
+                        Quantity = od.Quantity,
+                        Image = od.book != null ? od.book.Image : null
+                    };
+
+                    return bookDetailsVM;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Error processing item at index {index}: {ex.Message}", ex);
+                }
+            }).ToList();
+
+
+            // Process the book IDs as needed
+
+            // Return book IDs as JSON
+            return Json(bookDetailsVMs);
         }
     }
 }

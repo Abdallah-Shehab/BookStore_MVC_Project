@@ -1,66 +1,5 @@
 ﻿@model List<Project.ViewModels.BookDetailsVM>
-
-@if (Model != null && Model.Any())
-{
-    <h1 style="text-align: center;">Order Summary</h1>
-    <div class="table-responsive" style="margin: 0 auto; width: 80%;">
-        <table class="table table-bordered table-striped" style="text-align: center;">
-            <thead>
-                <tr>
-                    @* <th style="width: 10%;">Order ID</th> *@
-                    <th style="width: 8%;">Image</th>
-                    <th style="width: 25%;">Book Name</th>
-                    <th style="width: 12%;">Book Price</th>
-                    <th style="width: 15%;">Book Quantity</th>
-                    <th style="width: 15%;">Order Price</th>
-                    <th style="width: 15%;">Actions</th> <!-- New column for actions -->
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    decimal totalPrice = item.Quantity * item.Price;
-
-                    <tr>
-                        @* <td>@item.ID</td> *@
-                        <td><img id="product-zoom" src="~/assets/images/books/@item.Image" style="object-fit: cover; max-height: 200px;" data-zoom-image="~/assets/images/books/@item.Image" alt="product image"></td>
-                        <td>@item.Name</td>
-                        <td>$@item.Price</td>
-                        <td>@item.Quantity</td>
-                        <td>@totalPrice</td>
-                        <td>
-                            @* <a href="@Url.Action("EditOrder", "Order", new { orderId = item.ID })" title="Edit"><i class="fas fa-edit"></i></a> *@
-                           @*  <form asp-action="DeleteOrder" asp-controller="Order" method="post" class="d-inline">
-                                <input type="hidden" name="orderId" value="@item.book_id" />
-                                <button type="submit" title="Delete" style="background:none; border:none; color:red;"><i class="fas fa-trash"></i></button>
-                            </form> *@
-
-                            <form asp-action="DeleteOrder" asp-controller="Order" method="post" class="d-inline">
-                                <input type="hidden" name="book_id" value="@item.ID" />
-                                <button type="submit" title="Delete" style="background:none; border:none; color:red;"><i class="fas fa-trash"></i></button>
-                            </form>
-
-                        </td>
-
-                    </tr>
-                }
-            </tbody>
-@* 
-                <div>
-                    <h1 colspan="5" style="text-align: right;"><strong style="font-size: 18px;">Total Price:</strong></h1>
-                    <h2 style="font-size: 18px; font-weight: bold;">$@Model.Sum(item => item.Quantity * item.Price)</h2>
-                    
-                </div> *@
-        </table>
-
-        <div class="card w-75">
-            <div class="card-body">
-                <h5 class="card-title">Total Price </h5>
-                <p class="card-title">$@Model.Sum(item => item.Quantity * item.Price)</p>
-                <button type="submit" class="btn btn-primary mt-4">Confirm Order</button>
-            </div>
-        </div>
-    </div>
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
@@ -71,65 +10,50 @@
                     <div class="card-body p-4" style="border:2px solid initial;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
                         <form action="">
-                            <p class="fw-bold mb-4 pb-2">Saved cards:</p>
+                            
 
-                            <div class="d-flex flex-row align-items-center mb-4 pb-1">
-                                <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
-                                <div class="flex-fill mx-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="formControlLgXc" class="form-control form-control-lg"
-                                               value="**** **** **** 3193" />
-                                        <label class="form-label" for="formControlLgXc">Card Number</label>
-                                    </div>
-                                </div>
-                                <a href="#!">Remove card</a>
-                            </div>
+                            <p class="fw-bold mb-4">Add  card:</p>
 
-                            <div class="d-flex flex-row align-items-center mb-4 pb-1">
-                                <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
-                                <div class="flex-fill mx-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="formControlLgXs" class="form-control form-control-lg"
-                                               value="**** **** **** 4296" />
-                                        <label class="form-label" for="formControlLgXs">Card Number</label>
-                                    </div>
-                                </div>
-                                <a href="#!">Remove card</a>
-                            </div>
+                            <div class="form-outline mb-4 row ">
+                                <div class="col-md-8">
 
-                            <p class="fw-bold mb-4">Add new card:</p>
-
-                            <div class="form-outline mb-4">
+                                <label class="form-label" for="formControlLgXsd">Cardholder's Name</label>
                                 <input type="text" id="formControlLgXsd" class="form-control form-control-lg"
                                        value="Anna Doe" />
-                                <label class="form-label" for="formControlLgXsd">Cardholder's Name</label>
+                                </div>
                             </div>
 
+                                        <label class="form-label" for="formControlLgXM">Card Number</label>
                             <div class="row mb-4">
-                                <div class="col-7">
-                                    <div class="form-outline">
+                                <div class="col-md-1">
+                                <img class="img-fluid"  src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+
+                                </div>
+                                <div class="col-md-7">
+                                    
+                                     
                                         <input type="text" id="formControlLgXM" class="form-control form-control-lg"
                                                value="1234 5678 1234 5678" />
-                                        <label class="form-label" for="formControlLgXM">Card Number</label>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-outline">
-                                        <input type="password" id="formControlLgExpk" class="form-control form-control-lg"
-                                               placeholder="MM/YYYY" />
-                                        <label class="form-label" for="formControlLgExpk">Expire</label>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="formControlLgcvv" class="form-control form-control-lg"
-                                               placeholder="Cvv" />
-                                        <label class="form-label" for="formControlLgcvv">Cvv</label>
-                                    </div>
+                                    
                                 </div>
                             </div>
-
-                            <button class="btn btn-success btn-lg btn-block">Add card</button>
+                            <div class="row mb-4">
+                            <div class="col-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="formControlLgExpk">Expire</label>
+                                    <input type="password" id="formControlLgExpk" class="form-control form-control-lg"
+                                           placeholder="MM/YYYY" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="formControlLgcvv">Cvv</label>
+                                    <input type="password" id="formControlLgcvv" class="form-control form-control-lg"
+                                           placeholder="Cvv" />
+                                </div>
+                            </div>
+                            </div>
+                            <button onclick="AddCard()" class="btn btn-success btn-lg btn-block">Add card</button>
                         </form>
                     </div>
                 </div>
@@ -141,13 +65,11 @@
     <!-- Button to confirm order -->
     <div style="text-align: center;">
         <form asp-controller="Order" asp-action="ConfirmOrder" method="post">
-            <button type="submit" class="btn btn-primary mt-4">Confirm Order</button>
+            <button type="submit" class="btn btn-primary mt-4">Skip</button>
         </form>
     </div>
-}
-else
-{
-    <div style="margin: auto; margin-top:50px;
+ 
+ @*    <div style="margin: auto; margin-top:50px;
   
   border: 3px solid inherit;
   padding: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
@@ -156,4 +78,33 @@ else
 
 
     </div>
-}
+  *@
+
+    <script>
+        function AddCard() {
+        toster();
+        toastr.success("Card Added Successfully !");
+
+        }
+
+        addEventListener("submit",function(){
+        localStorage.setItem("cart", "");
+
+        })
+
+    function toster() {
+        toastr.options = {
+            "closeButton": true,
+            "newestOnTop": false,
+            "progressBar": true,
+            "preventDuplicates": false,
+            "onclick": null,
+            "timeOut": "2000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut",
+        }
+    }
+    </script>

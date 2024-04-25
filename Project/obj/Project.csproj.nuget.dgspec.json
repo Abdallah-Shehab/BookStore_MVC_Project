@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj": {}
+    "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj": {}
   },
   "projects": {
-    "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj": {
+    "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+        "projectPath": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\SHaFiQ\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\MVC_Project\\Project\\Project\\obj\\",
+        "outputPath": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SHaFiQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,6 +56,10 @@
             "FluentEmail.Smtp": {
               "target": "Package",
               "version": "[3.0.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

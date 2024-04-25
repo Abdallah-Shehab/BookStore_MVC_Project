@@ -5,7 +5,8 @@
 
 var ratingsContainer;
 
-var isAuthenticated = document.getElementById('authStatus').getAttribute('data-is-authenticated');
+//var isAuthenticated = document.getElementById('authStatus').getAttribute('data-is-authenticated');
+var isAuthenticated = document.getElementById('authStatus');
 if (isAuthenticated) {
     document.addEventListener("DOMContentLoaded", function () {
         ratingsContainer = document.querySelector(".addRating");
@@ -68,25 +69,25 @@ if (isAuthenticated) {
                     else {
                         toastr.success("your Review is Added Successfully.");
                         var newReview = '<div class="row no-gutters">'
-                                             +'<div class="col-auto">'
-                                                   +'<div class="ratings-container">'
-                                                      +'<div class="ratings">'
-                                                             +'<div class="ratings-val" style="width: '+(response.rate * 10)+'%"></div>'
-                                                      +'</div>'
-                                                   +'</div>'
-                                                   +'<span class="review-date">Just Now</span>'
-                                                 +'</div>'
-                                                 +'<div class="col">'
-                                                     +'<h4>'+response.userFName+' '+response.userLName+' (You)</h4>'
-                                                     +'<div class="review-content">'
-                                                         +'<p>'+response.comment+'</p>'
-                                                     +'</div>'
-                                                     +'<div class="review-action">'
-                                                         +'<a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>'
-                                                         +'<a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>'
-                                                     +'</div>'
-                                                 +'</div>'
-                                             +'</div>';
+                            + '<div class="col-auto">'
+                            + '<div class="ratings-container">'
+                            + '<div class="ratings">'
+                            + '<div class="ratings-val" style="width: ' + (response.rate * 10) + '%"></div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<span class="review-date">Just Now</span>'
+                            + '</div>'
+                            + '<div class="col">'
+                            + '<h4>' + response.userFName + ' ' + response.userLName + ' (You)</h4>'
+                            + '<div class="review-content">'
+                            + '<p>' + response.comment + '</p>'
+                            + '</div>'
+                            + '<div class="review-action">'
+                            + '<a href="#"><i class="icon-thumbs-up"></i>Helpful (2)</a>'
+                            + '<a href="#"><i class="icon-thumbs-down"></i>Unhelpful (0)</a>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>';
 
                         var reviewDiv = document.createElement("div");
                         reviewDiv.className = "review animateReview";

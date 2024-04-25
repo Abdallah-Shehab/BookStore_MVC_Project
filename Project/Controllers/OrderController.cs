@@ -126,8 +126,8 @@ namespace Project.Controllers
             }
 
             db.SaveChanges();
-
-            return RedirectToAction("BookDetails", new { id = order.ID });
+            Thread.Sleep(2000);
+            return RedirectToAction("BookDetails", "Home", new { id = order.ID });
         }
 
 
@@ -170,15 +170,27 @@ namespace Project.Controllers
 
 
         [HttpPost]
-        public IActionResult DeleteOrder(int book_id)
+        public IActionResult DeleteOrder(int id)
         {
-            var orderDetailToDelete = db.OrdersDetails.FirstOrDefault(od => od.Order_id == book_id);
+            var orderDetailToDelete = db.OrdersDetails.FirstOrDefault(od => od.Order_id == id);
             if (orderDetailToDelete != null)
             {
                 db.OrdersDetails.Remove(orderDetailToDelete);
-                db.SaveChanges();
+                var result = db.SaveChanges();
+                if (result > 0)
+                {
+                    return Json(result);
+
+                }
+                else
+                {
+                    return Json("false");
+
+                }
             }
-            return RedirectToAction("OrderSummary");
+            return Json(orderDetailToDelete);
+
+            //return RedirectToAction("OrderSummary");
         }
 
 
@@ -267,6 +279,25 @@ namespace Project.Controllers
             {
                 Date = DateTime.Now.AddDays(3)
             };
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account", new { returnUrl = Url.Action("ConfirmOrder", "Order") });
+            }
+
+            var userId = userManager.GetUserId(User);
+
+            if (!int.TryParse(userId, out int userIdInt))
+            {
+                return RedirectToAction("Error");
+            }
+
+            var orderDetails = db.OrdersDetails
+                                .Include(od => od.book)
+                                .Where(od => od.order.user_id == userIdInt)
+                                .ToList();
+
+            db.RemoveRange(orderDetails);
+            db.SaveChanges();
 
             return View("Thanks", order);
         }

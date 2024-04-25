@@ -680,6 +680,22 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Google/8.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/8.0.3": {
         "type": "package",
         "compile": {
@@ -3697,6 +3713,21 @@
         "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/8.0.4": {
+      "sha512": "SuTduxuUHX+1wU3ZXSmfdpuVfii4O1n3yUXFyqJ84rE+hvPXAJazqv8+WuzTLEyJWUJcw7jcgZfXnHkMOWtEEQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/8.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.8.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.3": {
@@ -8089,6 +8120,7 @@
       "AutoMapper >= 13.0.1",
       "FluentEmail.Core >= 3.0.2",
       "FluentEmail.Smtp >= 3.0.2",
+      "Microsoft.AspNetCore.Authentication.Google >= 8.0.4",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
@@ -8101,11 +8133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+      "projectUniqueName": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "D:\\ITI\\MVC_Project\\Project\\Project\\Project.csproj",
+      "projectPath": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\SHaFiQ\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI\\MVC_Project\\Project\\Project\\obj\\",
+      "outputPath": "D:\\ITI\\MVC_Project\\Project -AbdallahVersion\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SHaFiQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8150,6 +8182,10 @@
           "FluentEmail.Smtp": {
             "target": "Package",
             "version": "[3.0.2, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[8.0.4, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
